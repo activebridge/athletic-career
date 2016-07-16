@@ -18,6 +18,9 @@ gem 'tinymce-rails'
 gem 'decent_exposure', '3.0.0'
 gem 'lazybox'
 gem 'thelpers'
+gem 'cloudinary'
+gem 'carrierwave'
+gem 'carrierwave-base64'
 
 group :development, :test do
   gem 'byebug', platform: :mri
