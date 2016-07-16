@@ -21,6 +21,7 @@ gem 'thelpers'
 gem 'cloudinary'
 gem 'carrierwave'
 gem 'carrierwave-base64'
+gem 'foundation-rails'
 
 group :development, :test do
   gem 'byebug', platform: :mri
