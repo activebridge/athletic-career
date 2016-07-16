@@ -16,6 +16,7 @@ gem 'slim-rails'
 gem 'tinymce-rails'
 gem 'decent_exposure', '3.0.0'
 gem 'lazybox'
+gem 'thelpers'
 
 group :development, :test do
   gem 'byebug', platform: :mri
