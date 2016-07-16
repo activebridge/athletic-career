@@ -1,0 +1,23 @@
+# Ignore bundler config.
+/.bundle
+
+# Ignore Byebug command history file.
+.byebug_history
+
+/app/assets/images/temp
+# Ignore bundler config.
+/.bundle
+
+# Ignore all logfiles and tempfiles.
+/log/*
+/tmp/*
+!/log/.keep
+!/tmp/.keep
+/coverage
+/config/database.yml
+/config/secrets.yml
+/public/uploads/*
+tags
+.idea
+*.iml
+*.~
