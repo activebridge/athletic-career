@@ -1,0 +1,5 @@
+.session-form
+  p= link_to :vk_signin, '/auth/vkontakte'
+  p.text-center
+    => t('.no_account')
+    = link_to :signup, new_user_path, remote: true

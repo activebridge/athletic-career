@@ -11,8 +11,11 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 gem 'simple_form'
 gem 'omniauth'
+gem 'omniauth-vkontakte'
 gem 'slim-rails'
 gem 'tinymce-rails'
+gem 'decent_exposure', '3.0.0'
+gem 'lazybox'
 
 group :development, :test do
   gem 'byebug', platform: :mri
