@@ -16,7 +16,10 @@ class SessionsController < ApplicationController
   private
 
   def vk_params
-    { name: auth_hash[:info][:name] }
+    {
+      name: auth_hash[:info][:name],
+      avatar: auth_hash[:extra][:raw_info][:photo_200_orig]
+    }
   end
 
   def auth_hash
