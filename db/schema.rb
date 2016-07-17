@@ -30,6 +30,8 @@ ActiveRecord::Schema.define(version: 20160717091130) do
     t.integer  "user_id"
     t.string   "name"
     t.string   "description"
+    t.string   "url"
+    t.string   "logo"
     t.string   "place"
     t.date     "date"
     t.datetime "created_at",  null: false

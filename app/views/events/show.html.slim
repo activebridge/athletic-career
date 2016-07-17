@@ -2,17 +2,17 @@ p#notice = notice
 
 p
   strong Name:
-  = @event.name
+  = event.name
 p
   strong Description:
-  = @event.description
+  = event.description
 p
   strong Place:
-  = @event.place
+  = event.place
 p
   strong Date:
-  = @event.date
+  = event.date
 
-= link_to 'Edit', edit_event_path(@event)
+= link_to 'Edit', edit_event_path(event)
 '|
 = link_to 'Back', events_path

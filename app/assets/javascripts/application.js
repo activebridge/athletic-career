@@ -4,6 +4,7 @@
 //= require jquery-ui
 //= require turbolinks
 //= require lazybox
+//= require cloudinary
 //= require jquery.datetimepicker.min
 //= require_tree .
 
