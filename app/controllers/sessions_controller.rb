@@ -7,7 +7,8 @@ class SessionsController < ApplicationController
 
   def create
     return redirect(:root) if create_account
-    User.fetch_account(account_params, user_params)
+    user = User.fetch_account(account_params, user_params)
+    session[:user_id] = user.id
     redirect(:root)
   end
 

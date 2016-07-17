@@ -2,3 +2,5 @@ ru:
   links:
     login: Авторизоваться
     sign_up: Зарегистрироваться
+    sign_out: Выход
+    my_profile: Мой профайл

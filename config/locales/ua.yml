@@ -2,3 +2,5 @@ ua:
   links:
     login: Ввійти
     sign_up: Зареєструватися
+    sign_out: Вийти
+    my_profile: Мій профіль
