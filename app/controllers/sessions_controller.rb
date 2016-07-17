@@ -1,8 +1,13 @@
 class SessionsController < ApplicationController
+  include SessionMethods
+
+  skip_before_action :require_user
+
   def new; end
 
   def create
-    User.create(vk_params)
+    return redirect(:root) if create_account
+    User.fetch_account(account_params, user_params)
     redirect(:root)
   end
 
@@ -15,11 +20,28 @@ class SessionsController < ApplicationController
 
   private
 
-  def vk_params
+  def user_params
     {
       name: auth_hash[:info][:name],
       avatar: auth_hash[:extra][:raw_info][:photo_200_orig]
     }
+  end
+
+  def account_params
+    {
+      provider: auth_hash[:provider],
+      user_id: current_user&.id,
+      uid: client_uid(auth_hash[:provider]),
+      token: client_token(auth_hash[:provider]),
+      name: client_username(auth_hash[:provider])
+    }
+  end
+
+  def create_account
+    return false unless auth_hash['page'] == 'Account'
+    Account.create!(account_params)
+    redirect :root
+    true
   end
 
   def auth_hash

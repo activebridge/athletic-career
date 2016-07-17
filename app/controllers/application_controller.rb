@@ -1,6 +1,7 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   before_action :set_locale
+  before_action :require_user
 
   private
 
@@ -10,6 +11,10 @@ class ApplicationController < ActionController::Base
     reset_session
   end
   helper_method :current_user
+
+  def require_user
+    redirect(root_path) unless current_user
+  end
 
   def set_locale
     I18n.locale = session[:locale] || I18n.default_locale
