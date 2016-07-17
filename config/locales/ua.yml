@@ -1,2 +1,4 @@
 ua:
-  hello_world: Привіт світ
+  links:
+    login: Ввійти
+    sign_up: Зареєструватися

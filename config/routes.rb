@@ -8,4 +8,7 @@ Rails.application.routes.draw do
   resources :languages, only: :update, constraints: { id: /(ua|ru)/ }
 
   get '/auth/:provider/callback', to: 'sessions#create'
+  get '/signup', to: 'users#new'
+  get '/signin', to: 'sessions#new'
+  delete '/signout', to: 'sessions#destroy'
 end

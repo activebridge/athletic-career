@@ -7,7 +7,5 @@ html lang='en' class='no-js'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
     = render_lazybox
   body
-    ul
-      li= link_to_unless current_locale?(:ua), 'Укр', language_path(:ua), method: :patch
-      li= link_to_unless current_locale?(:ru), 'Рус', language_path(:ru), method: :patch
+    = render 'layouts/header'
     = yield

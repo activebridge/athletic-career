@@ -1,2 +1,4 @@
 ru:
-  hello_world: Привет мир
+  links:
+    login: Авторизоваться
+    sign_up: Зарегистрироваться
