@@ -1,6 +1,7 @@
 ua:
   links:
-    login: Ввійти
+    login: Увійти
     sign_up: Зареєструватися
     sign_out: Вийти
     my_profile: Мій профіль
+    vk_signin: Увійти через VK

@@ -2,6 +2,7 @@
  *= require jquery-ui
  *= require lazybox
  *= require foundation_and_overrides
+ *= require jquery.datetimepicker
  *= require_tree .
  *= require_self
  */

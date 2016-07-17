@@ -1,11 +1,9 @@
-= simple_form_for(@event) do |f|
+= simple_form_for @event do |f|
   = f.error_notification
+  = f.input :name
+  = f.input :description
+  = f.input :place
+  = f.input :start_date, label: 'Date from' do
+    = f.input_field :date, order: [:day, :month, :year]
 
-  .form-inputs
-    = f.input :name
-    = f.input :description
-    = f.input :place
-    = f.input :date
-
-  .form-actions
-    = f.button :submit
+  = f.button :submit
