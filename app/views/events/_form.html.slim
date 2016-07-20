@@ -1,11 +1,10 @@
-= simple_form_for event do |f|
+= simple_form_for event, multipart: true do |f|
   = f.error_notification
   .images
     = image_tag(params.dig(:event, :logo) || f.object.logo.url)
-  = f.input_field :logo, data: { behavior_preview: '.images img' }, class: :file
-  = f.label :logo, 'Set Featured Image', class: 'label-image button'
-  = f.hidden_field :logo, value: params.dig(:event, :logo)
-  = f.error :logo
+  = f.input :logo do
+    = f.input_field :logo, class: :file
+    /* = f.hidden_field :logo, value: params.dig(:event, :logo) */
   = f.input :name
   = f.input :url
   = f.input :description
