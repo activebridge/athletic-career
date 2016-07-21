@@ -6,7 +6,6 @@ class SessionsController < ApplicationController
   def new; end
 
   def create
-    return redirect(:root) if create_account
     user = User.fetch_account(account_params, user_params)
     session[:user_id] = user.id
     redirect(:root)
@@ -24,7 +23,8 @@ class SessionsController < ApplicationController
   def user_params
     {
       name: auth_hash[:info][:name],
-      avatar: auth_hash[:extra][:raw_info][:photo_200_orig]
+      avatar: client_avatar(auth_hash[:provider]),
+      email: auth_hash[:info][:email]
     }
   end
 
@@ -32,17 +32,10 @@ class SessionsController < ApplicationController
     {
       provider: auth_hash[:provider],
       user_id: current_user&.id,
-      uid: client_uid(auth_hash[:provider]),
-      token: client_token(auth_hash[:provider]),
-      name: client_username(auth_hash[:provider])
+      uid: auth_hash[:uid],
+      token: auth_hash[:credentials][:token],
+      name: auth_hash[:info][:name]
     }
-  end
-
-  def create_account
-    return false unless auth_hash['page'] == 'Account'
-    Account.create!(account_params)
-    redirect :root
-    true
   end
 
   def auth_hash

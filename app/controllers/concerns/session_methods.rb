@@ -1,13 +1,9 @@
 module SessionMethods
-  def client_uid(provider)
-    auth_hash[:uid]
-  end
-
-  def client_token(provider)
-    auth_hash[:credentials][:token]
-  end
-
-  def client_username(provider)
-    auth_hash[:info][:name]
+  def client_avatar(provider)
+    if provider == 'vkontakte'
+      auth_hash[:extra][:raw_info][:photo_200_orig]
+    else
+      auth_hash[:info][:image] + '?type=large'
+    end
   end
 end

@@ -4,7 +4,6 @@
     = image_tag(params.dig(:event, :logo) || f.object.logo.url)
   = f.input :logo do
     = f.input_field :logo, class: :file
-    /* = f.hidden_field :logo, value: params.dig(:event, :logo) */
   = f.input :name
   = f.input :url
   = f.input :description

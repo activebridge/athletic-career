@@ -13,6 +13,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'simple_form'
 gem 'omniauth'
 gem 'omniauth-vkontakte'
+gem 'omniauth-facebook'
 gem 'slim-rails'
 gem 'tinymce-rails'
 gem 'decent_exposure', '3.0.0'
@@ -22,6 +23,7 @@ gem 'cloudinary'
 gem 'carrierwave'
 gem 'carrierwave-base64'
 gem 'foundation-rails'
+gem 'rollbar'
 
 group :development, :test do
   gem 'byebug', platform: :mri
