@@ -1,10 +1,10 @@
 default: &default
-  cloud_name: 'cloud_name'
-  api_key: 'api_key'
-  api_secret: 'api_secret'
-  enhance_image_tag: 'enhance_image_tag'
-  static_image_support: 'static_image_support'
-  secure: 'secure'
+  cloud_name: dj7gguiej
+  api_key: '334659564612832'
+  api_secret: K0PG8FqRpJmdW2X9ERnvRAKOI2I
+  enhance_image_tag: true
+  static_image_support: false
+  secure: true
 
 development:
   <<: *default
