@@ -24,6 +24,7 @@ gem 'carrierwave'
 gem 'carrierwave-base64'
 gem 'foundation-rails'
 gem 'rollbar'
+gem 'rubocop', require: false
 
 group :development, :test do
   gem 'byebug', platform: :mri

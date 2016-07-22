@@ -17,7 +17,6 @@ class SessionsController < ApplicationController
     redirect(root_path)
   end
 
-
   private
 
   def user_params
