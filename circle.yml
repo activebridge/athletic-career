@@ -7,12 +7,12 @@ test:
     - cp config/cloudinary.yml.example config/cloudinary.yml
   post:
     - bundle exec rubocop
-# deployment:
-  # staging:
-    # branch: master
-    # commands:
-      # - bundle exec cap staging deploy
-  # production:
-    # branch: production
-    # commands:
-      # - bundle exec cap production deploy
+deployment:
+  staging:
+    branch: master
+    commands:
+      - bundle exec cap staging deploy
+  production:
+    branch: production
+    commands:
+      - bundle exec cap production deploy

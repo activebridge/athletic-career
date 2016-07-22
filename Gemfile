@@ -26,11 +26,16 @@ gem 'carrierwave'
 gem 'carrierwave-base64'
 gem 'foundation-rails'
 gem 'rollbar'
-gem 'rubocop', require: false
 
 group :development, :test do
   gem 'byebug', platform: :mri
   gem 'pry'
+  gem 'capistrano', '~> 3.5.0'
+  gem 'capistrano-bundler'
+  gem 'capistrano-rails', '~> 1.1.7'
+  gem 'capistrano-rvm', github: 'capistrano/rvm'
+
+  gem 'rubocop', require: false
 end
 
 group :development do
