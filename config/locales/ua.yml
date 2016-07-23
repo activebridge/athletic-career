@@ -5,4 +5,5 @@ ua:
     sign_out: Вийти
     my_profile: Мій профіль
     vk_signin: Увійти через VK
+    fb_signin: Увійти через Facebook
     add_event: Додати забіг

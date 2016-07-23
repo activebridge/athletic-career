@@ -46,11 +46,16 @@ GEM
       i18n (~> 0.7)
       minitest (~> 5.1)
       tzinfo (~> 1.1)
+    addressable (2.4.0)
     airbrussh (1.0.2)
       sshkit (>= 1.6.1, != 1.7.0)
-    arel (7.0.0)
-    ast (2.2.0)
+    arel (7.1.0)
+    ast (2.3.0)
     aws_cf_signer (0.1.3)
+    babel-source (5.8.35)
+    babel-transpiler (0.7.0)
+      babel-source (>= 4.0, < 6)
+      execjs (~> 2.0)
     builder (3.2.2)
     bullet (5.1.1)
       activesupport (>= 3.0.0)
@@ -69,6 +74,19 @@ GEM
     capistrano-rails (1.1.7)
       capistrano (~> 3.1)
       capistrano-bundler (~> 1.1)
+    capybara (2.7.1)
+      addressable
+      mime-types (>= 1.16)
+      nokogiri (>= 1.3.3)
+      rack (>= 1.0.0)
+      rack-test (>= 0.5.4)
+      xpath (~> 2.0)
+    capybara-email (2.5.0)
+      capybara (~> 2.4)
+      mail
+    capybara-screenshot (1.0.13)
+      capybara (>= 1.0, < 3)
+      launchy
     carrierwave (0.11.2)
       activemodel (>= 3.2.0)
       activesupport (>= 3.2.0)
@@ -77,6 +95,7 @@ GEM
       mimemagic (>= 0.3.0)
     carrierwave-base64 (2.3.1)
       carrierwave (>= 0.8.0, < 0.12.0)
+    cliver (0.3.2)
     cloudinary (1.2.2)
       aws_cf_signer
       rest-client
@@ -89,26 +108,35 @@ GEM
       execjs
     coffee-script-source (1.10.0)
     concurrent-ruby (1.0.2)
+    database_cleaner (1.5.3)
     debug_inspector (0.0.2)
     decent_exposure (3.0.0)
       activesupport (>= 4.0)
+    diff-lcs (1.2.5)
+    docile (1.1.5)
     domain_name (0.5.20160615)
       unf (>= 0.0.5, < 1.0.0)
     erubis (2.7.0)
     execjs (2.7.0)
+    factory_girl (4.7.0)
+      activesupport (>= 3.0.0)
+    factory_girl_rails (4.7.0)
+      factory_girl (~> 4.7.0)
+      railties (>= 3.0.0)
     faraday (0.9.2)
       multipart-post (>= 1.2, < 3)
     ffi (1.9.14)
-    foundation-rails (5.5.2.1)
+    foundation-rails (6.2.3.0)
       railties (>= 3.1.0)
       sass (>= 3.3.0, < 3.5)
+      sprockets-es6 (>= 0.9.0)
     globalid (0.3.6)
       activesupport (>= 4.1.0)
     hashie (3.4.4)
     http-cookie (1.0.2)
       domain_name (~> 0.5)
     i18n (0.7.0)
-    jbuilder (2.5.0)
+    jbuilder (2.6.0)
       activesupport (>= 3.0.0, < 5.1)
       multi_json (~> 1.2)
     jquery-rails (4.1.1)
@@ -119,7 +147,11 @@ GEM
       railties (>= 3.2.16)
     json (2.0.1)
     jwt (1.5.4)
+    launchy (2.4.3)
+      addressable (~> 2.3)
     lazybox (1.1.5)
+    letter_opener (1.4.1)
+      launchy (~> 2.2)
     listen (3.0.8)
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
@@ -159,20 +191,22 @@ GEM
     omniauth-oauth2 (1.4.0)
       oauth2 (~> 1.0)
       omniauth (~> 1.2)
-    omniauth-vkontakte (1.3.6)
-      multi_json
-      omniauth (~> 1.0)
+    omniauth-vkontakte (1.3.7)
       omniauth-oauth2 (~> 1.1)
-    parser (2.3.1.0)
+    parser (2.3.1.2)
       ast (~> 2.2)
     pg (0.18.4)
     pkg-config (1.1.7)
+    poltergeist (1.10.0)
+      capybara (~> 2.1)
+      cliver (~> 0.3.1)
+      websocket-driver (>= 0.2.0)
     powerpack (0.1.1)
-    pry (0.10.3)
+    pry (0.10.4)
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
       slop (~> 3.4)
-    puma (3.4.0)
+    puma (3.5.2)
     rack (2.0.1)
     rack-test (0.6.3)
       rack (>= 1.0)
@@ -208,17 +242,36 @@ GEM
       http-cookie (>= 1.0.2, < 2.0)
       mime-types (>= 1.16, < 4.0)
       netrc (~> 0.8)
-    rollbar (2.11.2)
+    rollbar (2.12.0)
       multi_json
-    rubocop (0.40.0)
-      parser (>= 2.3.1.0, < 3.0)
+    rspec-core (3.5.1)
+      rspec-support (~> 3.5.0)
+    rspec-expectations (3.5.0)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.5.0)
+    rspec-mocks (3.5.0)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.5.0)
+    rspec-rails (3.5.1)
+      actionpack (>= 3.0)
+      activesupport (>= 3.0)
+      railties (>= 3.0)
+      rspec-core (~> 3.5.0)
+      rspec-expectations (~> 3.5.0)
+      rspec-mocks (~> 3.5.0)
+      rspec-support (~> 3.5.0)
+    rspec-retry (0.4.5)
+      rspec-core
+    rspec-support (3.5.0)
+    rubocop (0.41.2)
+      parser (>= 2.3.1.1, < 3.0)
       powerpack (~> 0.1)
       rainbow (>= 1.99.1, < 3.0)
       ruby-progressbar (~> 1.7)
       unicode-display_width (~> 1.0, >= 1.0.1)
     ruby-progressbar (1.8.1)
     sass (3.4.22)
-    sass-rails (5.0.5)
+    sass-rails (5.0.6)
       railties (>= 4.0.0, < 6)
       sass (~> 3.1)
       sprockets (>= 2.8, < 4.0)
@@ -227,6 +280,11 @@ GEM
     simple_form (3.2.1)
       actionpack (> 4, < 5.1)
       activemodel (> 4, < 5.1)
+    simplecov (0.12.0)
+      docile (~> 1.1.0)
+      json (>= 1.8, < 3)
+      simplecov-html (~> 0.10.0)
+    simplecov-html (0.10.0)
     slim (3.0.7)
       temple (~> 0.7.6)
       tilt (>= 1.3.3, < 2.1)
@@ -239,9 +297,13 @@ GEM
     spring-watcher-listen (2.0.0)
       listen (>= 2.7, < 4.0)
       spring (~> 1.2)
-    sprockets (3.6.3)
+    sprockets (3.7.0)
       concurrent-ruby (~> 1.0)
       rack (> 1, < 3)
+    sprockets-es6 (0.9.0)
+      babel-source (>= 5.8.11)
+      babel-transpiler
+      sprockets (>= 3.0.0)
     sprockets-rails (3.1.1)
       actionpack (>= 4.0)
       activesupport (>= 4.0)
@@ -254,7 +316,7 @@ GEM
     thor (0.19.1)
     thread_safe (0.3.5)
     tilt (2.0.5)
-    tinymce-rails (4.1.6)
+    tinymce-rails (4.4.0)
       railties (>= 3.1.1)
     turbolinks (5.0.0)
       turbolinks-source (~> 5)
@@ -266,7 +328,7 @@ GEM
     unf (0.1.4)
       unf_ext
     unf_ext (0.0.7.2)
-    unicode-display_width (1.0.5)
+    unicode-display_width (1.1.0)
     uniform_notifier (1.10.0)
     web-console (3.3.1)
       actionview (>= 5.0)
@@ -276,6 +338,8 @@ GEM
     websocket-driver (0.6.4)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.2)
+    xpath (2.0.0)
+      nokogiri (~> 1.3)
 
 PLATFORMS
   ruby
@@ -287,31 +351,43 @@ DEPENDENCIES
   capistrano-bundler
   capistrano-rails (~> 1.1.7)
   capistrano-rvm!
+  capybara
+  capybara-email
+  capybara-screenshot
   carrierwave
   carrierwave-base64
   cloudinary
   coffee-rails (~> 4.2)
+  database_cleaner (~> 1.5.3)
   decent_exposure (= 3.0.0)
+  factory_girl_rails (~> 4.7.0)
   foundation-rails
   jbuilder (~> 2.5)
   jquery-rails
   jquery-ui-rails
   lazybox
+  letter_opener
   listen (~> 3.0.5)
   omniauth
   omniauth-facebook
   omniauth-vkontakte
   pg
+  poltergeist (~> 1.10.0)
   pry
   puma (~> 3.0)
   rails (~> 5.0.0)
   rollbar
+  rspec-mocks (~> 3.5.0)
+  rspec-rails (~> 3.5)
+  rspec-retry (~> 0.4.5)
   rubocop
   sass-rails (~> 5.0)
   simple_form
+  simplecov
   slim-rails
   spring
   spring-watcher-listen (~> 2.0.0)
+  sprockets (~> 3.7.0)
   thelpers
   tinymce-rails
   turbolinks (~> 5)

@@ -43,6 +43,18 @@ group :development do
   gem 'capistrano-bundler'
   gem 'capistrano-rails', '~> 1.1.7'
   gem 'capistrano-rvm', github: 'capistrano/rvm'
+  gem 'rspec-rails', '~> 3.5'
+  gem 'factory_girl_rails', '~> 4.7.0'
+  gem 'capybara'
+  gem 'capybara-screenshot'
+  gem 'simplecov', require: false
+  gem 'poltergeist', '~> 1.10.0'
+  gem 'database_cleaner', '~> 1.5.3'
+  gem 'letter_opener'
+  gem 'capybara-email'
+  gem 'rspec-retry', '~> 0.4.5'
+  gem 'rspec-mocks', '~> 3.5.0'
+  gem 'sprockets', '~> 3.7.0'
 end
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
