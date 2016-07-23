@@ -26,6 +26,7 @@ gem 'carrierwave'
 gem 'carrierwave-base64'
 gem 'foundation-rails'
 gem 'rollbar'
+gem 'bullet'
 
 group :development, :test do
   gem 'byebug', platform: :mri
