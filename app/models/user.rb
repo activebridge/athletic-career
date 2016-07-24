@@ -2,6 +2,8 @@ class User < ApplicationRecord
   has_many :events, dependent: :delete_all
   has_many :accounts, dependent: :delete_all
 
+  enum role: [:user, :admin]
+
   scope :find_by_provider_uid, -> (provider, uid) { joins(:accounts).where(accounts: { provider: provider, uid: uid }) }
 
   def self.fetch_account(account_params, user_params)
