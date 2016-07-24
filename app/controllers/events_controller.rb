@@ -3,19 +3,12 @@ class EventsController < ApplicationController
   expose :event
 
   def create
-    if event.update(event_params)
-      redirect_to event, notice: 'Event was successfully created.'
-    else
-      render :new
-    end
+    return redirect_to events_path if event.update(event_params)
+    render :new
   end
 
   def update
-    if event.update(event_params)
-      redirect_to event, notice: 'Event was successfully updated.'
-    else
-      render :edit
-    end
+    create
   end
 
   def destroy
