@@ -53,7 +53,11 @@ ActiveRecord::Schema.define(version: 20160724105325) do
 
   create_table "distances", force: :cascade do |t|
     t.string  "title"
-    t.boolean "visible", default: false
+    t.integer "price"
+    t.integer "end_price"
+    t.date    "buy_ticket"
+    t.date    "buy_ticket_end"
+    t.boolean "visible",        default: false
   end
 
   create_table "events", force: :cascade do |t|
