@@ -12,8 +12,18 @@ class ApplicationController < ActionController::Base
   end
   helper_method :current_user
 
+  def current_admin
+    session[:admin]
+  end
+  helper_method :current_admin
+
   def require_user
     redirect(root_path) unless current_user
+  end
+
+  def require_admin
+    return true if current_admin || current_user&.admin?
+    redirect(root_path)
   end
 
   def set_locale

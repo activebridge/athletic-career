@@ -7,6 +7,11 @@ Rails.application.routes.draw do
   resource :session, only: [:new, :destroy]
   resources :languages, only: :update, constraints: { id: /(ua|ru)/ }
 
+  namespace :admin do
+    resource :session, only: [:new, :create, :destroy]
+    get '/', to: 'dashboards#show', as: :dashboard
+  end
+
   get '/auth/:provider/callback', to: 'sessions#create'
   get '/signup', to: 'users#new'
   get '/signin', to: 'sessions#new'
