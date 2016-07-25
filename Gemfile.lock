@@ -381,7 +381,7 @@ DEPENDENCIES
   rspec-rails (~> 3.5)
   rspec-retry (~> 0.4.5)
   rubocop
-  sass-rails (~> 5.0)
+  sass-rails (~> 5.0.6)
   simple_form
   simplecov
   slim-rails
