@@ -1,0 +1,6 @@
+= simple_form_for category, as: :category, url: url do |f|
+  = f.error_notification
+  = f.input :title
+  = f.hidden_field :visible, value: true
+
+  = f.button :submit

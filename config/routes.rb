@@ -11,6 +11,7 @@ Rails.application.routes.draw do
     resource :session, only: [:new, :create, :destroy]
     resources :organizers
     resources :lengths
+    resources :categories
     get '/', to: 'dashboards#show', as: :dashboard
   end
 
