@@ -1,24 +1,23 @@
-# README
+MyAthleticCareer [![Circle CI](https://circleci.com/gh/activebridge/athletic-career.svg?style=svg&circle-token=26614b014f5eeb27ae7accf9d6e2e03c2c675828)](https://circleci.com/gh/activebridge/athletic-career)
+-
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Links
+-
 
-Things you may want to cover:
+[staging](http://staging.athletic-career.com)
 
-* Ruby version
+[production](http://my.freestak.com)
 
-* System dependencies
+[PivotalTracker](https://www.pivotaltracker.com/n/projects/1670389)
 
-* Configuration
+[Rollbar](https://rollbar.com/oleg-voloshyn/athletic-career/)
 
-* Database creation
+Setup
+-
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+    git@github.com:activebridge/athletic-career.git
+    bundle install
+    cp config/database.yml.example config/database.yml
+    cp config/secrets.yml.example config/secrets.yml
+    cp config/cloudinary.yml.example config/cloudinary.yml
+    rake db:create db:migrate db:seed
