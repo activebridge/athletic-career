@@ -1,4 +1,4 @@
-class Admin::CategoriesController < ApplicationController
+class Admin::CategoriesController < AdminsController
   expose :categories, -> { Category.all }
   expose :category
 
