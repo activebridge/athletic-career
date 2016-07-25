@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   namespace :admin do
     resource :session, only: [:new, :create, :destroy]
     resources :organizers
+    resources :lengths
     get '/', to: 'dashboards#show', as: :dashboard
   end
 

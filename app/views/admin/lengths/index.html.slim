@@ -1,0 +1,19 @@
+h1 Listing lengths
+
+table
+  thead
+    tr
+      th Title
+      th Edit
+      th Destroy
+
+  tbody
+    - lengths.each do |length|
+      tr
+        td = length.title
+        td = link_to 'Edit', edit_admin_length_path(length)
+        td = link_to 'Destroy', admin_length_path(length), data: { confirm: 'Are you sure?' }, method: :delete
+
+br
+
+= link_to 'New Length', new_admin_length_path
