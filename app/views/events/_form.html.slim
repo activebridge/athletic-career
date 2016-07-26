@@ -8,6 +8,8 @@
   = f.input :site
   = f.input :description
   = f.input :place
+  = f.input :category_id, as: :select, collection: Category.ready.map { |u| [u.title.to_s, u.id] }
+  = f.input :organizer_id, as: :select, collection: Organizer.ready.map { |u| [u.title.to_s, u.id] }
   /* = f.input :date, label: 'Date from' do */
     = f.input_field :date, order: [:day, :month, :year]
 

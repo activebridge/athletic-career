@@ -1,5 +1,4 @@
 class User < ApplicationRecord
-  has_many :events, dependent: :delete_all
   has_many :accounts, dependent: :delete_all
 
   enum role: [:user, :admin]
