@@ -6,7 +6,7 @@ Links
 
 [staging](http://staging.athletic-career.com)
 
-[production](http://my.freestak.com)
+[production](http://my.athletic-career.com)
 
 [PivotalTracker](https://www.pivotaltracker.com/n/projects/1670389)
 
@@ -25,12 +25,12 @@ Setup
 Team
 -
 
-[![](https://avatars2.githubusercontent.com/u/483482?v=3&s=72)](https://github.com/galulex) - WEB Expert/Consultant
+[![](https://avatars2.githubusercontent.com/u/483482?v=3&s=72)](https://github.com/galulex) - _WEB Expert/Consultant_
 
-[![](https://avatars2.githubusercontent.com/u/4018552?v=3&s=72)](https://github.com/NaumenkoSergiy) - WEB Expert/Сonsultant
+[![](https://avatars2.githubusercontent.com/u/4018552?v=3&s=72)](https://github.com/NaumenkoSergiy) - _WEB Expert/Сonsultant_
 
-[![](https://avatars2.githubusercontent.com/u/2426901?v=3&s=72)](https://github.com/oleg-voloshyn) - Developer
+[![](https://avatars2.githubusercontent.com/u/2426901?v=3&s=72)](https://github.com/oleg-voloshyn) - _Developer_
 
-[![](https://avatars2.githubusercontent.com/u/13198711?v=3&s=72)](https://github.com/TupickiyV) - Developer
+[![](https://avatars2.githubusercontent.com/u/13198711?v=3&s=72)](https://github.com/TupickiyV) - _Developer_
 
-[![](https://avatars2.githubusercontent.com/u/20640455?v=3&s=72)](https://github.com/lizhen-hrytsai) - Designer
+[![](https://avatars2.githubusercontent.com/u/20640455?v=3&s=72)](https://github.com/lizhen-hrytsai) - _Designer_
