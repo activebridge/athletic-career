@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160726082820) do
+ActiveRecord::Schema.define(version: 20160727082406) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -63,6 +63,10 @@ ActiveRecord::Schema.define(version: 20160726082820) do
     t.date    "buy_ticket"
     t.date    "buy_ticket_end"
     t.boolean "visible",        default: false
+    t.integer "event_id"
+    t.integer "length_id"
+    t.index ["event_id"], name: "index_distances_on_event_id", using: :btree
+    t.index ["length_id"], name: "index_distances_on_length_id", using: :btree
   end
 
   create_table "events", force: :cascade do |t|
@@ -100,6 +104,8 @@ ActiveRecord::Schema.define(version: 20160726082820) do
     t.integer  "role",       default: 0
   end
 
+  add_foreign_key "distances", "events"
+  add_foreign_key "distances", "lengths"
   add_foreign_key "events", "categories"
   add_foreign_key "events", "organizers"
 end
