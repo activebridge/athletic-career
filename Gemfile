@@ -29,7 +29,7 @@ gem 'bullet', '~> 5.2.0'
 
 group :development, :test do
   gem 'pry'
-  gem 'rubocop', require: false
+  gem 'rubocop', '~> 0.42.0', require: false
   gem 'byebug', platform: :mri
 end
 
