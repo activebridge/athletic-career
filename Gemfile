@@ -25,7 +25,7 @@ gem 'carrierwave'
 gem 'carrierwave-base64'
 gem 'foundation-rails'
 gem 'rollbar'
-gem 'bullet', '~> 5.2.0'
+gem 'bullet', '~> 5.1.1'
 
 group :development, :test do
   gem 'pry'
