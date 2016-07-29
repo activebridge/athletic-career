@@ -26,6 +26,8 @@ gem 'carrierwave-base64'
 gem 'foundation-rails'
 gem 'rollbar'
 gem 'bullet', '~> 5.1.1'
+gem 'country_select'
+gem 'nested_form'
 
 group :development, :test do
   gem 'pry'

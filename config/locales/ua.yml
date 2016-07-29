@@ -1,5 +1,7 @@
 ua:
   links:
+    delete: Видалити
+    add: Додати
     login: Увійти
     sign_up: Зареєструватися
     sign_out: Вийти
@@ -9,3 +11,39 @@ ua:
     add_event: Додати забіг
     title: MyAthleticCareer
     admin_title: Admin Dashboard
+  activerecord:
+    attributes:
+      event:
+        name: Назва
+        site: Сайт
+        description: Опис
+        city: Місто
+        country: Країна
+        date: Дата
+        category_id: Категорія
+        organizer_id: Організатор
+      distance:
+        title: Назва
+        price: Ціна
+    errors:
+      models:
+        event:
+          attributes:
+            date:
+              blank: Повинно бути заповнене
+            name:
+              blank: Повинно бути заповнене
+            organizer_id:
+              blank: Повинно бути заповнене
+            category_id:
+              blank: Повинно бути заповнене
+            city:
+              blank: Повинно бути заповнене
+        distance:
+          attributes:
+            title:
+              blank: Повинно бути заповнене
+            price:
+              blank: Повинно бути заповнене
+
+
