@@ -55,7 +55,7 @@ group :development do
   gem 'capybara-email'
   gem 'rspec-retry', '~> 0.4.5'
   gem 'rspec-mocks', '~> 3.5.0'
-  gem 'sprockets', '~> 3.7.0'
+  gem 'sprockets', '~> 3.6.3'
 end
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
