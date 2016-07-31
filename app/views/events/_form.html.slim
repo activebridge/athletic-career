@@ -1,16 +1,22 @@
-= simple_form_for event, multipart: true do |f|
-  = f.error_notification
-  .images
-    = image_tag(params.dig(:event, :logo) || f.object.logo.url)
-  = f.input :logo do
-    = f.input_field :logo, class: :file
-  = f.input :name
-  = f.input :site
-  = f.input :description
-  = f.input :place
-  = f.input :category_id, as: :select, collection: Category.ready.map { |u| [u.title.to_s, u.id] }
-  = f.input :organizer_id, as: :select, collection: Organizer.ready.map { |u| [u.title.to_s, u.id] }
-  /* = f.input :date, label: 'Date from' do */
-    = f.input_field :date, order: [:day, :month, :year]
-
-  = f.button :submit
+= simple_form_for @event do |f|
+  .row.form
+    .large-6.columns
+      = f.error_notification
+      = f.input :logo do
+        = f.input_field :logo, class: :file
+      = f.input :name
+      = f.input :country, as: :country, selected: "UA"
+      = f.input :organizer_id, as: :select, collection: Organizer.ready.map { |u| [u.title.to_s, u.id] }
+    .large-6.columns
+      = f.input :date, as: :date, html5: true
+      = f.input :category_id, as: :select, collection: Category.ready.map { |u| [u.title.to_s, u.id] }
+      = f.input :site
+      = f.input :city
+    .large-12.columns
+      = f.input :description
+  h1 Дистанції
+  = f.simple_fields_for :distances do |d|
+    = render 'distance_fields', f: d
+  .links
+    = link_to_add_association 'add distance', f, :distances
+  = f.button :submit, class: 'button success'

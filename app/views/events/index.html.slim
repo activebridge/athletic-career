@@ -5,18 +5,19 @@ table
     tr
       th Name
       th Description
-      th Place
+      th City
+      th Country
       th Date
-      th
       th
       th
 
   tbody
-    - events.each do |event|
+    - @events.each do |event|
       tr
         td = event.name
         td = event.description
-        td = event.place
+        td = event.city
+        td = event.country
         td = event.date
         td = link_to 'Show', event
         td = link_to 'Edit', edit_event_path(event)

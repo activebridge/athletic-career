@@ -1,0 +1,9 @@
+.nested-fields.row.large-12.columns
+  .large-4.columns
+    = f.input :title
+  .large-4.columns
+      = f.input :length_id, as: :select, collection: Length.ready.map { |u| [u.title.to_s, u.id] }
+  .large-3.columns
+    = f.input :price
+  .large-1.columns
+  = link_to_remove_association "remove event", f

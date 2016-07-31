@@ -1,20 +1,20 @@
 p#notice = notice
 
 p
-  = image_tag event.logo_url(:large)
+  = image_tag @event.logo_url(:large)
 p
   strong Name:
-  = event.name
+  = @event.name
 p
   strong Description:
-  = event.description
+  = @event.description
 p
-  strong Place:
-  = event.place
+  strong City:
+  = @event.city
 p
   strong Date:
-  = event.date
+  = @event.date
 
-= link_to 'Edit', edit_event_path(event)
+= link_to 'Edit', edit_event_path(@event)
 '|
 = link_to 'Back', events_path

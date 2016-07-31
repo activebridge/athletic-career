@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160727082406) do
+ActiveRecord::Schema.define(version: 20160727093435) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -62,7 +62,6 @@ ActiveRecord::Schema.define(version: 20160727082406) do
     t.integer "end_price"
     t.date    "buy_ticket"
     t.date    "buy_ticket_end"
-    t.boolean "visible",        default: false
     t.integer "event_id"
     t.integer "length_id"
     t.index ["event_id"], name: "index_distances_on_event_id", using: :btree
@@ -74,13 +73,14 @@ ActiveRecord::Schema.define(version: 20160727082406) do
     t.string   "description"
     t.string   "site"
     t.string   "logo"
-    t.string   "place"
+    t.string   "city"
     t.date     "date"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
     t.string   "banner"
     t.integer  "category_id"
     t.integer  "organizer_id"
+    t.string   "country"
     t.index ["category_id"], name: "index_events_on_category_id", using: :btree
     t.index ["organizer_id"], name: "index_events_on_organizer_id", using: :btree
   end

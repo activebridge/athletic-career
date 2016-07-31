@@ -2,7 +2,9 @@ class Event < ApplicationRecord
   belongs_to :organizer
   belongs_to :category
 
-  has_many :distances
+  has_many :distances, dependent: :destroy
+  accepts_nested_attributes_for :distances, allow_destroy: true
 
+  validates :name, :city, :country, :date, :category_id, :organizer_id, presence: true
   mount_base64_uploader :logo, LogoUploader
 end
