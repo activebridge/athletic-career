@@ -3,5 +3,5 @@ class Distance < ApplicationRecord
   belongs_to :event, required: false
   belongs_to :length
 
-  validates :title, :price, presence: true
+  validates :length_id, presence: true
 end
