@@ -6,7 +6,7 @@
 //= require lazybox
 //= require cloudinary
 //= require jquery.datetimepicker.min
-//= require jquery_nested_form
+//= require cocoon
 //= require_tree .
 
 $(function(){ $(document).foundation(); });

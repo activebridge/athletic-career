@@ -1,4 +1,4 @@
-= simple_nested_form_for event, multipart: true do |f|
+= simple_form_for @event do |f|
   .row.form
     .large-6.columns
       = f.error_notification
@@ -15,5 +15,8 @@
     .large-12.columns
       = f.input :description
   h1 Дистанції
-  = render 'distance_fields', f: f
+  = f.simple_fields_for :distances do |d|
+    = render 'distance_fields', f: d
+  .links
+    = link_to_add_association 'add distance', f, :distances
   = f.button :submit, class: 'button success'

@@ -27,7 +27,7 @@ gem 'foundation-rails'
 gem 'rollbar'
 gem 'bullet', '~> 5.1.1'
 gem 'country_select'
-gem 'nested_form'
+gem 'cocoon'
 
 group :development, :test do
   gem 'pry'

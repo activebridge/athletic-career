@@ -1,31 +1,40 @@
 class EventsController < ApplicationController
-  expose :events, -> { Event.all }
-  expose :event
+  before_action :find_event, only: [:show, :edit, :update, :destroy]
+  def index
+    @events = Event.all
+  end
 
   def new
-    event.distances.build
+    @event = Event.new
+    @event.distances.build
   end
 
   def create
-    return redirect_to events_path if event.update(event_params)
+    @event = Event.new(event_params)
+    return redirect_to events_path if @event.save
     render :new
   end
 
   def update
-    create
+    return redirect_to events_path if @event.update(event_params)
+    render :edit
   end
 
   def destroy
-    event.destroy
+    @event.destroy
     redirect_to events_url, notice: 'Event was successfully destroyed.'
   end
 
   private
 
+  def find_event
+    @event = Event.find(params[:id])
+  end
+
   def event_params
     params.require(:event).permit(
       :name, :description, :site, :logo, :city, :date, :banner, :country, :organizer_id, :category_id,
-      distances_attributes: [:event_id, :title, :price, :_destroy]
+      distances_attributes: [:id, :_destroy, :event_id, :length_id, :title, :price]
     )
   end
 end
