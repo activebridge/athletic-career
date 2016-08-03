@@ -1,5 +1,25 @@
 ru:
+  no_account: Нету аккаунта
+  are_you_sure: Вы уверены
+  events: Забеги
+  running_event: Беговое событие
+  edit_event: Изменить забег
+  name: Название
+  description: Описание
+  distances: Дистанции
+  city: Город
+  country: Страна
+  date: Дата
   links:
+    add_distance: Добавить дистанцию
+    remove_distance: Убрать дистанцию
+    add_future_event: Добавить старый забег
+    add_future_event: Добавить новый забег
+    back: Назад
+    edit: Изменить
+    show: Показать
+    delete: Удалить
+    add: Добавить
     login: Авторизоваться
     sign_up: Зарегистрироваться
     sign_out: Выход
@@ -9,3 +29,44 @@ ru:
     add_event: Добавить забег
     title: MyAthleticCareer
     admin_title: Admin Dashboard
+  activerecord:
+    attributes:
+      event:
+        name: Название
+        site: Сайт
+        description: Описание
+        city: Город
+        country: Страна
+        date: Дата
+        category_id: Категория
+        organizer_id: Организатор
+      distance:
+        title: Название
+        price: Начальная цена
+        end_price: Конечная цена
+        length_id: Длина
+    errors:
+      models:
+        event:
+          attributes:
+            date:
+              blank: Должно быть заполненое
+            name:
+              blank: Повинно бути заповнене
+            organizer_id:
+              blank: Должно быть заполненое
+            category_id:
+              blank: Должно быть заполненое
+            city:
+              blank: Должно быть заполненое
+        distance:
+          attributes:
+            title:
+              blank: Должно быть заполненое
+            price:
+              blank: Должно быть заполненое
+              less_than_or_equal_to: Начальная цена должна быть меньше за конечную
+            end_price:
+              blank: Должно быть заполненое
+            length_id:
+              blank: Должно быть заполненое

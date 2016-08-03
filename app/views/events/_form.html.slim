@@ -1,3 +1,4 @@
+h1=t('running_event')
 = simple_form_for @event do |f|
   .row.form
     .large-6.columns
@@ -6,17 +7,19 @@
         = f.input_field :logo, class: :file
       = f.input :name
       = f.input :country, as: :country, selected: "UA"
-      = f.input :organizer_id, as: :select, collection: Organizer.ready.map { |u| [u.title.to_s, u.id] }
+      = f.input :organizer_id, as: :select, collection: Organizer.ready
     .large-6.columns
       = f.input :date, as: :date, html5: true
-      = f.input :category_id, as: :select, collection: Category.ready.map { |u| [u.title.to_s, u.id] }
+      = f.input :category_id, as: :select, collection: Category.ready
       = f.input :site
       = f.input :city
     .large-12.columns
       = f.input :description
-  h1 Дистанції
-  = f.simple_fields_for :distances do |d|
-    = render 'distance_fields', f: d
-  .links
-    = link_to_add_association 'add distance', f, :distances
+  h1 =t('distances')
+  .row
+    = f.simple_fields_for :distances do |d|
+    - if params[:type] == 'past'
+      = link_to_add_association :add_distance, f, :distances, partial: 'distance_fields_past', class: 'add-distance'
+    - else
+      = link_to_add_association :add_distance, f, :distances, class: 'add-distance'
   = f.button :submit, class: 'button success'

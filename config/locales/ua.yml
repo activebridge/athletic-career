@@ -1,5 +1,23 @@
 ua:
+  no_account: Немає аккаунта
+  are_you_sure: Ви впевнені
+  events: Забіги
+  running_event: Бігова подія
+  edit_event: Змінити забіг
+  name: Назва
+  description: Опис
+  distances: Дистанції
+  city: Місто
+  country: Країна
+  date: Дата
   links:
+    add_distance: Додати дистанцію
+    remove_distance: Прибрати дистанцію
+    add_past_event: Додати стрий забіг
+    add_future_event: Додати новий забіг
+    back: Назад
+    edit: Змінити
+    show: Показати
     delete: Видалити
     add: Додати
     login: Увійти
@@ -24,7 +42,9 @@ ua:
         organizer_id: Організатор
       distance:
         title: Назва
-        price: Ціна
+        price: Початкова ціна
+        end_price: Кінцева ціна
+        length_id: Довжина
     errors:
       models:
         event:
@@ -45,5 +65,8 @@ ua:
               blank: Повинно бути заповнене
             price:
               blank: Повинно бути заповнене
-
-
+              less_than_or_equal_to: Початкова ціна повинна бути менша за кінцеву
+            end_price:
+              blank: Повинно бути заповнене
+            length_id:
+              blank: Повинно бути заповнене
