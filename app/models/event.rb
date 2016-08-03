@@ -7,4 +7,7 @@ class Event < ApplicationRecord
 
   validates :name, :city, :country, :date, :category_id, :organizer_id, presence: true
   mount_base64_uploader :logo, LogoUploader
+
+  scope :past, -> { where('date < ?', Date.current) }
+  scope :future, -> { where('date > ?', Date.current) }
 end

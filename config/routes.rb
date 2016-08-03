@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
   root to: 'welcome#index'
 
-  resources :events
+  resources :events, except: :new
+  scope ':type', constraints: { type: /past|future/ } do
+    resources :events, only: :new
+  end
   resources :welcome, only: :index, path: 'dashboard'
   resources :users
   resource :session, only: [:new, :destroy]
