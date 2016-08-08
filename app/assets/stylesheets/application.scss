@@ -1,12 +1,18 @@
-@import 'foundation_and_overrides';
 @import 'jquery-ui';
+@import "bootstrap-sprockets";
+@import "bootstrap";
 @import 'lazybox';
 @import 'jquery.datetimepicker';
 @import 'layouts';
-@import 'color';
 @import 'events';
 
 .translation_missing {
   color: red;
   background: black;
+}
+
+.form-signin {
+  max-width: 330px;
+  padding: 15px;
+  margin: 0 auto;
 }

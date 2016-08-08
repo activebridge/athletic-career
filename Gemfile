@@ -23,11 +23,12 @@ gem 'thelpers'
 gem 'cloudinary'
 gem 'carrierwave'
 gem 'carrierwave-base64'
-gem 'foundation-rails'
 gem 'rollbar'
 gem 'bullet', '~> 5.1.1'
 gem 'country_select'
 gem 'cocoon'
+gem 'bootstrap-sass', '~> 3.3.6'
+gem 'bootstrap-growl-rails'
 
 group :development, :test do
   gem 'pry'

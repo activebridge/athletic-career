@@ -1,8 +1,6 @@
-.top-bar {
+.navbar {
   background: $black; }
-  .top-bar a {
+  .navbar a {
+    text-decoration: none;
     background: $black;
     color: $white; }
-
-.menu-text {
-  color: $white; }

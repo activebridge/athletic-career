@@ -1,7 +1,8 @@
-= simple_form_for admin_session, url: admin_session_path, remote: true,
-                                 defaults: { wrapper_html: { class: 'g-1' },
-                                 input_html: { class: 'g-2-3 g-md-1' },
-                                 label_html: { class: 'g-1-3 g-md-1'}} do |f|
-  = f.input :email
-  = f.input :password
-  = f.button :button, 'Login', class: 'g-o-1-3 g-o-md-0'
+.form-signin
+  = simple_form_for admin_session, url: admin_session_path, remote: true,
+                                   defaults: { wrapper_html: { class: 'g-1' },
+                                   input_html: { class: 'g-2-3 g-md-1' },
+                                   label_html: { class: 'g-1-3 g-md-1'}} do |f|
+    = f.input :email
+    = f.input :password
+    = f.button :button, 'Login', class: 'g-o-1-3 g-o-md-0'
