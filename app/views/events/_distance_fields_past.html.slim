@@ -1,7 +1,7 @@
-.nested-fields.row.large-12.columns
-  .large-3.columns
+.nested-fields.row
+  .col-lg-3
     = f.input :title
-  .large-3.columns
+  .col-lg-3
     = f.input :length_id, as: :select, collection: Length.ready
-  .large-1.columns
+  .col-lg-1
   = link_to_remove_association :remove_distance, f
