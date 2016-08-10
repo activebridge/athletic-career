@@ -7,7 +7,15 @@
 @import 'jquery.datetimepicker';
 @import 'layouts';
 @import 'events';
+@import 'banner';
 
+html {
+    position: relative;
+    min-height: 100%;
+}
+body {
+    margin: 50px 0 100px;
+}
 .translation_missing {
   color: red;
   background: black;

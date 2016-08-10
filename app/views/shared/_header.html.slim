@@ -1,16 +1,14 @@
-nav.navbar
+nav.navbar.navbar-fixed-top
   .container-fluid
     .collapse.navbar-collapse
       ul.nav.navbar-nav
         li.pull-left
           = link_to :title, root_path
         li
-          a href="#"  Home
+          = link_to :events, events_path
         li
-          a href="#"  Events
+          = link_to :about_us, '/'
         li
-          a href="#"  About us
-        li
-          a href='#'  Contacts
+          = link_to :contacts, '/'
         li.pull-right
           = render 'shared/dropdown'
