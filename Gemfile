@@ -29,6 +29,7 @@ gem 'country_select'
 gem 'cocoon'
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'bootstrap-growl-rails'
+gem 'font-awesome-sass'
 
 group :development, :test do
   gem 'pry'

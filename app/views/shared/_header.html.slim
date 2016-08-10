@@ -1,16 +1,16 @@
-.navbar.navbar-inverse
+nav.navbar
   .container-fluid
-    .navbar-header
-      .navbar-brand
-        = link_to :title, root_path
-    ul.nav.navbar-nav.navbar-right
-      - if current_user
+    .collapse.navbar-collapse
+      ul.nav.navbar-nav
+        li.pull-left
+          = link_to :title, root_path
         li
-          => link_to :sign_out, signout_path, method: :delete
+          a href="#"  Home
         li
-          = link_to :my_profile, user_path(current_user)
-      - else
+          a href="#"  Events
         li
-          => link_to :login, signin_path, remote: true
+          a href="#"  About us
         li
-          = link_to :sign_up, signup_path, remote: true
+          a href='#'  Contacts
+        li.pull-right
+          = render 'shared/dropdown'
