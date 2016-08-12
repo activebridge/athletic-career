@@ -5,16 +5,20 @@
 @import "bootstrap";
 @import 'lazybox';
 @import 'jquery.datetimepicker';
-@import 'layouts';
+@import 'footer';
 @import 'events';
+@import 'navbar';
 @import 'banner';
+
+/* Fonts */
+@import url(http://fonts.googleapis.com/css?family=Montserrat);
 
 html {
     position: relative;
     min-height: 100%;
 }
 body {
-    margin: 50px 0 100px;
+    margin: 90px 0 100px;
 }
 .translation_missing {
   color: red;

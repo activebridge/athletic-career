@@ -3,3 +3,28 @@
     width: 100%;
     margin: auto;
 }
+
+.carousel-indicators {
+  bottom: 0;
+  li {
+    margin-left: 10px;
+    border: 2px solid $white;
+    width: 13px;
+    height: 13px;
+    transition: all .4s ease-in-out;
+    &:hover {
+      border: 2px solid $dodgerblue;
+      transition: all .4s ease-in-out;
+    }
+  }
+  .active {
+    margin-left: 10px;
+    margin-bottom: 1px;
+    width: 13px;
+    height: 13px;
+    background-color: $white;
+    &:hover {
+      border: 2px solid $white;
+    }
+  }
+}

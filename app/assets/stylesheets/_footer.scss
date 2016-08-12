@@ -1,19 +1,6 @@
-.navbar {
-  background: $white;
-  margin-bottom: 0;
-  font-size: 17px;
-  .navbar-nav {
-    width: 100%;
-    text-align: center;
-    > li {
-      float: none;
-      display: inline-block;
-    }
-  }
-}
-
 .footer-section {
-  font-size: 17px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
   background: #303043;
   color: $white;
   position: absolute;
@@ -30,15 +17,22 @@
     color: #fff;
     text-decoration: none;
   }
-  ul li {
-    color: #7e7e90;
-  }
   ul, ol {
     margin-bottom: 0;
   }
-  .list-inline > li {
+  .list-inline-center > li {
+    padding: 7px 10px;
+    color: $dimgray;
     display: inline-block;
-    padding-left: 5px;
-    padding-right: 5px;
+    border-left: 1px solid $dimgray;
+    &:first-child {
+      border: 0;
+    }
+  }
+  .list-inline-center > li > a {
+    color: $dodgerblue;
+  }
+  .fa {
+    font-size: 17px;
   }
 }
