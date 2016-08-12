@@ -2,9 +2,11 @@
   border: 1px solid $grey;
   padding: 1rem;
   border-radius: 3px;
+  text-align: center;
 }
-
-.add-distance {
-  text-decoration: none;
-  color: $black;
+.form-group {
+  margin: 10px 0;
+}
+.column {
+  margin: 12px 63px;
 }
