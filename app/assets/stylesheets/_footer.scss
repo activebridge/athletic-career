@@ -1,0 +1,38 @@
+.footer-section {
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  background: #303043;
+  color: $white;
+  position: absolute;
+  min-height: 100px;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 15px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-flow: row wrap;
+  a:hover {
+    color: #fff;
+    text-decoration: none;
+  }
+  ul, ol {
+    margin-bottom: 0;
+  }
+  .list-inline-center > li {
+    padding: 7px 10px;
+    color: $dimgray;
+    display: inline-block;
+    border-left: 1px solid $dimgray;
+    &:first-child {
+      border: 0;
+    }
+  }
+  .list-inline-center > li > a {
+    color: $dodgerblue;
+  }
+  .fa {
+    font-size: 17px;
+  }
+}

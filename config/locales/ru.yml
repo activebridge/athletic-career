@@ -27,6 +27,9 @@ ru:
     vk_signin: Войти с помощью VK
     fb_signin: Войти с помощью Facebook
     add_event: Добавить забег
+    events: Забеги
+    about_us: Про нас
+    contacts: Контакты
     title: MyAthleticCareer
     admin_title: Admin Dashboard
   activerecord:

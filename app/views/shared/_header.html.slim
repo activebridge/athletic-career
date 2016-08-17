@@ -1,16 +1,11 @@
-.navbar.navbar-inverse
+nav.navbar.navbar-fixed-top
   .container-fluid
-    .navbar-header
-      .navbar-brand
-        = link_to :title, root_path
-    ul.nav.navbar-nav.navbar-right
-      - if current_user
-        li
-          => link_to :sign_out, signout_path, method: :delete
-        li
-          = link_to :my_profile, user_path(current_user)
-      - else
-        li
-          => link_to :login, signin_path, remote: true
-        li
-          = link_to :sign_up, signup_path, remote: true
+    .collapse.navbar-collapse
+      .nav.navbar-nav
+        .pull-left
+          = nav_link t('links.title'), root_path
+        = nav_link t('links.events'), events_path
+        = nav_link t('links.about_us'), new_event_path(type: 'past')
+        = nav_link t('links.contacts'),  new_event_path(type: 'future')
+        .pull-right
+          = render 'shared/dropdown'

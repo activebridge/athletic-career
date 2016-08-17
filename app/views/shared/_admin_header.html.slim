@@ -1,5 +1,6 @@
-.navar.navbar-inverse
+nav.navbar.admin-navbar
   .container-fluid
-    .navbar-header
-      .navbar-brand
-        = link_to :admin_title, admin_dashboard_path
+    .collapse.navbar-collapse
+      ul.nav.navbar-nav
+        li.pull-left
+          = link_to :admin_title, admin_dashboard_path
