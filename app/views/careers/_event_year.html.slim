@@ -1,0 +1,13 @@
+.col-xs-6
+  = e.input :radio_button,
+    collection: [[true, { 'data-name'=> 'organizer' }, 'Organizer'], [false, { 'data-name'=> 'city' }, 'City']],
+      label_method: :last,
+      value_method: :first,
+      as: :radio_buttons,
+      item_wrapper_class: 'inline',
+      checked: true,
+      label: false
+.col-xs-6
+  = e.input :organizer_id, as: :select, collection: Event.all.map{ |o| [o.organizer.title, { "data-organizer"=> "organizer-#{o.date.year}" } ]}, label: false, prompt: t('prompts.select_organizer'), input_html: { data: { organizer: 'organizers' } }
+.col-xs-6
+  = e.input :city, as: :select, collection: Event.all.map{ |o| [o.city, { "data-city"=> "city-#{o.date.year}"} ]}.uniq, label: false, input_html: { id: 'career_event_city_id' }, prompt: t('prompts.select_city'), input_html: { data: { city: 'cities' } }

@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   resources :users
   resource :session, only: [:new, :destroy]
   resources :languages, only: :update, constraints: { id: /(ua|ru)/ }
+  resources :careers
 
   namespace :admin do
     resource :session, only: [:new, :create, :destroy]

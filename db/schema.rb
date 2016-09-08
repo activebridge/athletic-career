@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160801082225) do
+ActiveRecord::Schema.define(version: 20160825084458) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -48,6 +48,7 @@ ActiveRecord::Schema.define(version: 20160801082225) do
     t.integer  "category_rank"
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
+    t.integer  "year"
     t.index ["user_id"], name: "index_careers_on_user_id", using: :btree
   end
 
@@ -79,6 +80,8 @@ ActiveRecord::Schema.define(version: 20160801082225) do
     t.integer  "category_id"
     t.integer  "organizer_id"
     t.string   "country"
+    t.integer  "career_id"
+    t.index ["career_id"], name: "index_events_on_career_id", using: :btree
     t.index ["category_id"], name: "index_events_on_category_id", using: :btree
     t.index ["organizer_id"], name: "index_events_on_organizer_id", using: :btree
   end
@@ -104,6 +107,7 @@ ActiveRecord::Schema.define(version: 20160801082225) do
 
   add_foreign_key "distances", "events"
   add_foreign_key "distances", "lengths"
+  add_foreign_key "events", "careers"
   add_foreign_key "events", "categories"
   add_foreign_key "events", "organizers"
 end

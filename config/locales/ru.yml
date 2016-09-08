@@ -10,11 +10,19 @@ ru:
   city: Город
   country: Страна
   date: Дата
+  new_career: Новая карьера
+  prompts:
+    select_year: Выберите год
+    select_city: Выберите город
+    select_name: Выберите название
+    select_organizer: Выберите организатора
+    select_distance: Выберите дистанцию
   links:
     add_distance: Добавить дистанцию
     remove_distance: Убрать дистанцию
     add_future_event: Добавить старый забег
     add_future_event: Добавить новый забег
+    add_career: Добавить карьеру
     back: Назад
     edit: Изменить
     show: Показать

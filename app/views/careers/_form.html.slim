@@ -1,0 +1,21 @@
+h1 =t('new_career')
+.container
+  = simple_form_for @career do |f|
+    .row
+      = f.input :year, as: :select, collection: Event.all.map { |e| e.date.year }.uniq, input_html: { data: { year: 'year' } }, prompt: t('prompts.select_year')
+      = f.simple_fields_for :event do |e|
+        .organizer-and-city#organizer_and_city
+          = render partial: 'event_year', locals: { e: e }
+        .career-event
+          h1 =t('events')
+          = e.input :name, as: :select, collection: Event.all.map { |n| [n.name, { "data-event"=> "name-#{n.city}-#{n.organizer.title}-#{n.date.year}" } ]}, input_html: { data: { events: 'events' } }, prompt: t('prompts.select_name')
+          = e.input :distances, as: :select, collection: Distance.all.map { |d| [d.title, {"data-distance"=>"distance-#{d.event.name}"} ] }, input_html: { data: { distances: 'distances' } }, prompt: t('prompts.select_distance')
+        .career
+          = f.input :race_number
+          = f.input :result, include_seconds: true, prompt: {hour: 'hour', minute: 'min', second: 'sec'}
+          = f.input :net_result, include_seconds: true, prompt: {hour: 'hour', minute: 'min', second: 'sec'}
+          .col-xs-6
+            = f.input :rank
+          .col-xs-6
+            = f.input :category_rank
+    = f.button :submit, class: 'button success'
