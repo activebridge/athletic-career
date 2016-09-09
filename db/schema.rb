@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160825084458) do
+ActiveRecord::Schema.define(version: 20160908142258) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -49,6 +49,11 @@ ActiveRecord::Schema.define(version: 20160825084458) do
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
     t.integer  "year"
+    t.integer  "event_id"
+    t.integer  "distance_id"
+    t.string   "city"
+    t.index ["distance_id"], name: "index_careers_on_distance_id", using: :btree
+    t.index ["event_id"], name: "index_careers_on_event_id", using: :btree
     t.index ["user_id"], name: "index_careers_on_user_id", using: :btree
   end
 
@@ -74,14 +79,13 @@ ActiveRecord::Schema.define(version: 20160825084458) do
     t.string   "logo"
     t.string   "city"
     t.date     "date"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
+    t.datetime "created_at",                   null: false
+    t.datetime "updated_at",                   null: false
     t.string   "banner"
+    t.boolean  "visible",      default: false
     t.integer  "category_id"
     t.integer  "organizer_id"
     t.string   "country"
-    t.integer  "career_id"
-    t.index ["career_id"], name: "index_events_on_career_id", using: :btree
     t.index ["category_id"], name: "index_events_on_category_id", using: :btree
     t.index ["organizer_id"], name: "index_events_on_organizer_id", using: :btree
   end
@@ -105,9 +109,10 @@ ActiveRecord::Schema.define(version: 20160825084458) do
     t.integer  "role",       default: 0
   end
 
+  add_foreign_key "careers", "distances"
+  add_foreign_key "careers", "events"
   add_foreign_key "distances", "events"
   add_foreign_key "distances", "lengths"
-  add_foreign_key "events", "careers"
   add_foreign_key "events", "categories"
   add_foreign_key "events", "organizers"
 end

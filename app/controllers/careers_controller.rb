@@ -6,11 +6,10 @@ class CareersController < ApplicationController
 
   def new
     @career = Career.new
-    @career.events.build
   end
 
   def create
-    @career = Career.new(career_params)
+    @career = Career.new(career_params.merge(user_id: current_user.id))
     return redirect_to careers_path if @career.save
     render :new
   end
@@ -33,8 +32,8 @@ class CareersController < ApplicationController
 
   def career_params
     params.require(:career).permit(
-      :user_id, :race, :distance, :race_number, :result, :net_result, :rank, :category_rank, :year,
-      events_attributes: [:id, :career_id, :name, :organizer_id, :city]
+      :race, :distance, :race_number, :result, :net_result, :rank, :category_rank, :year,
+      :event_id, :city, :distance_id
     )
   end
 end
