@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160908142258) do
+ActiveRecord::Schema.define(version: 20160909092044) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -37,7 +37,12 @@ ActiveRecord::Schema.define(version: 20160908142258) do
     t.index ["user_id"], name: "index_admins_on_user_id", using: :btree
   end
 
-  create_table "careers", force: :cascade do |t|
+  create_table "categories", force: :cascade do |t|
+    t.string  "title"
+    t.boolean "visible", default: false
+  end
+
+  create_table "competitions", force: :cascade do |t|
     t.integer  "user_id"
     t.string   "race"
     t.string   "distance"
@@ -52,14 +57,9 @@ ActiveRecord::Schema.define(version: 20160908142258) do
     t.integer  "event_id"
     t.integer  "distance_id"
     t.string   "city"
-    t.index ["distance_id"], name: "index_careers_on_distance_id", using: :btree
-    t.index ["event_id"], name: "index_careers_on_event_id", using: :btree
-    t.index ["user_id"], name: "index_careers_on_user_id", using: :btree
-  end
-
-  create_table "categories", force: :cascade do |t|
-    t.string  "title"
-    t.boolean "visible", default: false
+    t.index ["distance_id"], name: "index_competitions_on_distance_id", using: :btree
+    t.index ["event_id"], name: "index_competitions_on_event_id", using: :btree
+    t.index ["user_id"], name: "index_competitions_on_user_id", using: :btree
   end
 
   create_table "distances", force: :cascade do |t|
@@ -109,8 +109,8 @@ ActiveRecord::Schema.define(version: 20160908142258) do
     t.integer  "role",       default: 0
   end
 
-  add_foreign_key "careers", "distances"
-  add_foreign_key "careers", "events"
+  add_foreign_key "competitions", "distances"
+  add_foreign_key "competitions", "events"
   add_foreign_key "distances", "events"
   add_foreign_key "distances", "lengths"
   add_foreign_key "events", "categories"

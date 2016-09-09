@@ -10,7 +10,7 @@ ru:
   city: Город
   country: Страна
   date: Дата
-  new_career: Новая карьера
+  new_competition: Новое соревнование
   prompts:
     select_year: Выберите год
     select_city: Выберите город
@@ -22,7 +22,7 @@ ru:
     remove_distance: Убрать дистанцию
     add_future_event: Добавить старый забег
     add_future_event: Добавить новый забег
-    add_career: Добавить карьеру
+    add_competition: Добавить соревнование
     back: Назад
     edit: Изменить
     show: Показать
@@ -42,6 +42,16 @@ ru:
     admin_title: Admin Dashboard
   activerecord:
     attributes:
+      competition:
+        year: Год
+        city: Город
+        event_id: Название забегу
+        distance_id: Дистанция
+        rank: Общая позиция
+        category_rank: Позиция в своей категории
+        race_number: Номер
+        result: Общий результат
+        net_result: Персональный результат
       event:
         name: Название
         site: Сайт

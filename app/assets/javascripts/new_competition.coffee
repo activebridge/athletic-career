@@ -1,5 +1,5 @@
 $(document).on 'change', ->
-  # name = $('input[name="career[event][radio_button]"]:checked').data('name')
+  # name = $('input[name="ccompetition[event][radio_button]"]:checked').data('name')
   year = $('[data-year] option:selected').val()
   # organizer = $('[data-organizer] option:selected').val()
   city = $('[data-city] option:selected').val()
@@ -16,19 +16,19 @@ $(document).on 'change', ->
     $("[data-distances]").prop("selectedIndex", 0)
     showParams(year, name)
 
-  # $('.career_event_radio_button').on 'change', ->
+  # $('.competition_event_radio_button').on 'change', ->
     # $('#organizer_and_city select').hide()
-    # name = $('input[name="career[event][radio_button]"]:checked').data('name')
+    # name = $('input[name="competition[event][radio_button]"]:checked').data('name')
     # $("[data-#{name}]").show()
     # showParams(year, name)
 
   $('[data-city]').on 'change', ->
-    $('.career-event').show()
+    $('.competition-event').show()
     $("[data-events]").prop("selectedIndex", 0)
     showEvent(city, year)
 
   $('[data-events]').on 'change', ->
-    $('.career').show()
+    $('.competition').show()
     showDistance(event_name)
 
 showParams = (year) ->

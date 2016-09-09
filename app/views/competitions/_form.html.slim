@@ -1,15 +1,15 @@
-h1 =t('new_career')
+h1 =t('new_competition')
 .container
-  = simple_form_for @career do |f|
+  = simple_form_for @competition do |f|
     .row
       = f.input :year, as: :select, collection: Event.all.map { |e| e.date.year }.uniq, input_html: { data: { year: 'year' } }, prompt: t('prompts.select_year')
       .organizer-and-city
         = render partial: 'event_year', locals: { f: f }
-      .career-event
+      .competition-event
         h1 =t('events')
         = f.input :event_id, as: :select, collection: Event.all.map { |n| [n.name, n.id, { "data-event"=> "name-#{n.city}-#{n.date.year}" } ]}, input_html: { data: { events: 'events' } }, prompt: t('prompts.select_name'),value_method: :second
-        = f.input :distance_id, as: :select, collection: Distance.all.map { |d| [d.title, {"data-distance"=>"distance-#{d.event.name}"} ] }, input_html: { data: { distances: 'distances' } }, prompt: t('prompts.select_distance')
-      .career
+        = f.input :distance_id, as: :select, collection: Distance.all.map { |d| [d.title, d.id, {"data-distance"=>"distance-#{d.event.id}"} ] }, input_html: { data: { distances: 'distances' } }, prompt: t('prompts.select_distance'), value_method: :second
+      .competition
         = f.input :race_number
         = f.input :result, include_seconds: true, prompt: {hour: 'hour', minute: 'min', second: 'sec'}
         = f.input :net_result, include_seconds: true, prompt: {hour: 'hour', minute: 'min', second: 'sec'}

@@ -2,7 +2,7 @@ class Event < ApplicationRecord
   belongs_to :organizer
   belongs_to :category
 
-  has_many :careers
+  has_many :competitions
   has_many :distances, dependent: :destroy
   accepts_nested_attributes_for :distances, allow_destroy: true
 
