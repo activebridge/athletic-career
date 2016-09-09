@@ -3,3 +3,4 @@ p= image_tag(user.avatar)
 br
 p= link_to :add_past_event, new_event_path(type: 'past')
 p= link_to :add_future_event, new_event_path(type: 'future')
+p= link_to :add_competition, new_competition_path, remote: true

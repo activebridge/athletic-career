@@ -1,4 +1,4 @@
 FactoryGirl.define do
-  factory :career do
+  factory :competition do
   end
 end
