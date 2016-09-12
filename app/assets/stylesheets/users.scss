@@ -1,3 +1,29 @@
 // Place all the styles related to the Users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.avatar {
+  padding: 0;
+  img {
+    margin: 10px 0;
+    width: 100%;
+  }
+}
+.profile-menu {
+  display: block;
+  background: lightgrey;
+  padding-left: 5px;
+  border: 2px solid grey;
+  a {
+    cursor: pointer;
+    text-decoration: none;
+  }
+}
+
+.user-name {
+  text-align: center;
+}
+
+.user-list {
+  border-bottom: 1px solid lightgrey;
+}

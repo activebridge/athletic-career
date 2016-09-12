@@ -1,6 +1,19 @@
-p= user.name
-p= image_tag(user.avatar)
-br
-p= link_to :add_past_event, new_event_path(type: 'past')
-p= link_to :add_future_event, new_event_path(type: 'future')
-p= link_to :add_competition, new_competition_path, remote: true
+.col-xs-12.col-sm-12
+  .col-sm-2.avatar
+    = image_tag(user.avatar)
+    .profile-menu
+      p = link_to :add_past_event, new_event_path(type: 'past')
+      p = link_to :add_future_event, new_event_path(type: 'future')
+      p = link_to :add_competition, new_competition_path, remote: true
+  .col-sm-10.user-name
+    h4
+      = user.name
+.user-career
+  .row
+    - @competitions.each do |c|
+      .col-sm-6.col-md-2.event
+        .thumbnail
+          = image_tag("http://livedemo00.template-help.com/wt_58730/images/carousel-06.jpg")
+        .caption
+          h4
+            = c.event.name
