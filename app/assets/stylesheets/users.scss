@@ -29,17 +29,42 @@
 }
 
 .length-info {
-  padding-right: 25px;
+  padding-left: 20px;
+  padding-right: 60px;
   .medal {
-    width: 75px;
-    height: 75px;
-    background: url(athletic.png) top left no-repeat;
-    background-size: 239px;
-    background-position: -5px -80px;
-    margin-top: 10px;
-    margin-bottom: 15px;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 90px;
+    border-radius: 50%;
+    background: #E7BC56;
+    background-image: linear-gradient(50deg, rgba(0,0,0,.2), rgba(255,255,255,.3));
+    border: 1px solid #8c661f;
+    box-shadow: 0 0 0 4px #CAA045,0 0 0 5px #8c661f;
+    font-weight: bold;
+    font-size: 12px;
+    padding-top: 15px;
+  }
+  .medal::after, .medal::before {
+    content: '';
+    width: 50px;
+    height: 10px;
+    position: absolute;
+    background: #CAA045;
+    z-index: -1;
+  }
+  .medal::before {
+    top: -22px;
+    left: -12px;
+    transform: rotate(60deg);
+  }
+  .medal::after {
+    top: -22px;
+    left: 12px;
+    transform: rotate(-60deg);
   }
   .count {
+    margin: 110px 0 0 20px;
     font-weight: bold;
   }
 }
