@@ -30,7 +30,16 @@
 
 .length-info {
   padding-right: 25px;
-  p {
+  .medal {
+    width: 75px;
+    height: 75px;
+    background: url(athletic.png) top left no-repeat;
+    background-size: 239px;
+    background-position: -5px -80px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+  }
+  .count {
     font-weight: bold;
   }
 }
