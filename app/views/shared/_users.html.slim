@@ -5,3 +5,9 @@
     .col-sm-11.user-name
       h4
         = link_to user.name, user_path(user)
+      table
+        tr
+          - user.distances.counter.each do |k, v|
+            td.length-info
+              p = k
+              = v

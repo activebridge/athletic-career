@@ -1,6 +1,7 @@
 class User < ApplicationRecord
   has_many :accounts, dependent: :delete_all
   has_many :competitions
+  has_many :distances, through: :competitions
 
   enum role: [:user, :admin]
 
