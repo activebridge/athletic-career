@@ -1,5 +1,8 @@
 class CompetitionsController < ApplicationController
-  before_action :find_competition, only: [:show, :edit, :update, :destroy]
+  before_action :competition, only: [:show, :edit, :update, :destroy]
+
+  helper_method :destroyable?
+
   def index
     @competitions = Competition.all
   end
@@ -26,8 +29,12 @@ class CompetitionsController < ApplicationController
 
   private
 
-  def find_competition
-    @competition = Competition.find(params[:id])
+  def destroyable?
+    current_admin || current_user.admin? || competition.user_id == current_user.id
+  end
+
+  def competition
+    @competition ||= Competition.find(params[:id])
   end
 
   def competition_params

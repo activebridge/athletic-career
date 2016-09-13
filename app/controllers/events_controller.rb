@@ -1,5 +1,8 @@
 class EventsController < ApplicationController
-  before_action :find_event, only: [:show, :edit, :update, :destroy]
+  before_action :event, only: [:show, :edit, :update, :destroy]
+
+  helper_method :destroyable?
+
   def index
     @events = Event.all
   end
@@ -27,8 +30,12 @@ class EventsController < ApplicationController
 
   private
 
-  def find_event
-    @event = Event.find(params[:id])
+  def destroyable?
+    current_admin || current_user.admin?
+  end
+
+  def event
+    @event ||= Event.find(params[:id])
   end
 
   def event_params
