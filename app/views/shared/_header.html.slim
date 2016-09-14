@@ -2,8 +2,7 @@ nav.navbar.navbar-fixed-top
   .container-fluid
     .collapse.navbar-collapse
       .nav.navbar-nav
-        .pull-left
-          = nav_link t('links.title'), root_path
+        = link_to '', root_path, class: 'pull-left'
         = nav_link t('links.events'), events_path
         = nav_link t('links.about_us'), new_event_path(type: 'past')
         = nav_link t('links.contacts'),  new_event_path(type: 'future')

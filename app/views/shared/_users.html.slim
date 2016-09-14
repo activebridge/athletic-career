@@ -7,7 +7,7 @@
         = link_to user.name, user_path(user)
       table
         tr
-          - user.distances.counter.each do |k, v|
+          - user.distances.counter.each do |length, count|
             td.length-info
-              .medal = k
-              .count = v
+              .medal class=("length-#{length}").parameterize
+              .count = count
