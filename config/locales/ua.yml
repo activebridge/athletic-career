@@ -20,7 +20,7 @@ ua:
   links:
     add_distance: Додати дистанцію
     remove_distance: Прибрати дистанцію
-    add_past_event: Додати стрий забіг
+    add_past_event: Додати старий забіг
     add_future_event: Додати новий забіг
     add_competition: Додати змагання
     back: Назад

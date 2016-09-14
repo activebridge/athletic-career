@@ -1,3 +1,66 @@
 // Place all the styles related to the Users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.avatar {
+  padding: 0;
+  img {
+    margin: 10px 0;
+    width: 100%;
+  }
+}
+.profile-menu {
+  display: block;
+  background: lightgrey;
+  padding-left: 5px;
+  border: 2px solid grey;
+  a {
+    cursor: pointer;
+    text-decoration: none;
+  }
+}
+
+.user-name {
+  text-align: center;
+}
+
+.user-list {
+  border-bottom: 1px solid lightgrey;
+}
+
+.length-info {
+  padding-right: 25px;
+  .medal {
+    width: 85px;
+    height: 100px;
+    background: url(athletic.png) top left no-repeat;
+    background-size: 290px;
+  }
+  .length{
+    &-ultra {
+      background-position: -99px -99px;
+    }
+    &-42-2 {
+      background-position: -10px -99px;
+    }
+    &-21-1 {
+      background-position: -192px -99px;
+    }
+    &-10 {
+      background-position: -10px -217px;
+    }
+    &-5 {
+      background-position: -99px -217px;
+    }
+    &-3 {
+      background-position: -192px -217px;
+    }
+    &-1 {
+      background-position: -10px -335px;
+    }
+  }
+  .count {
+    margin: 0 0 0 4px;
+    font-weight: bold;
+  }
+}

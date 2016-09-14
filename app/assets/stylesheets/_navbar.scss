@@ -11,7 +11,25 @@
     width: 100%;
     text-align: center;
     .pull-left {
-      font-family: "Montserrat", sans-serif;
+      width: 83px;
+      height: 58px;
+      position: absolute;
+      top: 15px;
+      left: 11px;
+      background: url(athletic.png) top left no-repeat;
+      background-size: 200px;
+      background-position: -119px 0px;
+      &:hover, &:focus {
+        border-bottom: none;
+      }
+    }
+    .logo {
+      width: 52px;
+      height: 45px;
+      top: 3px;
+      left: 6px;
+      background-size: 160px;
+      background-position: -100px 0px;
     }
     span {
       color: $dodgerblue;
@@ -31,7 +49,6 @@
         text-decoration: none;
         color: $dodgerblue;
         border-bottom: 2px solid $dodgerblue;
-        background: $white;
         transition: all .1s ease-in-out;
       }
     }
@@ -43,6 +60,5 @@
 .top-nav {
   padding: 12px 0px;
   font-size: 17px;
-  opacity: 0.7;
 }
 
