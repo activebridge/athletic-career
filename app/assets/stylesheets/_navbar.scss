@@ -16,7 +16,7 @@
       position: absolute;
       top: 15px;
       left: 11px;
-      background: url(athletic.png) top left no-repeat;
+      background: asset-url('athletic.png') top left no-repeat;
       background-size: 200px;
       background-position: -119px 0px;
       &:hover, &:focus {
