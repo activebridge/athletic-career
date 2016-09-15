@@ -1,4 +1,4 @@
-.nested-fields.row.form-inline
-  = f.input :title
-  = f.input :length_id, as: :select, collection: Length.ready
+.nested-fields.row.input_fields_form
+  = f.text_field :title, label: false, placeholder: true
+  = f.input :length_id, as: :select, collection: Length.ready, label: false, prompt: t('prompts.length_id')
   = link_to_remove_association :remove_distance, f

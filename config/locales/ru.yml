@@ -12,6 +12,9 @@ ru:
   date: Дата
   new_competition: Новое соревнование
   prompts:
+    organizer_id: Выберите организатора
+    category_id: Выберите категорию
+    length_id: Выберите длину
     select_year: Выберите год
     select_city: Выберите город
     select_name: Выберите название
@@ -19,7 +22,7 @@ ru:
     select_distance: Выберите дистанцию
   links:
     add_distance: Добавить дистанцию
-    remove_distance: Убрать дистанцию
+    remove_distance: Убрать
     add_future_event: Добавить старый забег
     add_future_event: Добавить новый забег
     add_competition: Добавить соревнование
@@ -40,6 +43,20 @@ ru:
     contacts: Контакты
     title: MyAthleticCareer
     admin_title: Admin Dashboard
+  helpers:
+    placeholder:
+      competition:
+        race_number: Номер
+      distance:
+        title: Название
+        price: Начальная цена
+        end_price: Конечная цена
+      event:
+        name: Имя
+        city: Город
+        site: Сайт
+        description: Опиcание
+        organizer: Организатор
   activerecord:
     attributes:
       competition:
