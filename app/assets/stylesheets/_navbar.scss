@@ -11,14 +11,14 @@
     width: 100%;
     text-align: center;
     .pull-left {
-      width: 83px;
-      height: 58px;
+      width: 70px;
+      height: 55px;
       position: absolute;
       top: 15px;
       left: 11px;
       background: asset-url('athletic.png') top left no-repeat;
-      background-size: 200px;
-      background-position: -119px 0px;
+      background-size: 230px;
+      background-position: -71px 3px;
       &:hover, &:focus {
         border-bottom: none;
       }
@@ -29,7 +29,7 @@
       top: 3px;
       left: 6px;
       background-size: 160px;
-      background-position: -100px 0px;
+      background-position: -51px 3px;
     }
     span {
       color: $dodgerblue;
