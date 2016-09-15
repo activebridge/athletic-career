@@ -1,12 +1,10 @@
 .row
   - events.each do |event|
-    .col-sm-6.col-md-2.event
+    .col-lg-2.col-md-3.col-ms-4.event
       .thumbnail
         = image_tag("http://livedemo00.template-help.com/wt_58730/images/carousel-06.jpg")
       .caption
-        h4
+        h5.name
           = link_to event.name, event_path(event)
-        p
-          = event.description
         p
           = event.date
