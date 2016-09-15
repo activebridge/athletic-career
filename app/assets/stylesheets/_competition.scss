@@ -1,1 +1,26 @@
 .competition-event, .competition { display: none; }
+
+.input_fields_form {
+  .result {
+    input, .form-control {
+      display: inline-block;
+      width: 32.65%;
+    }
+  }
+  input[type=number],input[type=text], .form-control {
+    display: block;
+    width: 100%;
+    height: 50px;
+    font-size: 15px;
+    padding: 7px 18px;
+    line-height: 34px;
+    color: #7e7e90;
+    background: #f7fafd;
+    border: 1px solid #e0e0e8;
+    border-radius: 4px;
+    font-weight: 600;
+    margin: 10px 0;
+  }
+}
+
+

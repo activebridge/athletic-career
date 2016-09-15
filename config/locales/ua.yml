@@ -12,6 +12,9 @@ ua:
   date: Дата
   new_competition: Нове змагання
   prompts:
+    organizer_id: Виберіть організатора
+    category_id: Виберіть категорію
+    length_id: Виберіть довжину
     select_year: Виберіть рік
     select_city: Виберіть місто
     select_name: Виберіть назву
@@ -19,7 +22,7 @@ ua:
     select_distance: Виберіть дистанцію
   links:
     add_distance: Додати дистанцію
-    remove_distance: Прибрати дистанцію
+    remove_distance: Прибрати
     add_past_event: Додати старий забіг
     add_future_event: Додати новий забіг
     add_competition: Додати змагання
@@ -40,6 +43,20 @@ ua:
     contacts: Контакти
     title: MyAthleticCareer
     admin_title: Admin Dashboard
+  helpers:
+    placeholder:
+      competition:
+        race_number: Номер
+      distance:
+        title: Назва
+        price: Початкова ціна
+        end_price: Кінцева ціна
+      event:
+        name: Ім'я
+        city: Місто
+        site: Сайт
+        description: Опиc
+        organizer: Організатор
   activerecord:
     attributes:
       competition:

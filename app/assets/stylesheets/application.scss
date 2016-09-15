@@ -32,3 +32,18 @@ body {
   padding: 15px;
   margin: 0 auto;
 }
+
+.btn-default {
+  position: relative;
+  border: none;
+  color: #fff;
+  background: #298ffc;
+  transition: .3s ease-out;
+  padding: 12px 30px;
+  font-size: 16px;
+  border-radius: 4px;
+  &:hover, &:focus {
+    color: #fff;
+    background: #26263a;
+  }
+}
