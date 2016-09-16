@@ -16,11 +16,14 @@
 @import url(http://fonts.googleapis.com/css?family=Montserrat);
 
 html {
-    position: relative;
-    min-height: 100%;
+  position: relative;
+  min-height: 100%;
 }
 body {
-    margin: 90px 0 100px;
+  min-height: 100%;
+  padding: 90px 0 100px;
+  position: absolute;
+  width: 100%;
 }
 .translation_missing {
   color: red;
