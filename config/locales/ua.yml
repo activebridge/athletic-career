@@ -11,6 +11,7 @@ ua:
   country: Країна
   date: Дата
   new_competition: Нове змагання
+  logo: Вибрати логотип
   prompts:
     organizer_id: Виберіть організатора
     category_id: Виберіть категорію
