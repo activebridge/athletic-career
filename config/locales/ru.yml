@@ -11,6 +11,7 @@ ru:
   country: Страна
   date: Дата
   new_competition: Новое соревнование
+  logo: Выбрать логотип
   prompts:
     organizer_id: Выберите организатора
     category_id: Выберите категорию

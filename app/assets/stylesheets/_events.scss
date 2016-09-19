@@ -102,3 +102,29 @@
     }
   }
 }
+
+.file-upload {
+  width: 20%;
+  .btn-default {
+    padding: 1px;
+    input[type=file] {
+      position: absolute;
+      cursor: pointer;
+      opacity: 0;
+      left: 0;
+      top: 0;
+      width: 100%;
+      padding: 13px;
+    }
+  }
+}
+
+.preview {
+  display: block;
+  width: 20%;
+  padding: 3px;
+  img {
+    width: 100%;
+    height: auto;
+  }
+}

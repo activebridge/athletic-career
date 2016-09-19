@@ -3,8 +3,12 @@ h1=t('running_event')
   = simple_form_for @event do |f|
     .row
       = f.error_notification
-      = f.input :logo, class: :file, label: false
-      = f.hidden_field(:logo_cache)
+      .file-upload
+        .btn-default
+          = f.hidden_field :logo_cache
+          = f.input :logo, label: t('logo')
+      .preview
+        = image_tag(@event.logo_url) if @event.logo?
       .input_fields_form
         = f.text_field :name, label: false, placeholder: true
         = f.input :date, as: :date, html5: true, label: false
