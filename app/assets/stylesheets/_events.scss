@@ -61,7 +61,6 @@
     min-height: 50px;
     a {
       color: $black;
-      font-weight: 600;
       transition: .3s ease-out;
       cursor: pointer;
       text-decoration: none;
@@ -98,6 +97,22 @@
       .fa {
         color: $lavender;
       }
+    }
+  }
+}
+
+.file-upload {
+  width: 20%;
+  .btn-default {
+    padding: 1px;
+    input[type=file] {
+      position: absolute;
+      cursor: pointer;
+      opacity: 0;
+      left: 0;
+      top: 0;
+      width: 100%;
+      padding: 13px;
     }
   }
 }
