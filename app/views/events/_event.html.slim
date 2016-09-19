@@ -1,0 +1,15 @@
+.card
+  .card-img
+    = link_to event_path(event)
+      = image_tag("http://m.art-portrets.ru/pict2/johnny-depp-portrait.jpg")
+      / = image_tag event.logo_url(:large)
+  .card-block
+    h4.card-title
+      = link_to event.name, event_path(event)
+    .card-info
+      .card-text
+        = event.city
+      .card-date
+        .fa.fa-calendar
+        =< event.date
+
