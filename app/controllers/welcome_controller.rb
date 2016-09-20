@@ -1,10 +1,6 @@
 class WelcomeController < ApplicationController
-  if Rails.env.production?
-    layout 'before_start'
-    skip_before_action :require_admin
-  else
-    skip_before_action :require_user
-  end
+  layout 'before_start'
+  skip_before_action :require_user
 
   def index
     @events = Event.all

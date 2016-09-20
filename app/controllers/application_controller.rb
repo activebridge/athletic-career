@@ -1,8 +1,7 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   before_action :set_locale
-  before_action :require_user if Rails.env.development? || Rails.env.test?
-  before_action :require_admin if Rails.env.production?
+  before_action :require_user
 
   private
 

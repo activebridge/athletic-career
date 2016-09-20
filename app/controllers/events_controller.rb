@@ -1,6 +1,6 @@
 class EventsController < ApplicationController
   before_action :event, only: [:show, :edit, :update, :destroy]
-  before_action :require_user, only: [:new, :create, :edit, :update, :destroy] if Rails.env.development? || Rails.env.test?
+  before_action :require_user, only: [:new, :create, :edit, :update, :destroy]
   helper_method :destroyable?
 
   def index
