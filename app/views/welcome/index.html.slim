@@ -1,2 +1,5 @@
-= render 'shared/banner'
-= render partial: 'shared/events', locals: { events: Event.last(5) }
+- if Rails.env.production?
+  = render 'shared/before_start'
+- else
+  = render 'shared/banner'
+  = render partial: 'shared/events', locals: { events: Event.last(5) }

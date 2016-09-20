@@ -1,0 +1,32 @@
+body {
+  margin: 0;
+  height: 100vh;
+  background: linear-gradient(0deg, rgb(69,92,88), rgb(105,119,111)) no-repeat;
+}
+.arch {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%) translateY(30%);
+  width: 750px;
+  height: 380px;
+  background: asset-url("arch.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.clock {
+  position: absolute;
+  top: 94px;
+  left: 50%;
+  width: 444px;
+  transform: translateX(-50%);
+  text-align: center;
+  .block {
+    display: inline-block;
+    margin: 11px;
+    font-size: 61px;
+    span {
+      opacity: .7;
+      letter-spacing: 12px;
+    }
+  }
+}

@@ -1,0 +1,9 @@
+doctype 5
+html lang='en' class='no-js'
+  head
+    title MyAthleticCareer
+    = csrf_meta_tags
+    = stylesheet_link_tag    'before_start', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_include_tag 'before_start', 'data-turbolinks-track': 'reload'
+  body
+    = yield
