@@ -13,13 +13,17 @@
 @import 'users';
 
 /* Fonts */
-@import url(http://fonts.googleapis.com/css?family=Montserrat);
+@font-face {
+  font-family: "ComfortaaRegular";
+  src: font-url("ComfortaaRegular.woff");
+}
 
 html {
   position: relative;
   min-height: 100%;
 }
 body {
+  font-family: 'ComfortaaRegular';
   min-height: 100%;
   padding: 90px 0 100px;
   position: absolute;
@@ -38,6 +42,8 @@ body {
 
 .btn-default {
   position: relative;
+  margin: 2px;
+  text-align: center;
   border: none;
   color: #fff;
   background: #298ffc;

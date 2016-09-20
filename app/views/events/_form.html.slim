@@ -3,8 +3,10 @@ h1=t('running_event')
   = simple_form_for @event do |f|
     .row
       = f.error_notification
-      = f.input :logo, class: :file, label: false
-      = f.hidden_field(:logo_cache)
+      .file-upload
+        .btn-default
+          = f.input :logo, label: 'Логотип'
+          = f.hidden_field(:logo_cache)
       .input_fields_form
         = f.text_field :name, label: false, placeholder: true
         = f.input :date, as: :date, html5: true, label: false
@@ -18,7 +20,7 @@ h1=t('running_event')
     .row
       = f.simple_fields_for :distances do |d|
       - if params[:type] == 'past'
-        = link_to_add_association :add_distance, f, :distances, partial: 'distance_fields_past', class: 'btn btn-success'
+        = link_to_add_association :add_distance, f, :distances, partial: 'distance_fields_past', class: 'btn btn-default'
       - else
-        = link_to_add_association :add_distance, f, :distances, class: 'btn btn-success'
-    = f.button :submit, class: 'button success'
+        = link_to_add_association :add_distance, f, :distances, class: 'btn btn-default'
+    = f.button :submit, class: 'btn-default'
