@@ -10,10 +10,10 @@ h1 =t('new_competition')
         = f.input :event_id, as: :select, collection: Event.all.map { |n| [n.name, n.id, { "data-event"=> "name-#{n.city}-#{n.date.year}" } ]}, input_html: { data: { events: 'events' } }, prompt: t('prompts.select_name'),value_method: :second, label: false
         = f.input :distance_id, as: :select, collection: Distance.all.map { |d| [d.title, d.id, {"data-distance"=>"distance-#{d.event.id}"} ] }, input_html: { data: { distances: 'distances' } }, prompt: t('prompts.select_distance'), value_method: :second, label: false
       .competition
-        = f.text_field :race_number, label: false, placeholder: true
+        = f.input :race_number, label: false, input_html: { placeholder: true }
         .result
           = f.input :result, include_seconds: true, prompt: {hour: 'hour', minute: 'min', second: 'sec'}
           = f.input :net_result, include_seconds: true, prompt: {hour: 'hour', minute: 'min', second: 'sec'}
-        = f.text_field :rank, label: false, placeholder: true
-        = f.text_field :category_rank, label: false, placeholder: true
+        = f.input :rank, label: false, input_html: { placeholder: true }
+        = f.input :category_rank, label: false, input_html: { placeholder: true }
     = f.button :submit, class: 'button success'

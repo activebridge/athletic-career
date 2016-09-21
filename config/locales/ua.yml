@@ -85,6 +85,27 @@ ua:
         length_id: Довжина
     errors:
       models:
+        competition:
+          attributes:
+            year:
+              blank: Повинно бути заповнене
+            city:
+              blank: Повинно бути заповнене
+            event_id:
+              blank: Повинно бути заповнене
+            distance_id:
+              blank: Повинно бути заповнене
+            race_number:
+              blank: Повинно бути заповнене
+            result:
+              blank: Повинно бути заповнене
+            net_result:
+              blank: Повинно бути заповнене
+            rank:
+              blank: Повинно бути заповнене
+            category_rank:
+              less_than_or_equal_to: Позиція в своїй категорії не може бути більша, ніж загальна позиція
+              blank: Повинно бути заповнене
         event:
           attributes:
             date:

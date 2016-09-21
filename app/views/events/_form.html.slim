@@ -8,14 +8,14 @@ h1=t('running_event')
           = f.input :logo, label: 'Логотип'
           = f.hidden_field(:logo_cache)
       .input_fields_form
-        = f.text_field :name, label: false, placeholder: true
+        = f.input :name, label: false, input_html: { placeholder: true }
         = f.input :date, as: :date, html5: true, label: false
         = f.input :country, as: :country, selected: "UA", label: false
-        = f.text_field :city, label: false, placeholder: true
+        = f.input :city, label: false, input_html: { placeholder: true }
         = f.input :organizer_id, as: :select, collection: Organizer.ready, label: false, prompt: t('prompts.organizer_id')
         = f.input :category_id, as: :select, collection: Category.ready, label: false, prompt: t('prompts.category_id')
-        = f.text_field :site, label: false, placeholder: true
-        = f.text_field :description, label: false, placeholder: true
+        = f.input :site, label: false, input_html: { placeholder: true }
+        = f.input :description, label: false, input_html: { placeholder: true }
     h1 =t('distances')
     .row
       = f.simple_fields_for :distances do |d|
