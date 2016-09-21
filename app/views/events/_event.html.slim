@@ -1,8 +1,7 @@
 .card
   .card-img
     = link_to event_path(event)
-      = image_tag("http://m.art-portrets.ru/pict2/johnny-depp-portrait.jpg")
-      / = image_tag event.logo_url(:large)
+      = event_logo(event)
   .card-block
     h4.card-title
       = link_to event.name, event_path(event)

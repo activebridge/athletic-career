@@ -39,8 +39,8 @@ ua:
     fb_signin: Увійти через Facebook
     add_event: Додати забіг
     events: Забіги
-    about_us: Про нас
-    contacts: Контакти
+    add_past_event: Минулий забіг
+    add_future_event: Найблищий забіг
     title: MyAthleticCareer
     admin_title: Admin Dashboard
   helpers:

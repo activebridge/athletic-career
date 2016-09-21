@@ -13,7 +13,7 @@
     - @competitions.each do |c|
       .col-sm-6.col-md-2.event
         .thumbnail
-          = image_tag("http://livedemo00.template-help.com/wt_58730/images/carousel-06.jpg")
+          = event_logo(c.event)
         .caption
           h4
             = c.event.name

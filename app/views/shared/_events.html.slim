@@ -2,7 +2,7 @@
   - events.each do |event|
     .col-lg-2.col-md-3.col-ms-4.event
       .thumbnail
-        = image_tag("http://livedemo00.template-help.com/wt_58730/images/carousel-06.jpg")
+        = event_logo(event)
       .caption
         h5.name
           = link_to event.name, event_path(event)
