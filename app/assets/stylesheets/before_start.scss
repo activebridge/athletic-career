@@ -1,5 +1,5 @@
 body {
-  font-family: "Arial",  sans-serif;
+  font-family: "Droid Sans Mono";
   margin: 0;
   height: 100vh;
   background: linear-gradient(0deg, rgb(69,92,88), rgb(105,119,111)) no-repeat;
@@ -16,18 +16,18 @@ body {
 }
 .clock {
   position: absolute;
-  top: 95px;
+  top: 91px;
   left: 47.5%;
   width: 459px;
   transform: translateX(-45.5%);
   text-align: center;
   .block {
     display: inline-block;
-    margin: 10px;
+    margin: 7px;
     font-size: 59px;
     span {
-      opacity: .7;
-      letter-spacing: 11px;
+      opacity: .6;
+      letter-spacing: 12px;
     }
   }
 }
