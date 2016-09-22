@@ -1,6 +1,6 @@
 .nested-fields.row.input_fields_form
-  = f.text_field :title, label: false, placeholder: true
+  = f.input :title, label: false, input_html: { placeholder: true }
   = f.input :length_id, as: :select, collection: Length.ready, label: false, prompt: t('prompts.length_id')
-  = f.number_field :price, label: false, placeholder: true
-  = f.number_field :end_price, label: false, placeholder: true
+  = f.input :price, label: false, input_html: { placeholder: true }
+  = f.input :end_price, label: false, input_html: { placeholder: true }
   = link_to_remove_association :remove_distance, f

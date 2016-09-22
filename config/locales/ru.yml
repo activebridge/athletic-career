@@ -85,6 +85,27 @@ ru:
         length_id: Длина
     errors:
       models:
+        competition:
+          attributes:
+            year:
+              blank: Должно быть заполненое
+            city:
+              blank: Должно быть заполненое
+            event_id:
+              blank: Должно быть заполненое
+            distance_id:
+              blank: Должно быть заполненое
+            race_number:
+              blank: Должно быть заполненое
+            result:
+              blank: Должно быть заполненое
+            net_result:
+              blank: Должно быть заполненое
+            rank:
+              blank: Должно быть заполненое
+            category_rank:
+              less_than_or_equal_to: Позиция в своей категории не может быть больше, чем общая позиция
+              blank: Должно быть заполненое
         event:
           attributes:
             date:
