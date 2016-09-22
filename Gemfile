@@ -24,7 +24,6 @@ gem 'cloudinary'
 gem 'carrierwave'
 gem 'carrierwave-base64'
 gem 'rollbar'
-gem 'bullet', '~> 5.1.1'
 gem 'country_select'
 gem 'cocoon'
 gem 'bootstrap-sass', '~> 3.3.6'
@@ -58,6 +57,7 @@ group :development do
   gem 'rspec-retry', '~> 0.4.5'
   gem 'rspec-mocks', '~> 3.5.0'
   gem 'sprockets', '~> 3.6.3'
+  gem 'bullet', '~> 5.1.1'
 end
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]

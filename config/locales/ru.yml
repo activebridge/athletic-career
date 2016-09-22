@@ -1,6 +1,6 @@
 ru:
   no_account: Нету аккаунта
-  are_you_sure: Вы уверены
+  are_you_sure: Вы уверены?
   events: Забеги
   running_event: Беговое событие
   edit_event: Изменить забег
@@ -23,7 +23,7 @@ ru:
   links:
     add_distance: Добавить дистанцию
     remove_distance: Убрать
-    add_future_event: Добавить старый забег
+    add_past_event: Добавить старый забег
     add_future_event: Добавить новый забег
     add_competition: Добавить соревнование
     back: Назад
@@ -39,8 +39,6 @@ ru:
     fb_signin: Войти с помощью Facebook
     add_event: Добавить забег
     events: Забеги
-    add_past_event: Прошлый забeг
-    add_future_event: Ближайший забег
     title: MyAthleticCareer
     admin_title: Admin Dashboard
   helpers:
