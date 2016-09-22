@@ -4,7 +4,7 @@ nav.navbar.navbar-fixed-top
       .nav.navbar-nav
         = link_to '', root_path, class: 'pull-left'
         = nav_link t('links.events'), events_path
-        = nav_link t('links.about_us'), new_event_path(type: 'past')
-        = nav_link t('links.contacts'),  new_event_path(type: 'future')
+        = nav_link t('links.add_past_event'), new_event_path(type: 'past')
+        = nav_link t('links.add_future_event'),  new_event_path(type: 'future')
         .pull-right
           = render 'shared/dropdown'

@@ -39,8 +39,8 @@ ru:
     fb_signin: Войти с помощью Facebook
     add_event: Добавить забег
     events: Забеги
-    about_us: Про нас
-    contacts: Контакты
+    add_past_event: Прошлый забeг
+    add_future_event: Ближайший забег
     title: MyAthleticCareer
     admin_title: Admin Dashboard
   helpers:
