@@ -1,9 +1,10 @@
-class Admin::LengthsController < AdminsController
+class LengthsController < ApplicationController
+  before_action :require_user, except: [:index, :show]
   expose :lengths, -> { Length.all.order(mark: :asc) }
   expose :length
 
   def create
-    return redirect_to admin_lengths_path if length.update(length_params)
+    return redirect_to lengths_path if length.update(length_params)
     render :new
   end
 
@@ -13,7 +14,7 @@ class Admin::LengthsController < AdminsController
 
   def destroy
     length.destroy
-    redirect_to admin_lengths_url, notice: 'Length was successfully destroyed.'
+    redirect_to lengths_url, notice: t('length_destroyed')
   end
 
   private

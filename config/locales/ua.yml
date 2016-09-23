@@ -1,6 +1,9 @@
 ua:
   past: Минулі
   future: Майбутні
+  length_destroyed: Довжина була успішно видалена
+  not_found_distance: не знайшли дистанцію в якій приймали участь, ви можете
+  variant: свій варіант
   no_account: Немає аккаунта
   are_you_sure: Ви впевнені
   events: Забіги
@@ -24,6 +27,7 @@ ua:
     select_distance: Виберіть дистанцію
   links:
     more: Показати більше
+    sentence: запропонувати
     add_distance: Додати дистанцію
     remove_distance: Прибрати
     add_past_event: Додати старий забіг

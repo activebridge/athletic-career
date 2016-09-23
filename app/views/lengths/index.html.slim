@@ -1,0 +1,7 @@
+- if current_user
+  h5
+    => t('not_found_distance')
+    => link_to :sentence, new_length_path
+    = t('variant')
+  - lengths.ready.each do |a|
+    p = link_to a.title, length_path(a)
