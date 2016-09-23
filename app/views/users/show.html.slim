@@ -10,7 +10,7 @@
       = user.name
 .user-career
   .row
-    - @competitions.each do |c|
+    - competitions.each do |c|
       .col-sm-6.col-md-2.event
         .thumbnail
           = event_logo(c.event)
