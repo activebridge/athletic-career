@@ -49,6 +49,13 @@ ru:
     title: MyAthleticCareer
     admin_title: Admin Dashboard
   helpers:
+    submit:
+      event:
+        create: Создать забег
+      competition:
+        create: Создать соревнование
+      length:
+        create: Добавить дистанцию
     placeholder:
       competition:
         race_number: Номер

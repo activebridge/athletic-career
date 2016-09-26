@@ -51,7 +51,16 @@ ua:
     title: MyAthleticCareer
     admin_title: Admin Dashboard
   helpers:
+    submit:
+      event:
+        create: Створити забіг
+      competition:
+        create: Створити змагання
+      length:
+        create: Додати дистанцію
     placeholder:
+      length:
+        title: Назва
       competition:
         race_number: Номер
       distance:
