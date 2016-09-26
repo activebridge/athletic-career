@@ -1,7 +1,6 @@
 = simple_form_for length, as: :length, url: url do |f|
   = f.error_notification
   = f.input :title
-  = f.hidden_field :visible, value: true
+  = f.input :visible, as: :select
   = f.input :mark
-
   = f.button :submit

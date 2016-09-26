@@ -4,13 +4,15 @@ table.table
   thead
     tr
       th Title
-      th Edit
-      th Destroy
+      th Mark
+      th Visible
 
   tbody
     - lengths.each do |length|
       tr
         td = length.title
+        td = length.mark
+        td = length.visible
         td = link_to 'Edit', edit_admin_length_path(length)
         td = link_to 'Destroy', admin_length_path(length), data: { confirm: 'Are you sure?' }, method: :delete
 

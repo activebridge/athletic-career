@@ -72,13 +72,8 @@ input[type=submit].btn-default{
     }
   }
 }
-.input_fields_form {
-  .result {
-    input, .form-control {
-      display: inline-block;
-      width: 32.65%;
-    }
-  }
+.result {
+  text-align: center;
 }
 .form-control {
   display: block;
