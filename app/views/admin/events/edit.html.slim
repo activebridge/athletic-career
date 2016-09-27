@@ -1,0 +1,6 @@
+h1
+  strong Edit #{event.name}
+
+== render 'form', url: admin_event_path(event)
+
+= link_to 'Back', admin_events_path

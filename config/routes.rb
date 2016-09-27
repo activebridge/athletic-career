@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 
   resources :events, except: :new
   scope ':type', constraints: { type: /past|future/ } do
-    resources :events, only: :new
+    resources :events, only: :new, controller: 'events'
   end
   resources :welcome, only: :index, path: 'dashboard'
   resources :users
@@ -16,6 +16,7 @@ Rails.application.routes.draw do
     resources :organizers
     resources :lengths
     resources :categories
+    resources :events
     get '/', to: 'dashboards#show', as: :dashboard
   end
 

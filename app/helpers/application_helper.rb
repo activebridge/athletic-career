@@ -13,7 +13,7 @@ module ApplicationHelper
     if event.logo.present?
       cl_image_tag event.logo.url(:large)
     else
-      image_tag('http://m.art-portrets.ru/pict2/johnny-depp-portrait.jpg')
+      image_tag('default.jpg')
     end
   end
 end
