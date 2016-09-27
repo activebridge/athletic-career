@@ -4,7 +4,7 @@ class EventsController < ApplicationController
   helper_method :destroyable?
 
   def index
-    @events = Event.all
+    @events = Event.ready
   end
 
   def new

@@ -11,4 +11,5 @@ class Event < ApplicationRecord
 
   scope :past, -> { where('date < ?', Date.current) }
   scope :future, -> { where('date > ?', Date.current) }
+  scope :ready, -> { where(visible: true) }
 end
