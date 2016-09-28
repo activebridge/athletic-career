@@ -2,12 +2,12 @@
   = render 'shared/before_start'
 - else
   = render 'shared/banner'
-  - if @events.past.present?
+  - if events.past.present?
     .title
       = t('past')
     = render partial: 'shared/events', locals: { events: Event.past.last(5) }
     = link_to :more, '/past/events'
-  - if @events.future.present?
+  - if events.future.present?
     .title
       = t('future')
     = render partial: 'shared/events', locals: { events: Event.future.last(5) }
