@@ -13,7 +13,7 @@ module ApplicationHelper
     if event.logo.present?
       cl_image_tag event.logo.url(:large)
     else
-      image_tag('default.jpg')
+      image_tag('default.png')
     end
   end
 end
