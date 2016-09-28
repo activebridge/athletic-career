@@ -1,4 +1,6 @@
 ua:
+  past: Минулі
+  future: Майбутні
   no_account: Немає аккаунта
   are_you_sure: Ви впевнені
   events: Забіги
@@ -21,6 +23,7 @@ ua:
     select_organizer: Виберіть організатора
     select_distance: Виберіть дистанцію
   links:
+    more: Показати більше
     add_distance: Додати дистанцію
     remove_distance: Прибрати
     add_past_event: Додати старий забіг
@@ -39,8 +42,8 @@ ua:
     fb_signin: Увійти через Facebook
     add_event: Додати забіг
     events: Забіги
-    add_past_event: Минулий забіг
-    add_future_event: Найблищий забіг
+    add_past_event: Додати минулий забіг
+    add_future_event: Додати найблищий забіг
     title: MyAthleticCareer
     admin_title: Admin Dashboard
   helpers:

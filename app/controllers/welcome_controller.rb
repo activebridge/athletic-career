@@ -3,6 +3,6 @@ class WelcomeController < ApplicationController
   skip_before_action :require_user
 
   def index
-    @events = Event.all
+    @events = Event.ready
   end
 end

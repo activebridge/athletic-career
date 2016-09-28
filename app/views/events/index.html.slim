@@ -1,12 +1,23 @@
 - if current_user
   .events-side
-    - @events.each do |event|
-      .col-lg-6.col-md-12.col-sm-12
-        = render partial: 'event', locals: { event: event }
+    - if params[:type] == 'past'
+      - @events.past.each do |event|
+        .col-lg-6.col-md-12.col-sm-12
+          = render partial: 'event', locals: { event: event }
+    - else
+      - @events.future.each do |event|
+        .col-lg-6.col-md-12.col-sm-12
+          = render partial: 'event', locals: { event: event }
+
   .user-information-side
     h1 Right side
 - else
   .unregistered-user
-    - @events.each do |event|
+  - if params[:type] == 'past'
+    - @events.past.each do |event|
+      .col-lg-4.col-md-6.col-sm-6
+        = render partial: 'event', locals: { event: event }
+  - else
+    - @events.future.each do |event|
       .col-lg-4.col-md-6.col-sm-6
         = render partial: 'event', locals: { event: event }

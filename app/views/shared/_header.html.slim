@@ -3,7 +3,6 @@ nav.navbar.navbar-fixed-top
     .collapse.navbar-collapse
       .nav.navbar-nav
         = link_to '', root_path, class: 'pull-left'
-        = nav_link :events, events_path
         = nav_link :add_past_event, new_event_path(type: 'past')
         = nav_link :add_future_event, new_event_path(type: 'future')
         .pull-right
