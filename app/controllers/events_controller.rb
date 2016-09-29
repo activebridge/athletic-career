@@ -1,5 +1,4 @@
 class EventsController < ApplicationController
-  before_action :event, only: [:show, :edit, :update, :destroy]
   before_action :require_user, only: [:new, :create, :edit, :update, :destroy]
   helper_method :destroyable?
 
@@ -11,12 +10,13 @@ class EventsController < ApplicationController
   end
 
   def create
-    return redirect_to root_path if event.update(event_params)
+    return redirect_to root_path if event.save
     render :new
   end
 
   def update
-    create
+    return redirect_to root_path if event.update(event_params)
+    render :edit
   end
 
   def destroy
