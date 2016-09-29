@@ -2,6 +2,7 @@ class LengthsController < ApplicationController
   before_action :require_user, except: [:index, :show]
   expose :lengths, -> { Length.all.order(mark: :asc) }
   expose :length
+  expose :events, -> { Event.joins(:distances).where(distances: { length_id: length.id }) }
 
   def create
     return redirect_to lengths_path if length.update(length_params)
