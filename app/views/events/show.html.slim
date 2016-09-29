@@ -1,19 +1,19 @@
 .col-lg-4.col-sm-4.col-xs-11.show
-  = event_logo(@event)
+  = event_logo(event)
 .col-lg-7.col-sm-7.col-xs-11.show
   p
     strong =>t('name')
-    = @event.name
+    = event.name
   p
-    strong =>t('description') if @event.description.present?
-    = @event.description
+    strong =>t('description') if event.description.present?
+    = event.description
   p
     strong =>t('city')
-    = @event.city
+    = event.city
   p
     strong =>t('date')
-    = @event.date
+    = event.date
 
-  => link_to :edit, edit_event_path(@event)
+  => link_to :edit, edit_event_path(event)
   '|
   = link_to :back, events_path
