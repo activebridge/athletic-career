@@ -10,6 +10,6 @@ class Event < ApplicationRecord
   mount_base64_uploader :logo, LogoUploader
 
   scope :past, -> { where('date < ?', Date.current) }
-  scope :future, -> { where('date > ?', Date.current) }
+  scope :future, -> { where('date >= ?', Date.current) }
   scope :ready, -> { where(visible: true) }
 end

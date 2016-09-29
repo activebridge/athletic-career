@@ -1,4 +1,6 @@
 ru:
+  past: Прошлые
+  future: Будущие
   no_account: Нету аккаунта
   are_you_sure: Вы уверены?
   events: Забеги
@@ -21,6 +23,7 @@ ru:
     select_organizer: Выберите организатора
     select_distance: Выберите дистанцию
   links:
+    more: Показать больше
     add_distance: Добавить дистанцию
     remove_distance: Убрать
     add_past_event: Добавить старый забег

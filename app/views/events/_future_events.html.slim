@@ -1,0 +1,7 @@
+- events.future.each do |event|
+  - if current_user
+    .col-lg-6.col-md-12.col-sm-12
+      = render partial: 'event', locals: { event: event }
+  - else
+    .col-lg-4.col-md-6.col-sm-6
+      = render partial: 'event', locals: { event: event }

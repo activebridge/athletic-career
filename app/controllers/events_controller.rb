@@ -3,39 +3,31 @@ class EventsController < ApplicationController
   before_action :require_user, only: [:new, :create, :edit, :update, :destroy]
   helper_method :destroyable?
 
-  def index
-    @events = Event.ready
-  end
+  expose :events, -> { Event.ready }
+  expose :event
 
   def new
-    @event = Event.new
-    @event.distances.build
+    event.distances.build
   end
 
   def create
-    @event = Event.new(event_params)
-    return redirect_to events_path if @event.save
+    return redirect_to root_path if event.update(event_params)
     render :new
   end
 
   def update
-    return redirect_to events_path if @event.update(event_params)
-    render :edit
+    create
   end
 
   def destroy
-    @event.destroy
-    redirect_to events_url, notice: 'Event was successfully destroyed.'
+    event.destroy
+    redirect_to root_url
   end
 
   private
 
   def destroyable?
     current_admin || current_user.admin?
-  end
-
-  def event
-    @event ||= Event.find(params[:id])
   end
 
   def event_params
