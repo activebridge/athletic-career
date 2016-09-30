@@ -15,6 +15,7 @@ ru:
   city: Город
   country: Страна
   date: Дата
+  competitions: Соревнования
   new_competition: Новое соревнование
   prompts:
     organizer_id: Выберите организатора

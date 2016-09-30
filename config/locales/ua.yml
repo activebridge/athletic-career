@@ -15,6 +15,7 @@ ua:
   city: Місто
   country: Країна
   date: Дата
+  competitions: Змагання
   new_competition: Нове змагання
   prompts:
     organizer_id: Виберіть організатора
