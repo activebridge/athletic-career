@@ -3,5 +3,5 @@ class UsersController < ApplicationController
 
   expose :users, -> { User.all }
   expose :user
-  expose :competitions, -> { user.competitions }
+  expose :competitions, -> { user.competitions.includes(:event) }
 end

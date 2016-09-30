@@ -1,7 +1,7 @@
 class CompetitionsController < ApplicationController
   helper_method :destroyable?
 
-  expose :competitions, -> { current_user.competitions }
+  expose :competitions, -> { current_user.competitions.includes(:event) }
   expose :competition
 
   def create
