@@ -1,15 +1,8 @@
 class CompetitionsController < ApplicationController
-  before_action :competition, only: [:show, :edit, :update, :destroy]
-
   helper_method :destroyable?
 
-  def index
-    @competitions = Competition.all
-  end
-
-  def new
-    @competition = Competition.new
-  end
+  expose :competitions, -> { current_user.competitions.includes(:event) }
+  expose :competition
 
   def create
     @competition = Competition.new(competition_params.merge(user_id: current_user.id))
@@ -18,12 +11,12 @@ class CompetitionsController < ApplicationController
   end
 
   def update
-    return redirect_to competitions_path if @competition.update(competition_params)
+    return redirect_to competitions_path if competition.update(competition_params)
     render :edit
   end
 
   def destroy
-    @competition.destroy
+    competition.destroy
     redirect_to competition_path, notice: 'Competition was successfully destroyed'
   end
 
@@ -31,10 +24,6 @@ class CompetitionsController < ApplicationController
 
   def destroyable?
     current_admin || current_user.admin? || competition.user_id == current_user.id
-  end
-
-  def competition
-    @competition ||= Competition.find(params[:id])
   end
 
   def competition_params
