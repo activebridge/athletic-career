@@ -5,10 +5,12 @@
   - if events.past.present?
     .title
       = t('past')
-    = render partial: 'shared/events', locals: { events: events.past.last(5) }
+    .row
+      = render partial: 'shared/events', collection: events.past.last(5), as: :event
     = link_to :more, '/past/events'
   - if events.future.present?
     .title
       = t('future')
-    = render partial: 'shared/events', locals: { events: events.future.last(5) }
+    .row
+      = render partial: 'shared/events', collection: events.future.last(5), as: :event
     = link_to :more, '/future/events'

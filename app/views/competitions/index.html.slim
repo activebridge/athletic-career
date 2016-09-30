@@ -1,4 +1,2 @@
 h1 =t('competitions')
-- @competitions.each do |c|
-  p
-    = c.event.name
+= render partial: 'competition', collection: @competitions, as: :competition
