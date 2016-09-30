@@ -1,1 +1,6 @@
 .competition-event, .competition { display: none; }
+
+input[type="submit"]:disabled {
+  background: $gray;
+  cursor: not-allowed;
+}

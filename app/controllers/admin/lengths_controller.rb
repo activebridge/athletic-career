@@ -1,5 +1,5 @@
 class Admin::LengthsController < AdminsController
-  expose :lengths, -> { Length.all }
+  expose :lengths, -> { Length.all.order(mark: :asc) }
   expose :length
 
   def create

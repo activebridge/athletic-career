@@ -12,8 +12,10 @@ h1 =t('new_competition')
       .competition
         = f.input :race_number, label: false, input_html: { placeholder: true }
         .result
-          = f.input :result, include_seconds: true, prompt: {hour: 'hour', minute: 'min', second: 'sec'}
-          = f.input :net_result, include_seconds: true, prompt: {hour: 'hour', minute: 'min', second: 'sec'}
+          .col-lg-6.col-md-6.col-sm-6.col-xs-6
+            = f.input :result, include_seconds: true, prompt: {hour: 'hour', minute: 'min', second: 'sec'}
+          .col-lg-6.col-md-6.col-sm-6.col-xs-6
+            = f.input :net_result, include_seconds: true, prompt: {hour: 'hour', minute: 'min', second: 'sec'}
         = f.input :rank, label: false, input_html: { placeholder: true }
         = f.input :category_rank, label: false, input_html: { placeholder: true }
-    = f.button :submit, class: 'button success'
+    = f.button :submit, class: 'button success', id: 'competition_submit', disabled: true

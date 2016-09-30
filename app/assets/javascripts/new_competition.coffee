@@ -1,4 +1,17 @@
 $(document).on 'change', ->
+  $('form#new_competition').on 'change', ->
+    $submit = $('input[type=submit]')
+    $inputs = $('input[type=number], select')
+
+    checkEmpty = ->
+      $inputs.filter(->
+        !$.trim(@value)
+      ).length == 0
+
+    $inputs.on('blur', ->
+      $submit.prop 'disabled', !checkEmpty()
+    ).blur()
+
   # name = $('input[name="ccompetition[event][radio_button]"]:checked').data('name')
   year = $('[data-year] option:selected').val()
   # organizer = $('[data-organizer] option:selected').val()

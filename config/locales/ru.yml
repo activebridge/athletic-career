@@ -1,6 +1,9 @@
 ru:
   past: Прошлые
   future: Будущие
+  length_destroyed: Длина была успешно удалена
+  not_found_distance: не найшли дистанцию в которой принимали участие, вы можете
+  variant:  свой вариант
   no_account: Нету аккаунта
   are_you_sure: Вы уверены?
   events: Забеги
@@ -12,6 +15,7 @@ ru:
   city: Город
   country: Страна
   date: Дата
+  competitions: Соревнования
   new_competition: Новое соревнование
   prompts:
     organizer_id: Выберите организатора
@@ -24,6 +28,7 @@ ru:
     select_distance: Выберите дистанцию
   links:
     more: Показать больше
+    sentence: предложить
     add_distance: Добавить дистанцию
     remove_distance: Убрать
     add_past_event: Добавить старый забег
@@ -45,6 +50,13 @@ ru:
     title: MyAthleticCareer
     admin_title: Admin Dashboard
   helpers:
+    submit:
+      event:
+        create: Создать забег
+      competition:
+        create: Создать соревнование
+      length:
+        create: Добавить дистанцию
     placeholder:
       competition:
         race_number: Номер

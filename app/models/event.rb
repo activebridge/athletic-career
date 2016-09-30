@@ -12,4 +12,5 @@ class Event < ApplicationRecord
   scope :past, -> { where('date < ?', Date.current) }
   scope :future, -> { where('date >= ?', Date.current) }
   scope :ready, -> { where(visible: true) }
+  scope :by_length, -> (length) { joins(:distances).where(distances: { length_id: length.id }) }
 end
