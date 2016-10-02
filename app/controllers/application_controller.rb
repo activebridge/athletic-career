@@ -18,7 +18,13 @@ class ApplicationController < ActionController::Base
   helper_method :current_admin
 
   def require_user
-    redirect(root_path) unless current_user
+    unless current_user
+      respond_to do |format|
+        format.html do
+          redirect_to root_path, notice: t('notify')
+        end
+      end
+    end
   end
 
   def require_admin

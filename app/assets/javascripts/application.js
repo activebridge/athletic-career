@@ -6,5 +6,6 @@
 //= require cloudinary
 //= require jquery.datetimepicker.min
 //= require cocoon
+//= require bootstrap-notify
 //= require bootstrap-sprockets
 //= require_tree .
