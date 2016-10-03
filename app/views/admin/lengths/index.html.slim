@@ -3,6 +3,7 @@ h1 Listing lengths
 table.table
   thead
     tr
+      th Name
       th Title
       th Mark
       th Visible
@@ -10,6 +11,7 @@ table.table
   tbody
     - lengths.each do |length|
       tr
+        td = length.name
         td = length.title
         td = length.mark
         td = length.visible

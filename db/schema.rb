@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161003084933) do
+ActiveRecord::Schema.define(version: 20161003190507) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -109,6 +109,7 @@ ActiveRecord::Schema.define(version: 20161003084933) do
     t.boolean "visible", default: false
     t.integer "mark",    default: 1000
     t.string  "logo"
+    t.string  "name"
   end
 
   create_table "organizers", force: :cascade do |t|
