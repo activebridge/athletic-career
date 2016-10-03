@@ -1,4 +1,7 @@
 class User < ApplicationRecord
+  extend FriendlyId
+  friendly_id :name, use: [:slugged, :finders]
+
   has_many :accounts, dependent: :delete_all
   has_many :competitions
   has_many :distances, through: :competitions
@@ -14,5 +17,9 @@ class User < ApplicationRecord
     user = create(user_params)
     user.accounts.create(account_params)
     user
+  end
+
+  def normalize_friendly_id(text)
+    text.to_slug.normalize(transliterations: :russian).to_s
   end
 end

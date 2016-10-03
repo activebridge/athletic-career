@@ -29,6 +29,8 @@ gem 'cocoon'
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'bootstrap-growl-rails'
 gem 'font-awesome-sass'
+gem 'friendly_id', '~> 5.0.0'
+gem 'babosa'
 
 group :development, :test do
   gem 'pry'
