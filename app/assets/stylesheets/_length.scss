@@ -1,0 +1,41 @@
+.length-block{
+  position: relative;
+  margin: 15px 0;
+  width: 100%;
+  height: 200px;
+  &-ultra {
+    background: linear-gradient(to right, #b1874c, #c8574e);
+  }
+  &-42-2 {
+    background: linear-gradient(to right, #d57a53, #b16b55);
+  }
+  &-21-1 {
+    background: linear-gradient(to right, #f4d175, #ceba68);
+  }
+  &-10 {
+    background: linear-gradient(to right, #67a061, #5f8d5b);
+  }
+  &-5 {
+    background: linear-gradient(to right, #77afd3, #6ba1b7);
+  }
+  &-3 {
+    background: linear-gradient(to right, #5dab87, #6f9079);
+  }
+  &-1 {
+    background: linear-gradient(to right, #b3b2b2, #908f8f);
+  }
+  img {
+    padding: 20px;
+    position: absolute;
+    left: 25%;
+    height: 100%;
+  }
+  a {
+    position: absolute;
+    bottom: 0;
+    right: 15px;
+    font-size: 20px;
+    color: $white;
+    text-decoration: none;
+  }
+}
