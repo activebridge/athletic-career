@@ -1,9 +1,10 @@
 = link_to :add_event, new_event_path(type: "#{params[:type]}")
-- if current_user
-  .events-side
-    = render partial: "#{params[:type]}_events"
-  .user-information-side
-    h1 Right side
-- else
-  .unregistered-user
-    = render partial: "#{params[:type]}_events"
+.row
+  - if current_user
+    .events-side
+      = render partial: "#{params[:type]}_events"
+    .user-information-side
+      h1 Right side
+  - else
+    .unregistered-user
+      = render partial: "#{params[:type]}_events"

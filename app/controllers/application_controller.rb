@@ -18,13 +18,7 @@ class ApplicationController < ActionController::Base
   helper_method :current_admin
 
   def require_user
-    unless current_user
-      respond_to do |format|
-        format.html do
-          redirect_to root_path, notice: t('notify')
-        end
-      end
-    end
+    redirect_to root_path, notice: t('unauthenticated') unless current_user
   end
 
   def require_admin

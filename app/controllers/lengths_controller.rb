@@ -6,8 +6,11 @@ class LengthsController < ApplicationController
   expose :ready_length, -> { Length.ready }
 
   def create
-    return redirect_to lengths_path if length.update(length_params)
-    render :new
+    if length.update(length_params)
+      redirect_to lengths_path, notice: t('length_created')
+    else
+      render :new
+    end
   end
 
   def update

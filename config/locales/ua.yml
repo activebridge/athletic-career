@@ -1,5 +1,8 @@
 ua:
-  notify: Ви повинні увійти або зареєструватися перш ніж виконувати цю дію
+  unauthenticated: Ви повинні увійти або зареєструватися перш ніж виконувати цю дію
+  event_created: Забіг успішно створений. Після огляду адміністрaтором він з'явиться на сайті.
+  competition_created: Змагання успішно створено.
+  length_created: Довжина успішно створена. Після огляду адміністрaтором вона з'явиться на сайті.
   past: Минулі
   future: Майбутні
   length_destroyed: Довжина була успішно видалена
@@ -32,8 +35,6 @@ ua:
     sentence: запропонувати
     add_distance: Додати дистанцію
     remove_distance: Прибрати
-    add_past_event: Додати старий забіг
-    add_future_event: Додати новий забіг
     add_competition: Додати змагання
     back: Назад
     edit: Змінити
@@ -48,6 +49,8 @@ ua:
     fb_signin: Увійти через Facebook
     add_event: Додати забіг
     events: Забіги
+    past_event: Минулі забіги
+    future_event: Найблищі забіги
     add_past_event: Додати минулий забіг
     add_future_event: Додати найблищий забіг
     title: MyAthleticCareer

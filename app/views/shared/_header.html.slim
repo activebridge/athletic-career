@@ -3,7 +3,7 @@ nav.navbar.navbar-fixed-top
     .collapse.navbar-collapse
       .nav.navbar-nav
         = link_to '', root_path, class: 'pull-left'
-        = nav_link t('links.add_past_event'), new_event_path(type: 'past')
-        = nav_link t('links.add_future_event'), new_event_path(type: 'future')
+        = nav_link t('links.past_event'), '/past/events'
+        = nav_link t('links.future_event'), '/future/events'
         .pull-right
           = render 'shared/dropdown'

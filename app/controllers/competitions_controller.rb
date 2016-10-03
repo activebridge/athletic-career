@@ -6,8 +6,11 @@ class CompetitionsController < ApplicationController
 
   def create
     @competition = Competition.new(competition_params.merge(user_id: current_user.id))
-    return redirect_to competitions_path if @competition.save
-    render :new
+    if @competition.save
+      redirect_to competitions_path, notice: t('competition_created')
+    else
+      render :new
+    end
   end
 
   def update
