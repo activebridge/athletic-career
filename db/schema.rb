@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161003082245) do
+ActiveRecord::Schema.define(version: 20161003084933) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -86,8 +86,10 @@ ActiveRecord::Schema.define(version: 20161003082245) do
     t.integer  "category_id"
     t.integer  "organizer_id"
     t.string   "country"
+    t.string   "slug"
     t.index ["category_id"], name: "index_events_on_category_id", using: :btree
     t.index ["organizer_id"], name: "index_events_on_organizer_id", using: :btree
+    t.index ["slug"], name: "index_events_on_slug", unique: true, using: :btree
   end
 
   create_table "friendly_id_slugs", force: :cascade do |t|

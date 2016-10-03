@@ -18,8 +18,4 @@ class User < ApplicationRecord
     user.accounts.create(account_params)
     user
   end
-
-  def normalize_friendly_id(text)
-    text.to_slug.normalize(transliterations: :russian).to_s
-  end
 end
