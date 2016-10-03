@@ -1,1 +1,4 @@
-p = link_to length.title, length_path(length)
+.col-lg-3.col-md-4.col-sm-6
+  .length-block class=("length-block-#{length.title}").parameterize
+    = image_tag ('man.png')
+    = link_to length.title, length_path(length)
