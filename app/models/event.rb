@@ -1,4 +1,7 @@
 class Event < ApplicationRecord
+  extend FriendlyId
+  friendly_id :name, use: [:slugged, :finders]
+
   belongs_to :organizer
   belongs_to :category
 
