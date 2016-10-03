@@ -10,6 +10,7 @@
 @import 'competition';
 @import 'navbar';
 @import 'banner';
+@import 'animate';
 @import 'users';
 
 /* Fonts */
@@ -88,4 +89,7 @@ input[type=submit].btn-default{
   border-radius: 4px;
   font-weight: 600;
   margin: 10px 0;
+}
+.alert-notification {
+  background: $lavender;
 }

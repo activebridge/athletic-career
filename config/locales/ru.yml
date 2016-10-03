@@ -1,4 +1,8 @@
 ru:
+  unauthenticated: Вы должны войти или зарегистрироваться прежде чем выполнять это действие.
+  event_created: Забег успешно создан. После осмотра администратором он появится на сайте.
+  competition_created: Соревнование успешно создано.
+  length_created: Длина успешно создана. После осмотра администратором она появится на сайте.
   past: Прошлые
   future: Будущие
   length_destroyed: Длина была успешно удалена
@@ -31,8 +35,6 @@ ru:
     sentence: предложить
     add_distance: Добавить дистанцию
     remove_distance: Убрать
-    add_past_event: Добавить старый забег
-    add_future_event: Добавить новый забег
     add_competition: Добавить соревнование
     back: Назад
     edit: Изменить
@@ -47,6 +49,10 @@ ru:
     fb_signin: Войти с помощью Facebook
     add_event: Добавить забег
     events: Забеги
+    past_event: Cтарые забеги
+    future_event: Новые забеги
+    add_past_event: Добавить старый забег
+    add_future_event: Добавить новый забег
     title: MyAthleticCareer
     admin_title: Admin Dashboard
   helpers:

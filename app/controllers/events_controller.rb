@@ -10,8 +10,11 @@ class EventsController < ApplicationController
   end
 
   def create
-    return redirect_to root_path if event.save
-    render :new
+    if event.save
+      redirect_to root_path, notice: t('event_created')
+    else
+      render :new
+    end
   end
 
   def update

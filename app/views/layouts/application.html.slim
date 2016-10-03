@@ -7,6 +7,9 @@ html lang='en' class='no-js'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
     = render_lazybox
   body
+    - if notice
+      javascript:
+        $.notify( { message: "#{notice}" }, { type: 'notification' } )
     = render 'shared/header'
     = yield
     = render 'shared/footer'
