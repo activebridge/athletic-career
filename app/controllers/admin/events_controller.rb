@@ -1,14 +1,19 @@
 class Admin::EventsController < ApplicationController
   expose :events, -> { Event.all }
   expose :event
+  expose :show_event, -> { Event.friendly.find(params[:id]) }
 
   def create
-    return redirect_to admin_events_path if event.update(event_params)
-    render :new
+    if event.save
+      redirect_to admin_events_path, notice: t('event_created')
+    else
+      render :new
+    end
   end
 
   def update
-    create
+    return redirect_to admin_events_path if show_event.update(event_params)
+    render :edit
   end
 
   def destroy

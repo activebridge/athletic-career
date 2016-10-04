@@ -1,3 +1,18 @@
-= simple_form_for event, as: :event, url: url do |f|
+- ur = new_event ? event : show_event
+= simple_form_for ur, as: :event, url: url do |f|
   = f.input :visible, as: :select
+  .file-upload
+    .btn-default
+      = f.input :logo, label: 'Логотип'
+      = f.hidden_field(:logo_cache)
+  .input_fields_form
+    = f.input :name
+    = f.input :date, as: :date, html5: true
+    = f.input :country, as: :country
+    = f.input :city
+    = f.input :organizer_id, as: :select, collection: Organizer.ready
+    = f.input :category_id, as: :select, collection: Category.ready
+    = f.input :site
+    = f.input :description
+
   = f.button :submit
