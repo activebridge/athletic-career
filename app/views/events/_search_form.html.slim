@@ -1,0 +1,12 @@
+.center
+  table
+    thead
+      th Год
+      th Город
+      th Организатор
+    = simple_form_for :search, method: :get do |f|
+      tbody
+        td = f.input :date, as: :select, collection: events.map { |y| y.date.year }.uniq, label: false, prompt: 'all'
+        td = f.input :city, as: :select, collection: events.map(&:city), label: false, prompt: 'all'
+        td = f.input :organizer_id, as: :select, collection: events.map(&:organizer), label: false,  prompt: 'all'
+        td = f.submit 'search'

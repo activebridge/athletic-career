@@ -5,6 +5,7 @@ class EventsController < ApplicationController
   expose :events, -> { Event.ready }
   expose :event
   expose :show_event, -> { Event.friendly.find(params[:id]) }
+  expose :search_event, -> { Event.search(params[:search]) }
 
   def new
     event.distances.build

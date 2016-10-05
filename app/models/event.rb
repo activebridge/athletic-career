@@ -16,4 +16,17 @@ class Event < ApplicationRecord
   scope :future, -> { where('date >= ?', Date.current) }
   scope :ready, -> { where(visible: true) }
   scope :by_length, -> (length) { joins(:distances).where(distances: { length_id: length.id }) }
+
+  query = lambda do |params|
+    return if params.blank?
+    all
+      .by_date(params[:date])
+      .by_city(params[:city])
+      .by_organizer(params[:organizer_id])
+  end
+
+  scope :search, query
+  scope :by_date, -> (date) { where('extract(year from date) = ?', date.to_s) unless date.blank? }
+  scope :by_city, -> (city) { where(city: city) unless city.blank? }
+  scope :by_organizer, -> (organizer) { where(organizer_id: organizer) unless organizer.blank? }
 end
