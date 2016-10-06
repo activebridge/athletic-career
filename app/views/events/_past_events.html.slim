@@ -1,7 +1,10 @@
-- search_event.past.each do |event|
-  - if current_user
-    .col-lg-6.col-md-12.col-sm-12
-      = render partial: 'event', locals: { event: event }
-  - else
-    .col-lg-4.col-md-6.col-sm-6
-      = render partial: 'event', locals: { event: event }
+- if search_event.present?
+  - search_event.past.each do |event|
+    - if current_user
+      .col-lg-6.col-md-12.col-sm-12
+        = render partial: 'event', locals: { event: event }
+    - else
+      .col-lg-4.col-md-6.col-sm-6
+        = render partial: 'event', locals: { event: event }
+- else
+  h1 = t('not_found_events')
