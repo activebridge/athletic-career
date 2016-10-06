@@ -18,7 +18,7 @@ class ApplicationController < ActionController::Base
   helper_method :current_admin
 
   def require_user
-    redirect_to root_path, notice: t('unauthenticated') unless current_user
+    redirect_to root_path, notice: t('.unauthenticated') unless current_user
   end
 
   def require_admin

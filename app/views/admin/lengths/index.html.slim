@@ -15,9 +15,9 @@ table.table
         td = length.title
         td = length.mark
         td = length.visible
-        td = link_to 'Edit', edit_admin_length_path(length)
-        td = link_to 'Destroy', admin_length_path(length), data: { confirm: 'Are you sure?' }, method: :delete
+        td = link_to :edit, edit_admin_length_path(length)
+        td = link_to :delete, admin_length_path(length), data: { confirm: 'Are you sure?' }, method: :delete
 
 br
 
-= link_to 'New Length', new_admin_length_path
+= link_to :new_length, new_admin_length_path

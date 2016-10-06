@@ -1,33 +1,74 @@
 ru:
-  year: Год
-  city: Город
-  organizer: Организатор
-  not_found_events: Таких забегов не найдено
-  all: все
-  ua: укр
-  ru: рус
-  unauthenticated: Вы должны войти или зарегистрироваться прежде чем выполнять это действие.
-  event_created: Забег успешно создан. После осмотра администратором он появится на сайте.
-  competition_created: Соревнование успешно создано.
-  length_created: Длина успешно создана. После осмотра администратором она появится на сайте.
-  past: Прошлые
-  future: Будущие
-  length_destroyed: Длина была успешно удалена
-  not_found_distance: не найшли дистанцию в которой принимали участие, вы можете
-  variant:  свой вариант
-  no_account: Нету аккаунта
   are_you_sure: Вы уверены?
-  events: Забеги
-  running_event: Беговое событие
-  edit_event: Изменить забег
-  name: Название
-  description: Описание
-  distances: Дистанции
-  city: Город
-  country: Страна
-  date: Дата
-  competitions: Соревнования
-  new_competition: Новое соревнование
+  admin:
+    dashboards:
+      show:
+        organizers: Список организаторов
+        lengths: Список дистанций
+        categories: Список категоріи
+        events: Список забегов
+    events:
+      index:
+        unauthenticated: Вы должны войти или зарегистрироваться прежде чем выполнять это действие.
+      create:
+        event_created: Забег успешно создан
+      show:
+        name: Название
+        description: Описание
+        city: Город
+        country: Страна
+        date: Дата
+  welcome:
+    index:
+      past: Прошлые
+      future: Будущие
+  shared:
+    header:
+      ua: укр
+      ru: рус
+  sessions:
+    create:
+      succesfull: Вы успешно вошли в свой аккаунт
+    destroy:
+      succesfull: Вы успешно вышли со своего аккаунта
+    new:
+      no_account: Нету аккаунта
+  lengths:
+    create:
+      length_created: Длина успешно создана. После осмотра администратором она появится на сайте.
+    destroy:
+      length_destroyed: Длина была успешно удалена
+    show:
+      past: Прошлые
+      future: Будущие
+    index:
+      not_found_distance: не найшли дистанцию в которой принимали участие, вы можете
+      variant:  свой вариант
+  events:
+    create:
+      event_created: Забег успешно создан. После осмотра администратором он появится на сайте.
+    show:
+      name: Название
+      description: Описание
+      city: Город
+      country: Страна
+      date: Дата
+    form:
+      running_event: Беговое событие
+      distances: Дистанции
+  competitions:
+    destroy:
+      competition_destroyed: Соревнование успешно удалено
+    create:
+      competition_created: Соревнование успешно создано.
+    new:
+      unauthenticated: Вы должны войти или зарегистрироваться прежде чем выполнять это действие.
+    index:
+      unauthenticated: Вы должны войти или зарегистрироваться прежде чем выполнять это действие.
+      competitions: Соревнования
+    form:
+      new_competition: Новое соревнование
+      events: Забеги
   prompts:
     organizer_id: Выберите организатора
     category_id: Выберите категорию
@@ -38,6 +79,9 @@ ru:
     select_organizer: Выберите организатора
     select_distance: Выберите дистанцию
   links:
+    new_organizer: Новый огранизатор
+    new_length: Новая длина
+    new_events: Новый забeг
     more: Показать больше
     sentence: предложить
     add_distance: Добавить дистанцию

@@ -7,7 +7,7 @@ class CompetitionsController < ApplicationController
   def create
     @competition = Competition.new(competition_params.merge(user_id: current_user.id))
     if @competition.save
-      redirect_to competitions_path, notice: t('competition_created')
+      redirect_to competitions_path, notice: t('.competition_created')
     else
       render :new
     end
@@ -20,7 +20,7 @@ class CompetitionsController < ApplicationController
 
   def destroy
     competition.destroy
-    redirect_to competition_path, notice: 'Competition was successfully destroyed'
+    redirect_to competition_path, notice: t('.competition_destroyed')
   end
 
   private

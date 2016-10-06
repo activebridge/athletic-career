@@ -11,9 +11,9 @@ table.table
     - organizers.each do |organizer|
       tr
         td = organizer.title
-        td = link_to 'Edit', edit_admin_organizer_path(organizer)
-        td = link_to 'Destroy', admin_organizer_path(organizer), data: { confirm: 'Are you sure?' }, method: :delete
+        td = link_to :edit, edit_admin_organizer_path(organizer)
+        td = link_to :delete, admin_organizer_path(organizer), data: { confirm: 'Are you sure?' }, method: :delete
 
 br
 
-= link_to 'New Organizer', new_admin_organizer_path
+= link_to :new_organizer, new_admin_organizer_path

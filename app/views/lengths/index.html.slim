@@ -1,6 +1,6 @@
 - if current_user
   h5
-    => t('not_found_distance')
+    => t('.not_found_distance')
     => link_to :sentence, new_length_path
-    = t('variant')
+    = t('.variant')
 = render partial: 'length', collection: ready_length, as: :length

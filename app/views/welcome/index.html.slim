@@ -4,13 +4,13 @@
   = render 'shared/banner'
   - if events.past.present?
     .title
-      = t('past')
+      = t('.past')
     .row
       = render partial: 'shared/events', collection: events.past.last(5), as: :event
     = link_to :more, '/past/events'
   - if events.future.present?
     .title
-      = t('future')
+      = t('.future')
     .row
       = render partial: 'shared/events', collection: events.future.last(5), as: :event
     = link_to :more, '/future/events'
