@@ -1,4 +1,4 @@
-h1 =t('new_competition')
+h1 =t('.new_competition')
 .container
   = simple_form_for competition do |f|
     .row.input_fields_form
@@ -6,7 +6,7 @@ h1 =t('new_competition')
       .organizer-and-city
         = render partial: 'event_year', locals: { f: f }
       .competition-event
-        h1 =t('events')
+        h1 =t('.events')
         = f.input :event_id, as: :select, collection: Event.all.map { |n| [n.name, n.id, { "data-event"=> "name-#{n.city}-#{n.date.year}" } ]}, input_html: { data: { events: 'events' } }, prompt: t('prompts.select_name'),value_method: :second, label: false
         = f.input :distance_id, as: :select, collection: Distance.all.map { |d| [d.title, d.id, {"data-distance"=>"distance-#{d.event.id}"} ] }, input_html: { data: { distances: 'distances' } }, prompt: t('prompts.select_distance'), value_method: :second, label: false
       .competition

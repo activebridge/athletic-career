@@ -1,8 +1,8 @@
 h1 = length.title
 
-h3 = t('past') if events.past.present?
+h3 = t('.past') if events.past.present?
 - events.past.each do |p|
   p = link_to p.name, event_path(p)
-h3 = t('future') if events.future.present?
+h3 = t('.future') if events.future.present?
 - events.future.each do |f|
   p = link_to f.name, event_path(f)

@@ -6,7 +6,7 @@ nav.navbar.navbar-fixed-top
         = nav_link t('links.past_event'), '/past/events'
         = nav_link t('links.future_event'), '/future/events'
         .pull-right
-          => link_to_unless current_locale?(:ua), t('ua'), language_path(:ua), method: :patch
+          => link_to_unless current_locale?(:ua), t('.ua'), language_path(:ua), method: :patch
           ' |
-          = link_to_unless current_locale?(:ru), t('ru'), language_path(:ru), method: :patch
+          = link_to_unless current_locale?(:ru), t('.ru'), language_path(:ru), method: :patch
           = render 'shared/dropdown'

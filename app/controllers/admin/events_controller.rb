@@ -5,7 +5,7 @@ class Admin::EventsController < ApplicationController
 
   def create
     if event.save
-      redirect_to admin_events_path, notice: t('event_created')
+      redirect_to admin_events_path, notice: t('.event_created')
     else
       render :new
     end

@@ -2,5 +2,5 @@
   p= link_to :vk_signin, '/auth/vkontakte', class: 'button'
   p= link_to :fb_signin, '/auth/facebook', class: 'button'
   p.text-center
-    => t('no_account')
+    => t('.no_account')
     = link_to :sign_up, signup_path, remote: true

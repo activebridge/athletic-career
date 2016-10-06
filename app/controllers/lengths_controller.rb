@@ -7,7 +7,7 @@ class LengthsController < ApplicationController
 
   def create
     if length.update(length_params)
-      redirect_to lengths_path, notice: t('length_created')
+      redirect_to lengths_path, notice: t('.length_created')
     else
       render :new
     end
@@ -19,7 +19,7 @@ class LengthsController < ApplicationController
 
   def destroy
     length.destroy
-    redirect_to lengths_url, notice: t('length_destroyed')
+    redirect_to lengths_url, notice: t('.length_destroyed')
   end
 
   private

@@ -1,33 +1,74 @@
 ua:
-  year: Рік
-  city: Місто
-  organizer: Організатор
-  not_found_events: Таких забігів не знайдено
-  all: все
-  ua: укр
-  ru: рус
-  unauthenticated: Ви повинні увійти або зареєструватися перш ніж виконувати цю дію
-  event_created: Забіг успішно створений. Після огляду адміністрaтором він з'явиться на сайті.
-  competition_created: Змагання успішно створено.
-  length_created: Довжина успішно створена. Після огляду адміністрaтором вона з'явиться на сайті.
-  past: Минулі
-  future: Майбутні
-  length_destroyed: Довжина була успішно видалена
-  not_found_distance: не знайшли дистанцію в якій приймали участь, ви можете
-  variant: свій варіант
-  no_account: Немає аккаунта
   are_you_sure: Ви впевнені
-  events: Забіги
-  running_event: Бігова подія
-  edit_event: Змінити забіг
-  name: Назва
-  description: Опис
-  distances: Дистанції
-  city: Місто
-  country: Країна
-  date: Дата
-  competitions: Змагання
-  new_competition: Нове змагання
+  admin:
+    dashboards:
+      show:
+        organizers: Список організаторів
+        lengths: Список дистанцій
+        categories: Список категорій
+        events: Список забігів
+    events:
+      index:
+        unauthenticated: Ви повинні увійти або зареєструватися перш ніж виконувати цю дію
+      create:
+        event_created: Забіг успішно створений.
+      show:
+        name: Назва
+        description: Опис
+        city: Місто
+        country: Країна
+        date: Дата
+  welcome:
+    index:
+      past: Минулі
+      future: Майбутні
+  shared:
+    header:
+      ua: укр
+      ru: рус
+  sessions:
+    create:
+      succesfull: Ви успішно увійшли в свій акаунт
+    destroy:
+      succesfull: Ви успішно вийшли зі свого акаунта
+    new:
+      no_account: Немає аккаунта
+  lengths:
+    create:
+      length_created: Довжина успішно створена. Після огляду адміністрaтором вона з'явиться на сайті.
+    destroy:
+      length_destroyed: Довжина була успішно видалена
+    show:
+      past: Минулі
+      future: Майбутні
+    index:
+      not_found_distance: не знайшли дистанцію в якій приймали участь, ви можете
+      variant: свій варіант
+  events:
+    create:
+      event_created: Забіг успішно створений. Після огляду адміністрaтором він з'явиться на сайті.
+    show:
+      name: Назва
+      description: Опис
+      city: Місто
+      country: Країна
+      date: Дата
+    form:
+      running_event: Бігова подія
+      distances: Дистанції
+  competitions:
+    destroy:
+      competition_destroyed: Змагання успішно видалено
+    create:
+      competition_created: Змагання успішно створено.
+    new:
+      unauthenticated: Ви повинні увійти або зареєструватися перш ніж виконувати цю дію
+    index:
+      unauthenticated: Ви повинні увійти або зареєструватися перш ніж виконувати цю дію
+      competitions: Змагання
+    form:
+      new_competition: Нове змагання
+      events: Забіги
   prompts:
     organizer_id: Виберіть організатора
     category_id: Виберіть категорію
@@ -38,6 +79,9 @@ ua:
     select_organizer: Виберіть організатора
     select_distance: Виберіть дистанцію
   links:
+    new_organizer: Новий огранізатор
+    new_length: Нова довжина
+    new_events: Новий забіг
     more: Показати більше
     sentence: запропонувати
     add_distance: Додати дистанцію

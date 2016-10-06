@@ -11,9 +11,9 @@ table.table
       tr
         td = link_to event.name, admin_event_path(event)
         td = event.visible
-        td = link_to 'Edit', edit_admin_event_path(event)
-        td = link_to 'Destroy', admin_event_path(event), data: { confirm: 'Are you sure?' }, method: :delete
+        td = link_to :edit, edit_admin_event_path(event)
+        td = link_to :delete, admin_event_path(event), data: { confirm: 'Are you sure?' }, method: :delete
 
 br
 
-= link_to 'New Event', new_admin_event_path
+= link_to :new_events , new_admin_event_path
