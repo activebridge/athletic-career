@@ -1,5 +1,5 @@
 ua:
-  are_you_sure: Ви впевнені
+  are_you_sure: Ви впевнені?
   admin:
     dashboards:
       show:
@@ -58,9 +58,9 @@ ua:
       distances: Дистанції
   competitions:
     destroy:
-      competition_destroyed: Змагання успішно видалено
+      competition_destroyed: Змагання видалено.
     create:
-      competition_created: Змагання успішно створено.
+      competition_created: Змагання створено.
     new:
       unauthenticated: Ви повинні увійти або зареєструватися перш ніж виконувати цю дію
     index:
@@ -101,9 +101,9 @@ ua:
     add_event: Додати забіг
     events: Забіги
     past_event: Минулі забіги
-    future_event: Найблищі забіги
+    future_event: Найближчі забіги
     add_past_event: Додати минулий забіг
-    add_future_event: Додати найблищий забіг
+    add_future_event: Додати найближчий забіг
     title: MyAthleticCareer
     admin_title: Admin Dashboard
   helpers:
