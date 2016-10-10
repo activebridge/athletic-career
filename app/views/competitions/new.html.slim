@@ -1,1 +1,6 @@
-= render 'form'
+h1 =t('.new_competition')
+.container
+  - if params[:distance]
+    = render partial: 'form_with_distance'
+  - else
+    = render partial: 'form'

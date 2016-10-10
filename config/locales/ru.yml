@@ -53,15 +53,23 @@ ru:
       city: Город
       country: Страна
       date: Дата
+    search_form:
+      year: Год
+      city: Город
+      organizer: Организатор
     form:
       running_event: Беговое событие
       distances: Дистанции
   competitions:
+    form_with_distance:
+      event: Забег
+      distance: Дистанция
     destroy:
       competition_destroyed: Соревнование успешно удалено
     create:
       competition_created: Соревнование успешно создано.
     new:
+      new_competition: Новое соревнование
       unauthenticated: Вы должны войти или зарегистрироваться прежде чем выполнять это действие.
     index:
       unauthenticated: Вы должны войти или зарегистрироваться прежде чем выполнять это действие.
@@ -79,6 +87,7 @@ ru:
     select_organizer: Выберите организатора
     select_distance: Выберите дистанцию
   links:
+    run: бегал
     new_organizer: Новый огранизатор
     new_length: Новая длина
     new_events: Новый забeг

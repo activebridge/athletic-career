@@ -2,9 +2,9 @@
   = simple_form_for :search, method: :get, remote: true, html: { data: { live: true }} do |f|
     table
       thead
-        th = t('year')
-        th = t('city')
-        th = t('organizer')
+        th = t('.year')
+        th = t('.city')
+        th = t('.organizer')
       tbody
         - if params[:type] == 'past'
           td = f.input :date, as: :select, collection: events.past.map { |y| y.date.year }.uniq, label: false, prompt: t('all')

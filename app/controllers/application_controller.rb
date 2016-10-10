@@ -37,4 +37,9 @@ class ApplicationController < ActionController::Base
       redirect_to path
     end
   end
+
+  def destroyable?
+    current_admin || competition.user_id == current_user.id
+  end
+  helper_method :destroyable?
 end
