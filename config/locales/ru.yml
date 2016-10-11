@@ -1,5 +1,4 @@
 ru:
-  are_you_sure: Вы уверены?
   admin:
     dashboards:
       show:
@@ -77,6 +76,9 @@ ru:
     form:
       new_competition: Новое соревнование
       events: Забеги
+  users:
+    show:
+      share: 'Поделиться:'
   prompts:
     organizer_id: Выберите организатора
     category_id: Выберите категорию
