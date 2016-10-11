@@ -10,6 +10,8 @@ class User < ApplicationRecord
 
   scope :find_by_provider_uid, -> (provider, uid) { joins(:accounts).where(accounts: { provider: provider, uid: uid }) }
 
+  mount_base64_uploader :avatar, AvatarUploader
+
   def self.fetch_account(account_params, user_params)
     user = find_by_provider_uid(account_params[:provider], account_params[:uid])
     return user.first if user.present?

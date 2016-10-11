@@ -1,12 +1,12 @@
 .col-xs-12.col-sm-12
   .col-sm-2.avatar
-    = image_tag(user.avatar)
+    = cl_image_tag(user.avatar.url(:user_show))
     - if current_user.id == user.id
       .profile-menu
         p = link_to :add_past_event, new_event_path(type: 'past')
         p = link_to :add_future_event, new_event_path(type: 'future')
         p = link_to :add_competition, new_competition_path, remote: true
-  .col-sm-10.user-name
+  .col-sm-9.user-name
     h4
       = user.name
 .user-career
