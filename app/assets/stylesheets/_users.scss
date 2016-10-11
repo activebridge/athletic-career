@@ -11,6 +11,14 @@
   background: $gray;
   padding-left: 5px;
   border: 2px solid $gray;
+  .fa {
+    color: $black;
+    margin: 0 5px;
+    font-size: 17px;
+    &:hover {
+      color: $dodgerblue;
+    }
+  }
   a {
     cursor: pointer;
     text-decoration: none;

@@ -77,6 +77,9 @@ ua:
     form:
       new_competition: Нове змагання
       events: Забіги
+  users:
+    show:
+      share: 'Поділитися:'
   prompts:
     organizer_id: Виберіть організатора
     category_id: Виберіть категорію
