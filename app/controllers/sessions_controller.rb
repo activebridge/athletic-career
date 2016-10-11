@@ -22,7 +22,7 @@ class SessionsController < ApplicationController
   def user_params
     {
       name: auth_hash[:info][:name],
-      avatar: client_avatar(auth_hash[:provider]),
+      remote_avatar_url: client_avatar(auth_hash[:provider]),
       email: auth_hash[:info][:email]
     }
   end
