@@ -1,4 +1,5 @@
 ua:
+  all: всі
   are_you_sure: Ви впевнені?
   admin:
     dashboards:
@@ -45,6 +46,12 @@ ua:
       not_found_distance: не знайшли дистанцію в якій приймали участь, ви можете
       variant: свій варіант
   events:
+    new:
+      unauthenticated: Ви повинні увійти або зареєструватися перш ніж виконувати цю дію
+    past_events:
+      not_found_events: Нічого не знайдено
+    future_events:
+      not_found_events: Нічого не знайдено
     create:
       event_created: Забіг успішно створений. Після огляду адміністрaтором він з'явиться на сайті.
     show:

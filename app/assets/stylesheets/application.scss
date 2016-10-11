@@ -56,8 +56,15 @@ body {
     background: $darkslategray;
   }
 }
+.more {
+  margin-left: 22px;
+}
+.new_event {
+  margin-left: 50px;
+}
 input[type=submit].btn-default{
   float: right;
+  margin-bottom: 15px;
 }
 .file-upload {
   width: 20%;
