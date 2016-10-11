@@ -53,15 +53,23 @@ ua:
       city: Місто
       country: Країна
       date: Дата
+    search_form:
+      year: Рік
+      city: Місто
+      organizer: Організатор
     form:
       running_event: Бігова подія
       distances: Дистанції
   competitions:
+    form_with_distance:
+      event: Забіг
+      distance: Дистанція
     destroy:
       competition_destroyed: Змагання видалено.
     create:
       competition_created: Змагання створено.
     new:
+      new_competition: Нове змагання
       unauthenticated: Ви повинні увійти або зареєструватися перш ніж виконувати цю дію
     index:
       unauthenticated: Ви повинні увійти або зареєструватися перш ніж виконувати цю дію
@@ -79,6 +87,7 @@ ua:
     select_organizer: Виберіть організатора
     select_distance: Виберіть дистанцію
   links:
+    run: бігав
     new_organizer: Новий огранізатор
     new_length: Нова довжина
     new_events: Новий забіг

@@ -1,6 +1,6 @@
-.col-lg-4.col-sm-4.col-xs-11.show
+.col-lg-4.col-sm-4.col-xs-12.show
   = event_logo(show_event)
-.col-lg-7.col-sm-7.col-xs-11.show
+.col-lg-8.col-sm-8.col-xs-12.show
   p
     strong =>t('.name')
     = show_event.name
@@ -13,3 +13,6 @@
   p
     strong =>t('.date')
     = show_event.date
+
+.col-lg-12
+  = render partial: 'distance', collection: show_event.distances, as: :distance
