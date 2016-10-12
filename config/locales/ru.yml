@@ -9,6 +9,8 @@ ru:
         categories: Список категоріи
         events: Список забегов
     events:
+      form:
+        distances: Дистанции
       index:
         unauthenticated: Вы должны войти или зарегистрироваться прежде чем выполнять это действие.
       create:
