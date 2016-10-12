@@ -92,7 +92,7 @@ ua:
   prompts:
     organizer_id: Виберіть організатора
     category_id: Виберіть категорію
-    length_id: Виберіть довжину
+    length_id: Виберіть дистанцію
     select_year: Виберіть рік
     select_city: Виберіть місто
     select_name: Виберіть назву
@@ -127,6 +127,7 @@ ua:
     add_future_event: Додати найближчий забіг
     title: MyAthleticCareer
     admin_title: Admin Dashboard
+    users: Користувачі
   helpers:
     submit:
       event:

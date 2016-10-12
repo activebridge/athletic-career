@@ -92,7 +92,7 @@ ru:
   prompts:
     organizer_id: Выберите организатора
     category_id: Выберите категорию
-    length_id: Выберите длину
+    length_id: Выберите дистанцию
     select_year: Выберите год
     select_city: Выберите город
     select_name: Выберите название
@@ -127,6 +127,7 @@ ru:
     add_future_event: Добавить новый забег
     title: MyAthleticCareer
     admin_title: Admin Dashboard
+    users: Пользователи
   helpers:
     submit:
       event:
