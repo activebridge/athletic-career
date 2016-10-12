@@ -1,4 +1,4 @@
-class Admin::EventsController < ApplicationController
+class Admin::EventsController < AdminsController
   expose :events, -> { Event.all }
   expose :event
   expose :show_event, -> { Event.friendly.find(params[:id]) }
