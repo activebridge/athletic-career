@@ -9,17 +9,7 @@
 }
 .profile-menu {
   display: block;
-  background: $gray;
   padding-left: 5px;
-  border: 2px solid $gray;
-  .fa {
-    color: $black;
-    margin: 0 5px;
-    font-size: 17px;
-    &:hover {
-      color: $dodgerblue;
-    }
-  }
   a {
     cursor: pointer;
     text-decoration: none;
@@ -34,7 +24,18 @@
     border-radius: 5px;
   }
 }
-
+.user-share {
+  width: 140px;
+  margin: 22px;
+  .fa {
+    color: $black;
+    margin: 0 5px;
+    font-size: 17px;
+    &:hover {
+      color: $dodgerblue;
+    }
+  }
+}
 .user-name {
   font-size: 14px;
   text-align: center;

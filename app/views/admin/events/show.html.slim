@@ -5,11 +5,11 @@
     strong =>t('.name')
     = show_event.name
   p
-    strong =>t('.description') if show_event.description.present?
-    = show_event.description
-  p
     strong =>t('.city')
     = show_event.city
   p
     strong =>t('.date')
     = show_event.date
+  p
+    strong =>t('.description') if show_event.description.present?
+    = show_event.description

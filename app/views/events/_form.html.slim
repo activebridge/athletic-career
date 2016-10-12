@@ -1,6 +1,6 @@
 .container
-  h1=t('.running_event')
   = simple_form_for event do |f|
+    h1 = t('.running_event')
     .row
       = f.error_notification
       .file-upload
