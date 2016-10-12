@@ -9,6 +9,8 @@ ua:
         categories: Список категорій
         events: Список забігів
     events:
+      form:
+        distances: Дистанції
       index:
         unauthenticated: Ви повинні увійти або зареєструватися перш ніж виконувати цю дію
       create:
