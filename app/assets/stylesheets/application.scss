@@ -63,8 +63,13 @@ body {
   margin-left: 50px;
 }
 input[type=submit].btn-default{
+  background: $teal;
   float: right;
   margin-bottom: 15px;
+  &:hover, &:focus {
+    background: $darkslategray;
+  }
+
 }
 .file-upload {
   width: 20%;
