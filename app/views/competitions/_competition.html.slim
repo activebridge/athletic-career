@@ -1,1 +1,12 @@
-p = competition.event.name
+.col-lg-3.col-sm-6.col-md-2
+  .card
+    .card-img
+      = event_logo(c.event)
+    .card-block
+      h4.card-title
+        = c.event.name
+      .card-info
+        .card-text
+          = c.event.city
+        .card-date
+          ="#{c.net_result.hour}:#{c.net_result.min}:#{c.net_result.sec}"

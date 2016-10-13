@@ -57,6 +57,7 @@ ua:
     create:
       event_created: Забіг успішно створений. Після огляду адміністрaтором він з'явиться на сайті.
     show:
+      distance: Дистанції
       name: Назва
       description: Опис
       city: Місто
@@ -87,6 +88,8 @@ ua:
       new_competition: Нове змагання
       events: Забіги
   users:
+    index:
+      unauthenticated: Ви повинні увійти або зареєструватися перш ніж виконувати цю дію
     show:
       share: 'Поділитися:'
   prompts:
