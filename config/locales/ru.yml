@@ -57,6 +57,7 @@ ru:
     create:
       event_created: Забег успешно создан. После осмотра администратором он появится на сайте.
     show:
+      distance: Дистанции
       name: Название
       description: Описание
       city: Город
@@ -87,6 +88,8 @@ ru:
       new_competition: Новое соревнование
       events: Забеги
   users:
+    index:
+      unauthenticated: Вы должны войти или зарегистрироваться прежде чем выполнять это действие.
     show:
       share: 'Поделиться:'
   prompts:
