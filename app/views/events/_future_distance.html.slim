@@ -1,6 +1,6 @@
 .nested-fields.row.input_fields_form
   = link_to_remove_association '', f, class: 'fa fa-times'
   = f.input :title, label: false, input_html: { placeholder: true }
-  = f.input :length_id, as: :select, collection: Length.ready, label: false, prompt: t('prompts.length_id')
+  = f.input :length_id, as: :select, collection: Length.ready.map(&:title), label: false, prompt: t('prompts.length_id')
   = f.input :price, label: false, input_html: { placeholder: true }
   = f.input :end_price, label: false, input_html: { placeholder: true }
