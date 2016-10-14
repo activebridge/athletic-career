@@ -4,12 +4,10 @@ class CompetitionsController < ApplicationController
   expose :event, -> { Event.find_by(name: params[:event]) }
 
   def create
+    @distance = Distance.find(params[:competition][:distance_id])
+    @event = @distance.event
     @competition = Competition.new(competition_params.merge(runner_params))
-    if @competition.save
-      redirect_to competitions_path, notice: t('.competition_created')
-    else
-      render :new
-    end
+    redirect_to competitions_path, notice: t('.competition_created') if @competition.save
   end
 
   def update
@@ -32,6 +30,6 @@ class CompetitionsController < ApplicationController
   end
 
   def runner_params
-    { user_id: current_user.id, year: event.date.year, city: event.city, event_id: event.id, distance_id: distance.id }
+    { user_id: current_user.id, year: @event.date.year, city: @event.city, event_id: @event.id, distance_id: @distance.id }
   end
 end
