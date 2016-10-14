@@ -163,6 +163,7 @@ GEM
     lazybox (1.1.5)
     letter_opener (1.4.1)
       launchy (~> 2.2)
+    libv8 (3.16.14.15)
     listen (3.0.8)
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
@@ -249,6 +250,7 @@ GEM
     rb-fsevent (0.9.7)
     rb-inotify (0.9.7)
       ffi (>= 0.5.0)
+    ref (2.0.0)
     rest-client (2.0.0)
       http-cookie (>= 1.0.2, < 2.0)
       mime-types (>= 1.16, < 4.0)
@@ -322,6 +324,9 @@ GEM
       net-ssh (>= 2.8.0)
     temple (0.7.7)
     thelpers (0.0.1)
+    therubyracer (0.12.2)
+      libv8 (~> 3.16.14.0)
+      ref
     thor (0.19.1)
     thread_safe (0.3.5)
     tilt (2.0.5)
@@ -403,6 +408,7 @@ DEPENDENCIES
   spring-watcher-listen (~> 2.0.0)
   sprockets (~> 3.6.3)
   thelpers
+  therubyracer
   turbolinks (~> 5)
   tzinfo-data
   uglifier (>= 1.3.0)
