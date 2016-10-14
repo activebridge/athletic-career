@@ -5,7 +5,7 @@ class CompetitionsController < ApplicationController
   expose :event, -> { distance.event }
 
   def create
-    @competition = Competition.new(competition_params.merge(runner_params))
+    @competition = Competition.new(competition_params.merge(user_id: current_user.id))
     if @competition.save
       redirect_to competitions_path, notice: t('.competition_created')
     else
