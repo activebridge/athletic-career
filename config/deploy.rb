@@ -8,6 +8,7 @@ set :linked_dirs, fetch(:linked_dirs, []).push('bin', 'log', 'tmp/pids', 'tmp/ca
 
 set :rvm_type, :user
 set :rvm_ruby_version, '2.3.1'
+set :bundle_binstubs, nil
 
 namespace :deploy do
   desc 'Restart application'
