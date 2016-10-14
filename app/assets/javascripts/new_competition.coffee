@@ -1,4 +1,3 @@
-
 $(document).on 'change', ->
   $('form#new_competition').on 'change', ->
     $submit = $('input[type=submit]')

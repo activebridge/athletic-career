@@ -1,1 +1,0 @@
-= f.input :city, as: :select, collection: Event.all.map{ |o| [o.city, { "data-city"=> "city-#{o.date.year}"} ]}.uniq, prompt: t('prompts.select_city'), input_html: { data: { city: 'cities' } }, label: false
