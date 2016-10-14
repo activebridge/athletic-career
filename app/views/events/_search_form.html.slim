@@ -6,7 +6,7 @@
         th = t('.city')
         th = t('.organizer')
       tbody
-        td = f.input :date, as: :select, collection: events.send("#{params[:type]}").map { |y| y.date.year }.uniq.sort{ |a, b| a <=> b }, label: false, prompt: t('all')
+        td = f.input :date, as: :select, collection: events.send("#{params[:type]}").map { |y| y.date.year }.uniq.sort{ |a, b| b <=> a }, label: false, prompt: t('all')
         td = f.input :city, as: :select, collection: events.send("#{params[:type]}").map(&:city).uniq, label: false, prompt: t('all')
         td = f.input :organizer_id, as: :select, collection: events.send("#{params[:type]}").map(&:organizer).uniq, label: false,  prompt: t('all')
         = f.submit 'search', style: 'display: none;'
