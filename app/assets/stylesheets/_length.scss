@@ -1,4 +1,4 @@
-.length-block{
+.length-block {
   position: relative;
   margin: 15px 0;
   width: 100%;
@@ -32,6 +32,9 @@
   }
   &-3 {
     background: linear-gradient(to right, #5dab87, #6f9079);
+  }
+  &-2 {
+    background: linear-gradient(to right, #5dab87, #6f9079); // Fix bleat
   }
   &-1 {
     background: linear-gradient(to right, #b3b2b2, #908f8f);
