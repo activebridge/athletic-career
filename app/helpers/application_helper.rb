@@ -11,7 +11,7 @@ module ApplicationHelper
 
   def event_logo(event)
     if event.logo.present?
-      cl_image_tag event.logo.url(:large)
+      cl_image_tag event.logo
     else
       image_tag('default.png')
     end
