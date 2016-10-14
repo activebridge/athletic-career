@@ -9,7 +9,6 @@
         td => event.name
         td => event.organizer.title
 = simple_form_for competition do |f|
-  = render partial: 'competition_form', locals: { f: f }
   = f.input :distance_id, as: :select, collection: event.distances.map { |d| [d.title, d.id] }, prompt: t('prompts.select_distance'), label: false
   = f.input :race_number, label: false, input_html: { placeholder: true }
   .result

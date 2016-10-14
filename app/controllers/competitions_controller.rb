@@ -1,8 +1,7 @@
 class CompetitionsController < ApplicationController
   expose :competitions, -> { current_user.competitions.includes(:event) }
   expose :competition
-  expose :distance, -> { Distance.find_by(params[:distance]) }
-  expose :event, -> { distance.event }
+  expose :event, -> { Event.find_by(name: params[:event]) }
 
   def create
     @competition = Competition.new(competition_params.merge(runner_params))
