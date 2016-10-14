@@ -10,6 +10,6 @@
           = c.event.city
         .card-date
           ="#{c.net_result.hour}:#{c.net_result.min}:#{c.net_result.sec}"
-    - if destroyable?
+    - if current_user == c.user
       => link_to :edit, edit_competition_path(c)
       =< link_to :delete, competition_path(c), method: :delete
