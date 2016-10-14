@@ -1,6 +1,5 @@
 class EventsController < ApplicationController
   before_action :require_user, only: [:new, :create, :edit, :update, :destroy]
-  helper_method :destroyable?
 
   expose :events, -> { Event.ready }
   expose :event
@@ -30,10 +29,6 @@ class EventsController < ApplicationController
   end
 
   private
-
-  def destroyable?
-    current_admin || current_user.admin?
-  end
 
   def event_params
     params.require(:event).permit(
