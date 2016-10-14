@@ -3,11 +3,11 @@
   .title
     = t('.past')
   .row
-    = render partial: 'shared/events', collection: events.past.last(5), as: :event
+    = render partial: 'shared/events', collection: events.past.order('date desc').last(5), as: :event
   .more = link_to :more, '/past/events'
 - if events.future.present?
   .title
     = t('.future')
   .row
-    = render partial: 'shared/events', collection: events.future.last(5), as: :event
+    = render partial: 'shared/events', collection: events.future.order('date desc').last(5), as: :event
   .more = link_to :more, '/future/events'
