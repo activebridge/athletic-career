@@ -23,8 +23,8 @@ ua:
         date: Дата
   welcome:
     index:
-      past: Минулі
-      future: Майбутні
+      past: Минулі забіги
+      future: Майбутні забіги
   shared:
     header:
       ua: укр

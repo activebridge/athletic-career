@@ -13,7 +13,7 @@ class Admin::LengthsController < AdminsController
 
   def destroy
     length.destroy
-    redirect_to admin_lengths_url, notice: 'Length was successfully destroyed.'
+    redirect_to admin_lengths_path
   end
 
   private
