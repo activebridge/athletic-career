@@ -4,7 +4,7 @@ MyAthleticCareer [![Circle CI](https://circleci.com/gh/activebridge/athletic-car
 Links
 -
 
-[staging](http://staging.athletic-career.com)
+[staging](http://104.131.59.157)
 
 [production](http://my.athletic-career.com)
 
