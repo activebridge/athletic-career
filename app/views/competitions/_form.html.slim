@@ -2,7 +2,7 @@ h1 =t('.new_competition')
 .container
   = simple_form_for competition do |f|
    .row.input_fields_form
-     = f.input :year, as: :select, collection: Event.all.map { |e| e.date.year }.uniq, input_html: { data: { year: 'year' } }, prompt: t('prompts.select_year'), label: false
+     = f.input :year, as: :select, collection: Event.all.map { |e| e.date.year }.uniq.sort { |a, b| b <=> a }, input_html: { data: { year: 'year' } }, prompt: t('prompts.select_year'), label: false
      .organizer-and-city
        = render partial: 'event_year', locals: { f: f }
      .competition-event
