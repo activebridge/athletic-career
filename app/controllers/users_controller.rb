@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  skip_before_action :require_user, only: [:new, :create, :show]
+  skip_before_action :require_user, only: [:index, :new, :create, :show]
 
   expose :users, -> { User.all }
   expose :user, -> { User.friendly.find(params[:id]) }
