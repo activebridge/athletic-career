@@ -20,7 +20,7 @@ class CompetitionsController < ApplicationController
 
   def destroy
     competition.destroy
-    redirect_to competition_path, notice: t('.competition_destroyed')
+    redirect_to user_path(current_user), notice: t('.competition_destroyed')
   end
 
   private

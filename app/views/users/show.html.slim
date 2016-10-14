@@ -2,12 +2,10 @@
   .col-sm-2.avatar
     = cl_image_tag(user.avatar.url(:user_show))
     .profile-menu
-      - if current_user
-        - if current_user.id == user.id
-          - if current_user.id == user.id
-            p = link_to :add_past_event, new_event_path(type: 'past')
-            p = link_to :add_future_event, new_event_path(type: 'future')
-            p = link_to :add_competition, new_competition_path, remote: true
+      - if current_user == user
+        /* p = link_to :add_past_event, new_event_path(type: 'past') */
+        /* p = link_to :add_future_event, new_event_path(type: 'future') */
+        p= link_to :add_competition, new_competition_path, remote: true
   .col-sm-8.user-name
     h4
       = user.name
