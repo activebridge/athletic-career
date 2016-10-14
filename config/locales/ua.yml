@@ -71,9 +71,11 @@ ua:
       running_event: Бігова подія
       distances: Дистанції
   competitions:
-    form_with_distance:
+    form:
       event: Забіг
-      distance: Дистанція
+      organizer: Організатор
+      new_competition: Нове змагання
+      events: Забіги
     destroy:
       competition_destroyed: Змагання видалено.
     create:
@@ -84,9 +86,6 @@ ua:
     index:
       unauthenticated: Ви повинні увійти або зареєструватися перш ніж виконувати цю дію
       competitions: Змагання
-    form:
-      new_competition: Нове змагання
-      events: Забіги
   users:
     index:
       unauthenticated: Ви повинні увійти або зареєструватися перш ніж виконувати цю дію
@@ -102,7 +101,7 @@ ua:
     select_organizer: Виберіть організатора
     select_distance: Виберіть дистанцію
   links:
-    run: бігав
+    run: Я брав участь!
     new_organizer: Новий огранізатор
     new_length: Нова довжина
     new_events: Новий забіг

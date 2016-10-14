@@ -1,13 +1,1 @@
-.center
-  table.table
-    thead
-      tr
-        th => t('.event')
-        th => t('.distance')
-    tbody
-      tr
-        td => params[:event]
-        td => params[:distance]
-= simple_form_for competition do |f|
-  = render partial: 'competition_form', locals: { f: f }
-  = f.button :submit, class: 'button success', id: 'competition_submit', disabled: true
+

@@ -71,9 +71,11 @@ ru:
       running_event: Беговое событие
       distances: Дистанции
   competitions:
-    form_with_distance:
+    form:
       event: Забег
-      distance: Дистанция
+      organizer: Организатор
+      new_competition: Новое соревнование
+      events: Забеги
     destroy:
       competition_destroyed: Соревнование успешно удалено
     create:
@@ -84,9 +86,6 @@ ru:
     index:
       unauthenticated: Вы должны войти или зарегистрироваться прежде чем выполнять это действие.
       competitions: Соревнования
-    form:
-      new_competition: Новое соревнование
-      events: Забеги
   users:
     index:
       unauthenticated: Вы должны войти или зарегистрироваться прежде чем выполнять это действие.
@@ -102,7 +101,7 @@ ru:
     select_organizer: Выберите организатора
     select_distance: Выберите дистанцию
   links:
-    run: бегал
+    run: Я принимал участие!
     new_organizer: Новый огранизатор
     new_length: Новая длина
     new_events: Новый забeг
