@@ -120,8 +120,8 @@ ua:
     sign_up: Зареєструватися
     sign_out: Вийти
     my_profile: Мій профіль
-    vk_signin: Увійти через VK
-    fb_signin: Увійти через Facebook
+    vk_signin: Увійти за допомогою VK
+    fb_signin: Увійти за дпомогою Facebook
     add_event: Додати забіг
     events: Забіги
     past_event: Минулі забіги
