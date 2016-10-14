@@ -1,0 +1,4 @@
+- users.each do |user|
+  div
+    = user.name
+    =< link_to 'destroy', admin_user_path(user), method: :delete
