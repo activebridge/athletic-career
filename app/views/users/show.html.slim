@@ -5,7 +5,7 @@
       - if current_user == user
         /* p = link_to :add_past_event, new_event_path(type: 'past') */
         /* p = link_to :add_future_event, new_event_path(type: 'future') */
-        p= link_to :add_competition, new_competition_path, remote: true
+        p= link_to :add_competition, new_competition_path, remote: true, class: 'btn btn-default'
   .col-sm-8.user-name
     h4
       = user.name
