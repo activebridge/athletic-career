@@ -32,6 +32,7 @@ gem 'font-awesome-sass'
 gem 'friendly_id', '~> 5.0.0'
 gem 'babosa'
 gem 'therubyracer'
+gem 'tinymce-rails'
 
 group :development, :test do
   gem 'pry'
