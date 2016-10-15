@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   resources :languages, only: :update, constraints: { id: /(ua|ru)/ }
   resources :competitions
   resources :lengths
+  resources :articles, only: [:show, :index]
 
   namespace :admin do
     resource :session, only: [:new, :create, :destroy]
