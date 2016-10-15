@@ -135,7 +135,7 @@ ru:
       event:
         create: Создать забег
       competition:
-        create: Создать соревнование
+        create: Добавить этот забег к вашей карьере
       length:
         create: Добавить дистанцию
     placeholder:

@@ -109,7 +109,7 @@ ua:
     sentence: запропонувати
     add_distance: Додати дистанцію
     remove_distance: Прибрати
-    add_competition: Додати карєру
+    add_competition: Додати кар'єру
     back: Назад
     edit: Змінити
     show: Показати
@@ -135,7 +135,7 @@ ua:
       event:
         create: Створити забіг
       competition:
-        create: Створити змагання
+        create: Додати цей забіг до вашої кар'єри
       length:
         create: Додати дистанцію
     placeholder:

@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  resources :articles
   root to: 'welcome#index'
 
   resources :events, except: [:new, :index, :edit]
@@ -20,6 +19,7 @@ Rails.application.routes.draw do
     resources :categories
     resources :events
     resources :users
+    resources :articles
     get '/', to: 'dashboards#show', as: :dashboard
   end
 
