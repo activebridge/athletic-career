@@ -29,4 +29,8 @@ class Event < ApplicationRecord
   scope :by_date, -> (date) { where('extract(year from date) = ?', date.to_s) unless date.blank? }
   scope :by_city, -> (city) { where(city: city) unless city.blank? }
   scope :by_organizer, -> (organizer) { where(organizer_id: organizer) unless organizer.blank? }
+
+  def normalize_friendly_id(input)
+    input.to_s.to_slug.normalize(transliterations: :russian).to_s
+  end
 end

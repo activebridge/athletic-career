@@ -2,22 +2,22 @@
   .col-sm-2.avatar
     = cl_image_tag(user.avatar.url(:user_show))
     .profile-menu
-      - if current_user == user
         /* p = link_to :add_past_event, new_event_path(type: 'past') */
         /* p = link_to :add_future_event, new_event_path(type: 'future') */
         /* p= link_to :add_competition, new_competition_path, class: 'btn btn-default' */
   .col-sm-8.user-name
     h4
       = user.name
-  .col-sm-2.user-share
-    a href="https://twitter.com/intent/tweet?status=#{user.name} + #{root_link}/users/#{user.slug}"
-      i.fa.fa-twitter
-    a href="http://www.facebook.com/sharer/sharer.php?u=#{root_link}/users/#{user.slug}&title=#{user.name}"
-      i.fa.fa-facebook
-    a href="https://plus.google.com/share?url=#{root_link}/users/#{user.slug}"
-      i.fa.fa-google-plus
-    a href="http://vk.com/share.php?url=#{root_link}/users/#{user.slug}&title=#{user.name}"
-      i.fa.fa-vk
+  - if current_user == user
+    .col-sm-2.user-share
+      a href="https://twitter.com/intent/tweet?status=#{user.name} + #{root_link}/users/#{user.slug}"
+        i.fa.fa-twitter
+      a href="http://www.facebook.com/sharer/sharer.php?u=#{root_link}/users/#{user.slug}&title=#{user.name}"
+        i.fa.fa-facebook
+      a href="https://plus.google.com/share?url=#{root_link}/users/#{user.slug}"
+        i.fa.fa-google-plus
+      a href="http://vk.com/share.php?url=#{root_link}/users/#{user.slug}&title=#{user.name}"
+        i.fa.fa-vk
 .user-career
   .row
     = render partial: 'competitions/competition', collection: competitions, as: :c
