@@ -1,10 +1,10 @@
 .col-lg-3.col-sm-6.col-md-2
   .card
     .card-img
-      = event_logo(c.event)
+      = link_to event_logo(c.event), event_path(c.event.id)
     .card-block
       h4.card-title
-        = c.event.name
+        = link_to c.event.name, event_path(c.event.id)
       .card-info
         .card-text
           = c.event.city

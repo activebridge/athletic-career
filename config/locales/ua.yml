@@ -85,12 +85,13 @@ ua:
       unauthenticated: Ви повинні увійти або зареєструватися перш ніж виконувати цю дію
     index:
       unauthenticated: Ви повинні увійти або зареєструватися перш ніж виконувати цю дію
-      competitions: Змагання
+      competitions: Моя кар'єра
   users:
     index:
       unauthenticated: Ви повинні увійти або зареєструватися перш ніж виконувати цю дію
     show:
       share: 'Поділитися:'
+      history: 'Список та результати змагань:'
   prompts:
     organizer_id: Виберіть організатора
     category_id: Виберіть категорію
