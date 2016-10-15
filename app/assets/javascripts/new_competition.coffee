@@ -1,7 +1,7 @@
 $(document).on 'change', ->
   $('form#new_competition').on 'change', ->
     $submit = $('input[type=submit]')
-    $inputs = $('#competition_distance_id, #competition_race_number, select')
+    $inputs = $('#competition_distance_id, #competition_race_number, #competition_net_result_1i, #competition_net_result_2i, #competition_net_result_3i')
 
     checkEmpty = ->
       $inputs.filter(->
