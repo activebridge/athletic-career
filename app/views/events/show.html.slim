@@ -13,6 +13,9 @@
   p
     strong =>t('.description') if show_event.description.present?
     = show_event.description
+  p
+    - if show_event.date < DateTime.now
+      = link_to :run, new_competition_path(event: show_event.name)
 
 .col-lg-12.col-md-12.col-sm-14.col-xs-12
   .row
