@@ -19,7 +19,7 @@ class Event < ApplicationRecord
 
   query = lambda do |params|
     return if params.blank?
-    ready
+    all
       .by_date(params[:date])
       .by_city(params[:city])
       .by_organizer(params[:organizer_id])
