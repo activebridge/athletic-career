@@ -139,6 +139,7 @@ ua:
         create: Створити забіг
       competition:
         create: Додати цей забіг до вашої кар'єри
+        update: Внести зміни до цього забігу
       length:
         create: Додати дистанцію
     placeholder:

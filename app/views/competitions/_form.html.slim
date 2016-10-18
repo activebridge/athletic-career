@@ -9,13 +9,13 @@
         td => event.name
         td => event.organizer.title
 = simple_form_for competition do |f|
-  = f.input :distance_id, as: :select, collection: event.distances.map { |d| [d.title, d.id] }, prompt: t('prompts.select_distance'), label: false, input_html: { required: true }
+  = f.input :distance_id, as: :select, collection: event.distances.map { |d| [d.length.title, d.id] }, prompt: t('prompts.select_distance'), label: false, input_html: { required: true }
   = f.input :race_number, label: false, input_html: { placeholder: true, required: true }
   .result
     .col-lg-6.col-md-6.col-sm-6.col-xs-6
-      = f.input :result, include_seconds: true, prompt: {hour: 'hour', minute: 'min', second: 'sec'}
+      = f.input :result, include_seconds: true, prompt: { hour: 'hour', minute: 'min', second: 'sec' }
     .col-lg-6.col-md-6.col-sm-6.col-xs-6
-      = f.input :net_result, include_seconds: true, prompt: {hour: 'hour', minute: 'min', second: 'sec'}, input_html: { required: true }
-  = f.input :rank, label: false, input_html: { placeholder: true, required: true}
-  = f.input :category_rank, label: false, input_html: { placeholder: true, required: true}
+      = f.input :net_result, include_seconds: true, prompt: { hour: 'hour', minute: 'min', second: 'sec' }, input_html: { required: true }
+  = f.input :rank, label: false, input_html: { placeholder: true, required: true }
+  = f.input :category_rank, label: false, input_html: { placeholder: true, required: true }
   = f.button :submit, class: 'button success'

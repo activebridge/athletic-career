@@ -18,7 +18,9 @@ Rails.application.routes.draw do
     resources :organizers
     resources :lengths
     resources :categories
-    resources :events
+    scope ':type', constraints: { type: /past|future/ } do
+      resources :events
+    end
     resources :users
     resources :articles
     get '/', to: 'dashboards#show', as: :dashboard

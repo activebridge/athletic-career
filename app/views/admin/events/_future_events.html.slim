@@ -1,0 +1,6 @@
+- if search_event.future.present?
+  - search_event.future.each do |event|
+    .col-lg-3.col-md-4.col-sm-6.col-xs-6
+      = render partial: 'event', locals: { event: event }
+- else
+  h1 = t('.not_found_events')

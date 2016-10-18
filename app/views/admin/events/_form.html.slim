@@ -17,5 +17,5 @@
     h1 =t('.distances')
     .row
       = f.simple_fields_for :distance do |d|
-        = link_to_add_association :add_distance, f, :distances, partial: "events/future_distance.html.slim", class: 'btn btn-default'
+        = link_to_add_association :add_distance, f, :distances, partial: "#{params[:type]}_distance", class: 'btn btn-default'
   = f.button :submit

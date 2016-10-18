@@ -23,10 +23,7 @@ class CompetitionsController < ApplicationController
   private
 
   def competition_params
-    params.require(:competition).permit(
-      :race, :distance, :race_number, :result, :net_result, :rank, :category_rank, :year,
-      :event_id, :city, :distance_id
-    )
+    params.require(:competition).permit!
   end
 
   def runner_params

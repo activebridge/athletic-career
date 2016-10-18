@@ -9,11 +9,11 @@ table.table
   tbody
     - events.each do |event|
       tr
-        td = link_to event.name, admin_event_path(event)
+        td = link_to event.name, admin_event_path(event, type: "#{params[:type]}")
         td = event.visible
-        td = link_to :edit, edit_admin_event_path(event)
-        td = link_to :delete, admin_event_path(event), data: { confirm: 'Are you sure?' }, method: :delete
+        td = link_to :edit, edit_admin_event_path(event, type: "#{params[:type]}")
+        td = link_to :delete, admin_event_path(event, type: "#{params[:type]}"), data: { confirm: 'Are you sure?' }, method: :delete
 
 br
 
-= link_to :new_events , new_admin_event_path
+= link_to :new_events, new_admin_event_path(type: "#{params[:type]}")
