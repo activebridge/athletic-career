@@ -26,6 +26,9 @@ ru:
       past: Прошлые забеги
       future: Будущие забеги
   shared:
+    users:
+      distance: 'Дистанция:'
+      count: 'Количество забегов:'
     header:
       ua: укр
       ru: рус

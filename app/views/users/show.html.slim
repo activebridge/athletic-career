@@ -1,6 +1,6 @@
 .col-xs-12.col-sm-12
   .col-sm-2.avatar
-    = cl_image_tag(user.avatar.url(:user_show))
+    = link_to cl_image_tag(user.avatar.url(:user_show)), user.profile, target: '_blank'
     .profile-menu
   .col-sm-8.user-name
     h4

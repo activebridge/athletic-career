@@ -45,8 +45,24 @@
   }
 }
 
+.user-title {
+  margin-top: 35px;
+  a { color: $black; }
+}
+table.user-table {
+  margin-bottom: 20px;
+  font-style: italic;
+  text-align: center;
+
+  td.count {
+    vertical-align: top;
+    font-style: italic;
+    padding: 0 20px;
+  }
+}
+
 .length-info {
-  padding: 30px 15px;
+  padding: 0 15px;
   text-align: center;
   .medal {
     width: 85px;
@@ -54,10 +70,7 @@
     background: asset-url('athletic.png') top left no-repeat;
     background-size: 310px;
   }
-  .count {
-    font-weight: bold;
-  }
-  .length{
+  .length {
     &-ultra {
       background-position: -111px -100px;
     }
