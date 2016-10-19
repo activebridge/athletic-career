@@ -95,6 +95,8 @@ ua:
     show:
       share: 'Поділитися:'
       history: 'Список та результати змагань:'
+      distance: 'Дистанція:'
+      count: 'Кількість забігів:'
   prompts:
     organizer_id: Виберіть організатора
     category_id: Виберіть категорію

@@ -2,9 +2,19 @@
   .col-sm-2.avatar
     = link_to cl_image_tag(user.avatar.url(:user_show)), user.profile, target: '_blank'
     .profile-menu
-  .col-sm-8.user-name
-    h4
-      = user.name
+  .col-sm-8
+    h3= user.name
+    - if user.distances.present?
+      table.user-table.table-bordered
+        tr
+          td= t('.distance')
+          - user.distances.counter.each do |length, count|
+            td.length-info
+              .medal class=("length-#{length}").parameterize
+        tr
+          td.count= t('.count')
+          - user.distances.counter.each do |length, count|
+            td.count= count
   - if current_user == user
     .col-sm-2.user-share
       a href="https://twitter.com/intent/tweet?status=#{user.name} + #{root_link}/users/#{user.slug}"
@@ -15,11 +25,7 @@
         i.fa.fa-google-plus
       a href="http://vk.com/share.php?url=#{root_link}/users/#{user.slug}&title=#{user.name}"
         i.fa.fa-vk
-    .col-sm-6
-      p= 'Бажаєте взяти участь в Grand Prix Lviv Half Marathon 2016 6-го листопада? Розігруємо 4 реєстрації, більше інфорамації тут: '
-      a href= 'http://my.athletic-career.com/articles/1'
-        'Grand Prix Lviv Half Marathon 2016'
-.user-career
-  p= t('.history') if competitions.count > 0
-  .row
-    = render partial: 'competitions/competition', collection: competitions, as: :c
+.col-xs-12.col-sm-12
+  p
+    i= t('.history') if competitions.count > 0
+  = render partial: 'competitions/competition', collection: competitions, as: :c
