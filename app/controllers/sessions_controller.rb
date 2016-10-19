@@ -23,7 +23,9 @@ class SessionsController < ApplicationController
     {
       name: auth_hash[:info][:name],
       remote_avatar_url: client_avatar(auth_hash[:provider]),
-      email: auth_hash[:info][:email]
+      email: auth_hash[:info][:email],
+      gender: user_gender(auth_hash[:provider]),
+      profile: user_url(auth_hash[:provider])
     }
   end
 
