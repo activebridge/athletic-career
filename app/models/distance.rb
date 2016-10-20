@@ -8,13 +8,11 @@ class Distance < ApplicationRecord
   validates :length_id, presence: true
   validates :price, numericality: { less_than_or_equal_to: :end_price }, allow_blank: true
 
-  scope :uniq_counter, -> { all.group_by { |d| d.length.name } }
+  scope :uniq_counter, -> { all.includes(:length).group_by { |d| d.length.name } }
 
   def self.counter
     result = {}
-    uniq_counter.each do |key, val|
-      result[key.to_s] = val.count
-    end
-    result
+    uniq_counter.each { |key, val| result[key.to_s] = val.count }
+    result.sort { |a, b| b <=> a }
   end
 end
