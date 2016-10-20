@@ -26,9 +26,6 @@ ua:
       past: Минулі забіги
       future: Майбутні забіги
   shared:
-    users:
-      distance: 'Дистанція:'
-      count: 'Кількість забігів:'
     header:
       ua: укр
       ru: рус
@@ -97,6 +94,13 @@ ua:
       history: 'Список та результати змагань:'
       distance: 'Дистанція:'
       count: 'Кількість забігів:'
+      age: 'Вікова група:'
+      city: 'Місто:'
+    users:
+      distance: 'Дистанція:'
+      count: 'Кількість забігів:'
+      age: 'Вікова група:'
+      city: 'Місто:'
   prompts:
     organizer_id: Виберіть організатора
     category_id: Виберіть категорію
@@ -107,6 +111,7 @@ ua:
     select_organizer: Виберіть організатора
     select_distance: Виберіть дистанцію
   links:
+    edit_profile: Редагувати профайл
     run: Я брав участь!
     new_organizer: Новий огранізатор
     new_length: Нова довжина
@@ -147,6 +152,8 @@ ua:
         update: Внести зміни до цього забігу
       length:
         create: Додати дистанцію
+      user:
+        update: Оновити профайл
     placeholder:
       length:
         title: Назва
@@ -188,6 +195,9 @@ ua:
         price: Початкова ціна
         end_price: Кінцева ціна
         length_id: Довжина
+      user:
+        city: Ваше місто
+        category: Ваша вікова група
     errors:
       models:
         competition:

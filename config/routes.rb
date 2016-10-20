@@ -6,7 +6,7 @@ Rails.application.routes.draw do
     resources :events, only: [:new, :index], controller: 'events'
   end
   resources :welcome, only: :index, path: 'dashboard'
-  resources :users
+  resources :users, except: :destroy
   resource :session, only: [:new, :destroy]
   resources :languages, only: :update, constraints: { id: /(ua|ru)/ }
   resources :competitions

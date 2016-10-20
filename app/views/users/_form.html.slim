@@ -1,0 +1,7 @@
+.container
+  = simple_form_for user do |f|
+    .col-lg-6.col-md-6.col-sm-6.col-xs-6
+      = f.input :city
+    .col-lg-6.col-md-6.col-sm-6.col-xs-6
+      = f.input :category, as: :select, collection: User::AGE
+    = f.button :submit, class: 'button success'

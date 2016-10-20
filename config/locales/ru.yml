@@ -26,9 +26,6 @@ ru:
       past: Прошлые забеги
       future: Будущие забеги
   shared:
-    users:
-      distance: 'Дистанция:'
-      count: 'Количество забегов:'
     header:
       ua: укр
       ru: рус
@@ -97,6 +94,11 @@ ru:
       history: 'Список и результаты соревнований:'
       distance: 'Дистанция:'
       count: 'Количество забегов:'
+    users:
+      distance: 'Дистанция:'
+      count: 'Количество забегов:'
+      age: 'Возрастная группа:'
+      city: 'Город:'
   prompts:
     organizer_id: Выберите организатора
     category_id: Выберите категорию
@@ -107,6 +109,7 @@ ru:
     select_organizer: Выберите организатора
     select_distance: Выберите дистанцию
   links:
+    edit_profile: Редактировать профайл
     run: Я принимал участие!
     new_organizer: Новый огранизатор
     new_length: Новая длина
@@ -147,6 +150,8 @@ ru:
         update: Внести изменения в этот забег
       length:
         create: Добавить дистанцию
+      user:
+        update: Обновить профайл
     placeholder:
       competition:
         race_number: Номер
@@ -186,6 +191,9 @@ ru:
         price: Начальная цена
         end_price: Конечная цена
         length_id: Длина
+      user:
+        city: Ваш город
+        category: Ваша возрастная группа
     errors:
       models:
         competition:

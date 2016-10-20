@@ -5,8 +5,19 @@ class UsersController < ApplicationController
   expose :user, -> { User.friendly.find(params[:id]) }
   expose :competitions, -> { user.competitions.includes(:event) }
 
+  def update
+    return redirect_to user_path(user) if user.update(user_params)
+    render :edit
+  end
+
   def root_link
     "#{request.protocol}#{request.host}"
   end
   helper_method :root_link
+
+  private
+
+  def user_params
+    params.require(:user).permit(:city, :category)
+  end
 end

@@ -1,9 +1,39 @@
 .col-xs-12.col-sm-12
   .col-sm-2.avatar
     = link_to cl_image_tag(user.avatar.url(:user_show)), user.profile, target: '_blank'
-    .profile-menu
-  .col-sm-8
-    h3= user.name
+    - if current_user == user
+      = link_to :edit_profile, edit_user_path(user)
+  .col-sm-3.col-xs-3
+    .user-title
+      h3= user.name
+      - if current_user == user
+        .user-share
+          a href="https://twitter.com/intent/tweet?status=#{user.name} + #{root_link}/users/#{user.slug}"
+            i.fa.fa-twitter
+          a href="http://www.facebook.com/sharer/sharer.php?u=#{root_link}/users/#{user.slug}&title=#{user.name}"
+            i.fa.fa-facebook
+          a href="https://plus.google.com/share?url=#{root_link}/users/#{user.slug}"
+            i.fa.fa-google-plus
+          a href="http://vk.com/share.php?url=#{root_link}/users/#{user.slug}&title=#{user.name}"
+            i.fa.fa-vk
+      table.table
+        tr
+          td
+            i= t('.count')
+          td
+            i= user.competitions.count
+        tr
+          td
+            i= t('.city')
+          td
+            i= user.city
+        tr
+          td
+            i= t('.age')
+          td
+            i= user.guman_category
+.col-xs-12.col-sm-12
+  .user-title
     - if user.distances.present?
       table.user-table.table-bordered
         tr
@@ -15,17 +45,7 @@
           td.count= t('.count')
           - user.distances.counter.each do |length, count|
             td.count= count
-  - if current_user == user
-    .col-sm-2.user-share
-      a href="https://twitter.com/intent/tweet?status=#{user.name} + #{root_link}/users/#{user.slug}"
-        i.fa.fa-twitter
-      a href="http://www.facebook.com/sharer/sharer.php?u=#{root_link}/users/#{user.slug}&title=#{user.name}"
-        i.fa.fa-facebook
-      a href="https://plus.google.com/share?url=#{root_link}/users/#{user.slug}"
-        i.fa.fa-google-plus
-      a href="http://vk.com/share.php?url=#{root_link}/users/#{user.slug}&title=#{user.name}"
-        i.fa.fa-vk
 .col-xs-12.col-sm-12
-  p
+  h4
     i= t('.history') if competitions.count > 0
   = render partial: 'competitions/competition', collection: competitions, as: :c

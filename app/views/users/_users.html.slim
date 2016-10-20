@@ -1,0 +1,35 @@
+.col-lg-12.col-xs-12.col-sm-12.user-list
+  .col-sm-2.col-xs-3
+    .profile-link= link_to cl_image_tag(user.avatar.url(:user_index)), user_path(user)
+  .col-sm-3.col-xs-3
+    .user-title
+      h3= link_to user.name, user_path(user)
+      table.table
+        tr
+          td
+            i= t('.count')
+          td
+            i= user.competitions.count
+        tr
+          td
+            i= t('.city')
+          td
+            i= user.city
+        tr
+          td
+            i= t('.age')
+          td
+            i= user.category
+  .col-sm-7.col-xs-3
+    .user-title
+      - if user.distances.present?
+        table.right.user-table.table-bordered
+          tr
+            td= t('.distance')
+            - user.distances.counter.each do |length, count|
+              td.length-info
+                .medal class=("length-#{length}").parameterize
+          tr
+            td.count= t('.count')
+            - user.distances.counter.each do |length, count|
+              td.count= count

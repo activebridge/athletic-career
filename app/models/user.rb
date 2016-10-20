@@ -1,12 +1,13 @@
 class User < ApplicationRecord
   extend FriendlyId
   friendly_id :name, use: [:slugged, :finders]
+  AGE = { '16-39' => 1, '40-49' => 2, '50-59' => 3, '60+' => 4 }
 
   has_many :accounts, dependent: :delete_all
   has_many :competitions
   has_many :distances, through: :competitions
 
-  enum role: [:user, :admin]
+  enum role: [:user, :organizer]
 
   scope :find_by_provider_uid, -> (provider, uid) { joins(:accounts).where(accounts: { provider: provider, uid: uid }) }
 
@@ -23,5 +24,9 @@ class User < ApplicationRecord
 
   def normalize_friendly_id(input)
     input.to_s.to_slug.normalize(transliterations: :russian).to_s
+  end
+
+  def guman_category
+    AGE.index(category)
   end
 end
