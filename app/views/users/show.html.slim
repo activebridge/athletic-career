@@ -2,7 +2,7 @@
   .col-sm-2.avatar
     = link_to cl_image_tag(user.avatar.url(:user_show)), user.profile, target: '_blank'
     - if current_user == user
-      = link_to :edit_profile, edit_user_path(user)
+      = link_to :edit_profile, edit_user_path
   .col-sm-3.col-xs-3
     .user-title
       h3= user.name

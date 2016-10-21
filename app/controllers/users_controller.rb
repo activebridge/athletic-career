@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
   skip_before_action :require_user, only: [:index, :new, :create, :show]
+  before_action :user_exist, only: [:edit, :update]
 
   expose :users, -> { User.all.order('created_at desc') }
   expose :user, -> { User.friendly.find(params[:id]) }
@@ -19,5 +20,9 @@ class UsersController < ApplicationController
 
   def user_params
     params.require(:user).permit(:city, :category)
+  end
+
+  def user_exist
+    redirect_to user_path unless current_user == user
   end
 end
