@@ -6,7 +6,7 @@ class UsersController < ApplicationController
   expose :competitions, -> { user.competitions.includes(:event) }
 
   def update
-    return redirect_to user_path(user) if user.update(user_params)
+    return redirect_to user_path(current_user) if current_user.update(user_params)
     render :edit
   end
 
