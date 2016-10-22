@@ -163,7 +163,7 @@ ru:
         price: Начальная цена
         end_price: Конечная цена
       event:
-        name: Имя
+        name: Название
         city: Город
         site: Сайт
         description: Опиcание

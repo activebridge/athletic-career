@@ -165,7 +165,7 @@ ua:
         price: Початкова ціна
         end_price: Кінцева ціна
       event:
-        name: Ім'я
+        name: Назва
         city: Місто
         site: Сайт
         description: Опиc
