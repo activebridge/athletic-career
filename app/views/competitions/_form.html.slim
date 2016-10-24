@@ -9,7 +9,7 @@
         td => event.name
         td => event.organizer.title
 = simple_form_for competition do |f|
-  = f.input :distance_id, as: :select, collection: event.distances.map { |d| [d.length.title, d.id] }, prompt: t('prompts.select_distance'), label: false, input_html: { required: true }
+  = f.input :distance_id, as: :select, collection: distance_list(event), prompt: t('prompts.select_distance'), label: false, input_html: { required: true }
   = f.input :race_number, label: false, input_html: { placeholder: true, required: true }
   .result
     .col-lg-6.col-md-6.col-sm-6.col-xs-6

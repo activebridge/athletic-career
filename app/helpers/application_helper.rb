@@ -16,4 +16,8 @@ module ApplicationHelper
       image_tag('default.png')
     end
   end
+
+  def distance_list(event)
+    event.distances.includes(:length).map { |d| [d.length.title, d.id] }
+  end
 end

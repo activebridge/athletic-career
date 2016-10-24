@@ -77,9 +77,9 @@ ru:
       new_competition: Новое соревнование
       events: Забеги
     destroy:
-      competition_destroyed: Соревнование успешно удалено
+      competition_destroyed: Забег удален с вашей карьеры.
     create:
-      competition_created: Соревнование успешно создано.
+      competition_created: Забег добавлен к вашей карьере.
     new:
       new_competition: Новое соревнование
       unauthenticated: Вы должны войти или зарегистрироваться прежде чем выполнять это действие.
@@ -118,7 +118,7 @@ ru:
     new_length: Новая длина
     new_events: Новый забeг
     more: Показать больше
-    news: Акции
+    news: Новости
     read_more: Узнать больше
     sentence: предложить
     add_distance: Добавить дистанцию

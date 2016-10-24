@@ -77,9 +77,9 @@ ua:
       new_competition: Нове змагання
       events: Забіги
     destroy:
-      competition_destroyed: Змагання видалено.
+      competition_destroyed: Забіг видалено з вашої кар'єри.
     create:
-      competition_created: Змагання створено.
+      competition_created: Забіг додано до вашої кар'єри.
     new:
       new_competition: Нове змагання
       unauthenticated: Ви повинні увійти або зареєструватися перш ніж виконувати цю дію
@@ -122,7 +122,7 @@ ua:
     add_distance: Додати дистанцію
     remove_distance: Прибрати
     add_competition: Додати кар'єру
-    news: Акції
+    news: Новини
     read_more: Дізнатись більше
     back: Назад
     edit: Змінити
