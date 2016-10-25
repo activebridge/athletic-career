@@ -11,4 +11,5 @@
       .card-date
         .fa.fa-calendar
         =< event.date
-  = link_to :run, new_competition_path(event: event.name)
+  -  params['type'] == 'past'
+    = link_to :run, new_competition_path(event: event.name)
