@@ -20,4 +20,4 @@
 .col-lg-12.col-md-12.col-sm-14.col-xs-12
   .row
     h1=t('.distance')
-  = render partial: 'distance', collection: show_event.distances, as: :distance
+  = render partial: 'distance', collection: show_event.distances.includes(:length), as: :distance
