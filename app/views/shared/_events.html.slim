@@ -6,4 +6,5 @@
       = link_to event.name, event_path(event)
     p
       = event.date
-    = link_to :run, new_competition_path(event: event.name)
+    - if params['type'] == 'past'
+      = link_to :run, new_competition_path(event: event.name)
