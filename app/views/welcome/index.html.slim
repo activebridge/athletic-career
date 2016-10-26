@@ -2,10 +2,10 @@
 .title
   = t('.past')
 .row
-  = render partial: 'shared/events', collection: events.past.order('date desc').first(5), as: :event
+  = render partial: 'shared/past_events', collection: events.past.order('date desc').first(5), as: :event
 .more = link_to :more, '/past/events'
 .title
   = t('.future')
 .row
-  = render partial: 'shared/events', collection: events.future.order('date asc').first(5), as: :event
+  = render partial: 'shared/future_events', collection: events.future.order('date asc').first(5), as: :event
 .more = link_to :more, '/future/events'
