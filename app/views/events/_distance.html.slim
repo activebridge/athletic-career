@@ -2,3 +2,4 @@
   .length-block class=("length-block-#{distance.length.name}").parameterize
     = image_tag ('man.png')
     = link_to distance.length.title, 'javascript:void(false);'
+    = link_to :run, new_competition_path(event: distance.event.name, distance: distance)

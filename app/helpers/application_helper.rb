@@ -20,4 +20,9 @@ module ApplicationHelper
   def distance_list(event)
     event.distances.includes(:length).map { |d| [d.length.title, d.id] }
   end
+
+  def find_distance(id)
+    distance = Distance.find(id)
+    distance.length.title
+  end
 end
