@@ -74,6 +74,7 @@ ua:
     form:
       event: Забіг
       organizer: Організатор
+      distance: Дистанция
       new_competition: Нове змагання
       events: Забіги
     destroy:

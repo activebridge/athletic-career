@@ -74,6 +74,7 @@ ru:
     form:
       event: Забег
       organizer: Организатор
+      distance: Дистанція
       new_competition: Новое соревнование
       events: Забеги
     destroy:

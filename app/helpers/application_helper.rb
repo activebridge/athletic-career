@@ -26,7 +26,8 @@ module ApplicationHelper
     distance.length.title
   end
 
-  def run_link?(id)
+  def run_link?(id, event)
+    return true unless event.date < DateTime.now
     result = current_user.competitions.map(&:distance_id)
     result.include?(id)
   end
