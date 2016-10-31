@@ -6,4 +6,4 @@
       = link_to event.name, event_path(event)
     p
       = event.date
-    = link_to :run, new_competition_path(event: event.name)
+    = link_to :run, event_path(event)

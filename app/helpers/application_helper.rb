@@ -25,4 +25,9 @@ module ApplicationHelper
     distance = Distance.find(id)
     distance.length.title
   end
+
+  def run_link?(id)
+    result = current_user.competitions.map(&:distance_id)
+    result.include?(id)
+  end
 end
