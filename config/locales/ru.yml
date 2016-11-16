@@ -97,7 +97,14 @@ ru:
       count: 'Количество забегов:'
       age: 'Возрастная группа:'
       city: 'Город:'
+    useful_links:
       useful_links: 'Полезные ссылки'
+      sport_event: Ukraine Sport Events - Спортивные мероприятия Украины
+      at_events: Athletic Events - Спортивные мероприятия Украины
+      run_ukraine: Организация спортивных массовых мероприятий
+      all_events: Всеукраинский календарь пробегов и тренировок
+      legs_gots: "Всё о беге: тренировки для начинающих, мотивация, подготовка к марафону, экипировка."
+      run_and_travel: Блог о беге на длинные дистанции, марафонах, полумарафонах, тренировках и обо всем, что с этим связано.
     users:
       distance: 'Дистанция:'
       count: 'Количество забегов:'
@@ -145,6 +152,12 @@ ru:
     title: MyAthleticCareer
     admin_title: Admin Dashboard
     users: Пользователи
+    sport_event: Sport Event
+    at_events: At. Events
+    run_ukraine: Run Ukraine
+    all_events: ВсеПробеги
+    legs_gots: Ногибоги
+    run_and_travel: Run and Travel
   helpers:
     submit:
       event:

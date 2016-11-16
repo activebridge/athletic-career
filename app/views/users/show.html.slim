@@ -36,35 +36,7 @@
                   i.fa.fa-vk
           td
 
-  .col-sm-7.col-xs-3
-    .user-title
-      h3
-        i= 'Корисні посилання'
-      table.table
-        tr
-          td
-            i= link_to 'Sport Event', 'http://sportevent.com.ua/', target: '_black'
-          td= 'Ukraine Sport Events - Спортивные мероприятия Украины'
-        tr
-          td
-            i= link_to 'At. Events', 'https://athletic-events.com/', target: '_blank'
-          td= 'Athletic Events - Спортивные мероприятия Украины'
-        tr
-          td
-            i= link_to 'Run Ukraine', 'http://runukraine.org/', target: '_blank'
-          td=  'Організація спортивних масових заходів'
-        tr
-          td
-            i= link_to 'ВсеПробеги', '', target: '_blank'
-          td= 'Всеукраїнський календар пробігів і тренувань'
-        tr
-          td
-            i= link_to 'Ногибоги', 'http://nogibogi.com/', target: '_blank'
-          td= 'Всё о беге: тренировки для начинающих, мотивация, подготовка к марафону, экипировка.'
-        tr
-          td
-            i= link_to 'Run and Travel', 'http://run-and-travel.com/', target: '_blank'
-          td= 'Блог о беге на длинные дистанции, марафонах, полумарафонах, тренировках и обо всем, что с этим связано.'
+  = render 'useful_links'
 .col-xs-12.col-sm-12
   .user-title
     - if user.distances.present?
