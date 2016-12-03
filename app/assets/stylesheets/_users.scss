@@ -73,6 +73,12 @@ table.user-table {
     background-size: 310px;
   }
   .length {
+    &-trail {
+      background-position: -14px -601px;
+    }
+    &-runup {
+      background-position: -14px -477px;
+    }
     &-ultra {
       background-position: -111px -100px;
     }
