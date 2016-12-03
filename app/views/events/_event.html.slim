@@ -10,6 +10,6 @@
         = event.city
       .card-date
         .fa.fa-calendar
-        =< event.date
+        =< l(event.date, format: :default)
   - if params['type'] == 'past'
     = link_to :run, event_path(event)
