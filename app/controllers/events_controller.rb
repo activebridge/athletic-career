@@ -34,7 +34,7 @@ class EventsController < ApplicationController
   def event_params
     params.require(:event).permit(
       :name, :description, :site, :logo, :logo_cache, :city, :date, :banner, :country, :organizer_id, :category_id,
-      distances_attributes: [:id, :_destroy, :event_id, :length_id, :price, :end_price]
+      distances_attributes: [:id, :_destroy, :event_id, :length_id, :price, :end_price, :title]
     )
   end
 end

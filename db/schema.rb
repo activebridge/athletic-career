@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161025072733) do
+ActiveRecord::Schema.define(version: 20161203174346) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -77,6 +77,7 @@ ActiveRecord::Schema.define(version: 20161025072733) do
     t.integer "end_price"
     t.integer "event_id"
     t.integer "length_id"
+    t.string  "title"
     t.index ["event_id"], name: "index_distances_on_event_id", using: :btree
     t.index ["length_id"], name: "index_distances_on_length_id", using: :btree
   end
