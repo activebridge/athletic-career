@@ -3,5 +3,3 @@
 .row
   #list-events.events-side
     = render partial: "#{params[:type]}_events"
-    p.pagination
-      = link_to_next_page(@event, 'Next Page', remote: true)
