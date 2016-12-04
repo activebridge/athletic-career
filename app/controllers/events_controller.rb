@@ -10,7 +10,7 @@ class EventsController < ApplicationController
   expose :future_search_event, -> { events.future.search(params[:search]).order('date asc').page(params[:page]) }
 
   def index
-    @events = params[:type] == 'past' ? search_event : future_search_event
+    @events = params[:type] == 'past' ? past_events : future_events
   end
 
   def new
