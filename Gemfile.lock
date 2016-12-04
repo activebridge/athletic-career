@@ -158,6 +158,9 @@ GEM
       railties (>= 3.2.16)
     json (2.0.2)
     jwt (1.5.4)
+    kaminari (0.17.0)
+      actionpack (>= 3.0.0)
+      activesupport (>= 3.0.0)
     launchy (2.4.3)
       addressable (~> 2.3)
     lazybox (1.1.5)
@@ -386,6 +389,7 @@ DEPENDENCIES
   jbuilder (~> 2.5)
   jquery-rails
   jquery-ui-rails
+  kaminari
   lazybox
   letter_opener
   listen (~> 3.0.5)
@@ -421,4 +425,4 @@ RUBY VERSION
    ruby 2.3.1p112
 
 BUNDLED WITH
-   1.12.5
+   1.13.5

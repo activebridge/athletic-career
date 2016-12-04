@@ -9,8 +9,10 @@ class Event < ApplicationRecord
   has_many :distances, dependent: :destroy
   accepts_nested_attributes_for :distances, allow_destroy: true
 
-  validates :name, :city, :country, :date, :category_id, :organizer_id, presence: true
+  paginates_per 4
   mount_base64_uploader :logo, LogoUploader
+
+  validates :name, :city, :country, :date, :category_id, :organizer_id, presence: true
 
   scope :past, -> { where('date < ?', Date.current) }
   scope :future, -> { where('date >= ?', Date.current) }

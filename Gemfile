@@ -33,6 +33,7 @@ gem 'friendly_id', '~> 5.0.0'
 gem 'babosa'
 gem 'therubyracer'
 gem 'tinymce-rails'
+gem 'kaminari'
 
 group :development, :test do
   gem 'pry'
