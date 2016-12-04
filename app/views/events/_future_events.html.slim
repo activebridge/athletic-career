@@ -1,5 +1,5 @@
 - future_search_event.each do |event|
   .col-lg-3.col-md-4.col-sm-6.col-xs-6
     = render partial: 'event', locals: { event: event }
-p.pagination
-  = link_to_next_page(future_search_event, 'Next Page', remote: true)
+.row.pagination
+  = link_to_next_page(future_search_event, '', remote: true)
