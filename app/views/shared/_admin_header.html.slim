@@ -1,6 +1,16 @@
-nav.navbar.admin-navbar
+nav.navbar.navbar-fixed-top
   .container-fluid
     .collapse.navbar-collapse
-      ul.nav.navbar-nav
-        li.pull-left
-          = link_to :admin_title, admin_dashboard_path
+      .nav.navbar-nav
+        = link_to '', admin_dashboard_path, class: 'pull-left'
+        = nav_link t('links.organizers'), admin_organizers_path
+        = nav_link t('links.lengths'), admin_lengths_path
+        = nav_link t('links.categories'), admin_categories_path
+        = nav_link t('links.future_events'), admin_events_path(type: 'future')
+        = nav_link t('links.past_events'), admin_events_path(type: 'past')
+        = nav_link t('links.users'), admin_users_path
+        = nav_link t('links.news'), admin_articles_path
+        .pull-right
+          => link_to_unless current_locale?(:ua), t('ua'), language_path(:ua), method: :patch
+          ' |
+          = link_to_unless current_locale?(:ru), t('ru'), language_path(:ru), method: :patch

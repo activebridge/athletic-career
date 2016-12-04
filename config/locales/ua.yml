@@ -1,13 +1,9 @@
 ua:
+  ua: укр
+  ru: рус
   all: всі
   are_you_sure: Ви впевнені?
   admin:
-    dashboards:
-      show:
-        organizers: Список організаторів
-        lengths: Список дистанцій
-        categories: Список категорій
-        events: Список забігів
     events:
       form:
         distances: Дистанції
@@ -29,10 +25,6 @@ ua:
     month_names: ['~', 'Січня', 'Лютого', 'Березня', 'Квітня', 'Травня', 'Червня', 'Липня', 'Серпня', 'Вересня', 'Жовтня', 'Листопада', 'Грудня']
     formats:
       default: "%d %B %Y"
-  shared:
-    header:
-      ua: укр
-      ru: рус
   sessions:
     create:
       succesfull: Ви успішно увійшли в свій акаунт
@@ -162,6 +154,13 @@ ua:
     all_events: ВсеПробеги
     legs_gots: Ногибоги
     run_and_travel: Run and Travel
+    organizers: Організатори
+    lengths: Дистанції
+    categories: Категорії
+    future_events: Майбутні івенти
+    past_events: Минулі івенти
+    users: Користувачі
+    news: Новини
   helpers:
     submit:
       event:

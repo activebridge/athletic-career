@@ -8,7 +8,7 @@ nav.navbar.navbar-fixed-top
         = nav_link t('links.users'), '/users'
         = nav_link t('links.news'), '/articles'
         .pull-right
-          => link_to_unless current_locale?(:ua), t('.ua'), language_path(:ua), method: :patch
+          => link_to_unless current_locale?(:ua), t('ua'), language_path(:ua), method: :patch
           ' |
-          = link_to_unless current_locale?(:ru), t('.ru'), language_path(:ru), method: :patch
+          = link_to_unless current_locale?(:ru), t('ru'), language_path(:ru), method: :patch
           = render 'shared/dropdown'

@@ -1,13 +1,9 @@
 ru:
+  ua: укр
+  ru: рус
   all: все
   are_you_sure: Вы уверены?
   admin:
-    dashboards:
-      show:
-        organizers: Список организаторов
-        lengths: Список дистанций
-        categories: Список категоріи
-        events: Список забегов
     events:
       form:
         distances: Дистанции
@@ -29,10 +25,6 @@ ru:
     month_names: ['~', 'Января', 'Февраля', 'Марта', 'Апреля', 'Мая', 'Июня', 'Июля', 'Августа', 'Сентября', 'Октября', 'Ноября', 'Декабря']
     formats:
       default: "%d %B %Y"
-  shared:
-    header:
-      ua: укр
-      ru: рус
   sessions:
     create:
       succesfull: Вы успешно вошли в свой аккаунт
@@ -162,6 +154,13 @@ ru:
     all_events: ВсеПробеги
     legs_gots: Ногибоги
     run_and_travel: Run and Travel
+    organizers: Организаторы
+    lengths: Дистанции
+    categories: Категории
+    future_events: Будущие ивенты
+    past_events: Прошлие ивенты
+    users: Пользователи
+    news: Новости
   helpers:
     submit:
       event:
