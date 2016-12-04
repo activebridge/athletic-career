@@ -5,4 +5,4 @@
     h5.name
       = link_to event.name, event_path(event)
     p
-      = event.date
+      = l(event.date, format: :default)
