@@ -1,5 +1,5 @@
-$(document).on 'page:change ready page:load', ->
-  $('#list-events').infinitePages('next')
+$(window).scroll ->
+  $('#list-events').infinitePages
     loading: ->
       $(this).text('Loading next page...')
     error: ->
