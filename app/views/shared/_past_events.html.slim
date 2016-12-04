@@ -1,9 +1,0 @@
-.col-lg-2.col-md-2.col-ms-4.col-xs-3.event
-  .thumbnail
-    = event_logo(event)
-  .caption
-    h5.name
-      = link_to event.name, event_path(event)
-    p
-      = l(event.date, format: :default)
-    = link_to :run, event_path(event)

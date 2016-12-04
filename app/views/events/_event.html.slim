@@ -6,10 +6,9 @@
     h4.card-title
       = link_to event.name, event_path(event)
     .card-info
-      .card-text
-        = event.city
       .card-date
         .fa.fa-calendar
         =< l(event.date, format: :default)
   - if params['type'] == 'past'
+    br
     = link_to :run, event_path(event)

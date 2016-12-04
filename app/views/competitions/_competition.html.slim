@@ -6,8 +6,6 @@
       h4.card-title
         = link_to c.event.name, event_path(c.event.id)
       .card-info
-        .card-text
-          = c.event.city
         .card-date
           ="#{c.net_result.hour}:#{c.net_result.min}:#{c.net_result.sec}"
     - if current_user == c.user

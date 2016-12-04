@@ -80,13 +80,7 @@
     width: 100%;
     object-fit: scale-down;
   }
-  .card-info{
-    display: flex;
-    .card-text {
-      color: $gray;
-      margin: 10px;
-      display: inline-block;
-    }
+  .card-info {
     .card-date {
       margin: 10px;
       margin-left: auto;
