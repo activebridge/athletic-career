@@ -9,7 +9,7 @@ class Event < ApplicationRecord
   has_many :distances, dependent: :destroy
   accepts_nested_attributes_for :distances, allow_destroy: true
 
-  paginates_per 8
+  paginates_per 12
   mount_base64_uploader :logo, LogoUploader
 
   validates :name, :city, :country, :date, :category_id, :organizer_id, presence: true
