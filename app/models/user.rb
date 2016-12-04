@@ -11,6 +11,7 @@ class User < ApplicationRecord
 
   scope :find_by_provider_uid, -> (provider, uid) { joins(:accounts).where(accounts: { provider: provider, uid: uid }) }
 
+  paginates_per 15
   mount_base64_uploader :avatar, AvatarUploader
 
   def self.fetch_account(account_params, user_params)

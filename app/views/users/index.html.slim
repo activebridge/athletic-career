@@ -1,1 +1,4 @@
-= render partial: 'users', collection: users, as: :user
+#list-users
+  = render partial: 'users', collection: users, as: :user
+  .row.pagination
+    = link_to_next_page(users, '', remote: true)

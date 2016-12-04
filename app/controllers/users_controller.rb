@@ -2,7 +2,7 @@ class UsersController < ApplicationController
   skip_before_action :require_user, only: [:index, :new, :create, :show]
   before_action :user_exist, only: [:edit, :update]
 
-  expose :users, -> { User.all.order('created_at desc') }
+  expose :users, -> { User.all.order('created_at desc').page(params[:page]) }
   expose :user, -> { User.friendly.find(params[:id]) }
   expose :competitions, -> { user.competitions.includes(:event) }
 
