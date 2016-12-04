@@ -34,6 +34,7 @@ gem 'babosa'
 gem 'therubyracer'
 gem 'tinymce-rails'
 gem 'kaminari'
+gem 'jquery-infinite-pages'
 
 group :development, :test do
   gem 'pry'

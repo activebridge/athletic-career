@@ -6,6 +6,7 @@
 //= require lazybox
 //= require cloudinary
 //= require jquery.datetimepicker.min
+//= require jquery.infinite-pages
 //= require cocoon
 //= require bootstrap-notify
 //= require bootstrap-sprockets

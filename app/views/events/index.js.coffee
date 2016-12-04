@@ -1,5 +1,5 @@
 $('#list-events').append('<%= j(render partial: "#{params[:type]}_events") %>')
-if "<%= notifications.next_page %>"
-  $('.events-side').attr('href', '<%= event_path(page: params[:page].to_i + 1, type: "#{params[:type]}") %>')
+if <%= search_event.last_page? %>
+  $('.pagination').html("That's all, folks!")
 else
-  $('.events-side').remove()
+  $('.pagination').html("<%=j link_to_next_page(search_event, 'Next Page', remote: true) %>")

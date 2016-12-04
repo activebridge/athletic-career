@@ -7,6 +7,10 @@ class EventsController < ApplicationController
   expose :search_event, -> { events.search(params[:search]).order('date desc').page(params[:page]) }
   expose :future_search_event, -> { events.future.search(params[:search]).order('date asc').page(params[:page]) }
 
+  def index
+    @event = params[:type] == 'past' ? search_event : future_search_event
+  end
+
   def new
     event.distances.build
   end
