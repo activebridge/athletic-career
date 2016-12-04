@@ -61,4 +61,6 @@
   padding: 12px 0px;
   font-size: 17px;
 }
-
+.nav .open>a, .nav .open>a:hover, .nav .open>a:focus {
+  background: none;
+}
