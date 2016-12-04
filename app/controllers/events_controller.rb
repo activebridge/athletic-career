@@ -2,13 +2,15 @@ class EventsController < ApplicationController
   before_action :require_user, only: [:new, :create, :edit, :update, :destroy]
 
   expose :events, -> { Event.ready }
+  expose :past_events, -> { events.past.order('date desc').page(params[:page]) }
+  expose :future_events, -> { events.future.order('date asc').page(params[:page]) }
   expose :event
   expose :show_event, -> { Event.friendly.find(params[:id]) }
   expose :search_event, -> { events.search(params[:search]).order('date desc').page(params[:page]) }
   expose :future_search_event, -> { events.future.search(params[:search]).order('date asc').page(params[:page]) }
 
   def index
-    @event = params[:type] == 'past' ? search_event : future_search_event
+    @events = params[:type] == 'past' ? search_event : future_search_event
   end
 
   def new
