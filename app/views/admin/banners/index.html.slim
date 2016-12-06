@@ -6,6 +6,7 @@ table
       th Title
       th Visible
       th Image
+      th Priority
       th
       th
       th
@@ -13,12 +14,13 @@ table
   tbody
     - banners.each do |banner|
       tr
-        td = banner.name
-        td = banner.visible
-        td = banner.image
-        td = link_to 'Show', admin_banner_path(banner)
-        td = link_to 'Edit', edit_admin_banner_path(banner)
-        td = link_to 'Destroy', admin_banner_path(banner), data: { confirm: 'Are you sure?' }, method: :delete
+        td= banner.name
+        td= banner.visible
+        td= cl_image_tag(banner.image.url(:small))
+        td= banner.priority
+        td= link_to 'Show', admin_banner_path(banner)
+        td= link_to 'Edit', edit_admin_banner_path(banner)
+        td= link_to 'Destroy', admin_banner_path(banner), data: { confirm: 'Are you sure?' }, method: :delete
 
 br
 
