@@ -1,0 +1,12 @@
+= simple_form_for user, as: :user, url: url do |f|
+  .file-upload
+    .btn-default
+      = f.input :avatar, label: 'Avatar'
+      = f.hidden_field(:avatar_cache)
+  .input_fields_form
+    = f.input :name
+    = f.input :email
+    = f.input :category, as: :select, collection: User::AGE
+    = f.input :city
+    = f.select :role, options_for_select(User.roles.keys, selected: user.role)
+    = f.button :submit, class: 'button success'
