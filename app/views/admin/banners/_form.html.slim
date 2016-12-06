@@ -1,0 +1,13 @@
+= simple_form_for banner, as: :banner, url: url do |f|
+  = f.error_notification
+
+  .form-inputs
+    .file-upload
+      .btn-default
+        = f.input :image, label: 'Image'
+        = f.hidden_field(:image_cache)
+    = f.input :name
+    = f.input :visible, as: :select
+
+  .form-actions
+    = f.button :submit

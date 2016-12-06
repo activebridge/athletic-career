@@ -10,6 +10,7 @@ nav.navbar.navbar-fixed-top
         = nav_link t('links.past_events'), admin_events_path(type: 'past')
         = nav_link t('links.users'), admin_users_path
         = nav_link t('links.news'), admin_articles_path
+        = nav_link t('links.banner'), admin_banners_path
         .pull-right
           => link_to_unless current_locale?(:ua), t('ua'), language_path(:ua), method: :patch
           ' |

@@ -1,12 +1,8 @@
 #myCarousel.carousel.slide data-ride="carousel"
   ol.carousel-indicators
-    li.active data-slide-to="0" data-target="#myCarousel"
-    li data-slide-to="1" data-target="#myCarousel"
-    li data-slide-to="2" data-target="#myCarousel"
-  .carousel-inner role="listbox"
-    .item.active
-      = image_tag('yoli.jpg')
-    .item
-      = image_tag('2017.jpg')
-    .item
-      = image_tag('harkiv.jpg')
+    - banners.each_with_index do |banner, index|
+      li class = "#{'active' if index == 0}" data-slide-to= index data-target="#myCarousel"
+  .carousel-inner role='listbox'
+    - banners.each_with_index do |banner, index|
+      .item class = "#{'active' if index == 0}"
+        = cl_image_tag(banner.image.url(:standard))
