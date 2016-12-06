@@ -19,7 +19,7 @@ table
         td= banner.priority
         td= link_to :show, admin_banner_path(banner)
         td= link_to :edit, edit_admin_banner_path(banner)
-        td= link_to :destroy, admin_banner_path(banner), data: { confirm: t('are_you_sure') }, method: :delete
+        td= link_to :delete, admin_banner_path(banner), data: { confirm: t('are_you_sure') }, method: :delete
 
 br
 

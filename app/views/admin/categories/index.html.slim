@@ -12,7 +12,7 @@ table.table
       tr
         td = category.title
         td = link_to :edit, edit_admin_category_path(category)
-        td = link_to :destroy, admin_category_path(category), data: { confirm: t('.are_you_sure') }, method: :delete
+        td = link_to :delete, admin_category_path(category), data: { confirm: t('.are_you_sure') }, method: :delete
 
 br
 
