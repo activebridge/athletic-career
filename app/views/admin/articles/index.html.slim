@@ -1,25 +1,24 @@
-h1 Listing articles
+h1= t('.title')
 
-table
+table.table
   thead
     tr
-      th Title
-      th Body
-      th Image
+      th= t('.name')
+      th= t('.body')
+      th= t('.image')
       th
       th
       th
-
   tbody
     - articles.each do |article|
       tr
-        td = article.title
-        td = article.body
-        td = article.image
-        td = link_to 'Show', admin_article_path(article)
-        td = link_to 'Edit', edit_admin_article_path(article)
-        td = link_to 'Destroy', admin_article_path(article), data: { confirm: 'Are you sure?' }, method: :delete
+        td= article.title
+        td= article.body
+        td= article.image
+        td= link_to :show, admin_article_path(article)
+        td= link_to :edit, edit_admin_article_path(article)
+        td= link_to :destroy, admin_article_path(article), data: { confirm: t('are_you_sure') }, method: :delete
 
 br
 
-= link_to 'New Article', new_admin_article_path
+= link_to :new_article, new_admin_article_path

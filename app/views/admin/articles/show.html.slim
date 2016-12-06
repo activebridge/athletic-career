@@ -1,15 +1,15 @@
-p#notice = notice
+p#notice= notice
 
 p
-  strong Title:
+  strong= ('.title')
   = article.title
 p
-  strong Body:
+  strong= ('.body')
   = article.body
 p
-  strong Image:
+  strong= ('.image')
   = article.image
 
-= link_to 'Edit', edit_admin_article_path(article)
+= link_to :edit, edit_admin_article_path(article)
 '|
-= link_to 'Back', admin_articles_path
+= link_to :back, admin_articles_path

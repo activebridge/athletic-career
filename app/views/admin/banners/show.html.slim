@@ -1,15 +1,15 @@
-p#notice = notice
+p#notice= notice
 
 p
-  strong Title:
+  strong= t('.title')
   = banner.name
 p
-  strong Body:
+  strong= t('.body')
   = banner.visible
 p
-  strong Image:
+  strong= t('.image')
   = banner.image
 
-= link_to 'Edit', edit_admin_banner_path(banner)
+= link_to :edit, edit_admin_banner_path(banner)
 '|
-= link_to 'Back', admin_banners_path
+= link_to :back, admin_banners_path

@@ -1,18 +1,18 @@
-h1 Listing organizers
+h1= t('.title')
 
 table.table
   thead
     tr
-      th Title
-      th Edit
-      th Destroy
+      th= t('.name')
+      th= t('.edit')
+      th= t('destroy')
 
   tbody
     - organizers.each do |organizer|
       tr
         td = organizer.title
         td = link_to :edit, edit_admin_organizer_path(organizer)
-        td = link_to :delete, admin_organizer_path(organizer), data: { confirm: 'Are you sure?' }, method: :delete
+        td = link_to :delete, admin_organizer_path(organizer), data: { confirm: t('.are_you_sure') }, method: :delete
 
 br
 

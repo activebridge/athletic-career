@@ -161,6 +161,7 @@ ru:
     past_events: Прошлие ивенты
     users: Пользователи
     news: Новости
+    banner: Банеры
   helpers:
     submit:
       event:

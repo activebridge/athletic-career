@@ -1,22 +1,22 @@
-h1 Listing lengths
+h1= t('.page_title')
 
 table.table
   thead
     tr
-      th Name
-      th Title
-      th Mark
-      th Visible
+      th= t('.name')
+      th= t('.title')
+      th= t('.mark')
+      th= t('.visible')
 
   tbody
     - lengths.each do |length|
       tr
-        td = length.name
-        td = length.title
-        td = length.mark
-        td = length.visible
-        td = link_to :edit, edit_admin_length_path(length)
-        td = link_to :delete, admin_length_path(length), data: { confirm: 'Are you sure?' }, method: :delete
+        td= length.name
+        td= length.title
+        td= length.mark
+        td= length.visible
+        td= link_to :edit, edit_admin_length_path(length)
+        td= link_to :delete, admin_length_path(length), data: { confirm: t('.are_you_sure') }, method: :delete
 
 br
 

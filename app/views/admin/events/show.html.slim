@@ -2,14 +2,14 @@
   = event_logo(show_event)
 .col-lg-7.col-sm-7.col-xs-11.show
   p
-    strong =>t('.name')
+    strong=>t('.name')
     = show_event.name
   p
-    strong =>t('.city')
+    strong=>t('.city')
     = show_event.city
   p
-    strong =>t('.date')
+    strong=>t('.date')
     = show_event.date
   p
-    strong =>t('.description') if show_event.description.present?
+    strong=>t('.description') if show_event.description.present?
     = show_event.description

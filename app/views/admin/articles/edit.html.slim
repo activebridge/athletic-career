@@ -1,8 +1,6 @@
-h1 Editing article
-
-== render 'form', url: admin_article_path(article)
-
-= link_to 'Show', admin_article_path(article)
+h1= t('.title')
+==render 'form', url: admin_article_path(article)
+=link_to :show, admin_article_path(article)
 '|
-= link_to 'Back', admin_articles_path
+=link_to :back, admin_articles_path
 

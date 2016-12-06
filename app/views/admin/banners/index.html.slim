@@ -1,16 +1,15 @@
-h1 Listing banners
+h1= t('.title')
 
 table
   thead
     tr
-      th Title
-      th Visible
-      th Image
-      th Priority
+      th= t('.name')
+      th= t('.visible')
+      th= t('.image')
+      th= t('.priority')
       th
       th
       th
-
   tbody
     - banners.each do |banner|
       tr
@@ -18,10 +17,10 @@ table
         td= banner.visible
         td= cl_image_tag(banner.image.url(:small))
         td= banner.priority
-        td= link_to 'Show', admin_banner_path(banner)
-        td= link_to 'Edit', edit_admin_banner_path(banner)
-        td= link_to 'Destroy', admin_banner_path(banner), data: { confirm: 'Are you sure?' }, method: :delete
+        td= link_to :show, admin_banner_path(banner)
+        td= link_to :edit, edit_admin_banner_path(banner)
+        td= link_to :destroy, admin_banner_path(banner), data: { confirm: t('are_you_sure') }, method: :delete
 
 br
 
-= link_to 'New Banner', new_admin_banner_path
+= link_to t('.new_banner'), new_admin_banner_path

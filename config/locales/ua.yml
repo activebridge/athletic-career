@@ -160,6 +160,7 @@ ua:
     future_events: Майбутні івенти
     past_events: Минулі івенти
     users: Користувачі
+    banner: Банери
     news: Новини
   helpers:
     submit:
