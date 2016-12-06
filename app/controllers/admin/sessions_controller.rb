@@ -1,5 +1,6 @@
 class Admin::SessionsController < AdminsController
   skip_before_action :require_admin
+  layout 'admin_session'
 
   def new
     @admin_session = Session.new
