@@ -1,0 +1,5 @@
+ua:
+  admin:
+    dashboards:
+      show:
+        users_count: Кількість юзерів

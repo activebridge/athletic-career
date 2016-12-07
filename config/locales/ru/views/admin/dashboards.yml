@@ -1,0 +1,5 @@
+ru:
+  admin:
+    dashboards:
+      show:
+        users_count: Количество пользователей

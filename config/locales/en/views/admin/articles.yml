@@ -2,22 +2,22 @@ en:
   admin:
     articles:
       index:
-        title: Список публікацій
-        name: Заголовок
-        body: Текст
-        image: Зображення
+        title: Articles list
+        name: Title
+        body: Text
+        image: Image
       new:
-        title: Створити нову статтю
+        title: Create article
       edit:
-        title: Редагувати статтю
+        title: Edit article
       edit_form:
-        logo: Додати зображення
-        submit: Оновити статтю
+        logo: Add Image
+        submit: Update article
       form:
-        logo: Додати зображення
-        submit: Створити статтю
+        logo: Add Image
+        submit: Create article
       show:
-        title: Заголовок
-        body: Текст
-        image: Зображення
+        title: Title
+        body: Text
+        image: Image
 

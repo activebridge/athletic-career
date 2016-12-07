@@ -1,5 +1,5 @@
 en:
   welcome:
     index:
-      past: Минулі забіги
-      future: Майбутні забіги
+      past: Past events
+      future: Future events

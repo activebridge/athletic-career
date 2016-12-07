@@ -1,5 +1,5 @@
 class Admin::ArticlesController < AdminsController
-  expose :articles, -> { Article.all }
+  expose :articles, -> { Article.all.order(created_at: :desc).page(params[:page]) }
   expose :show_article, -> { Article.friendly.find(params[:id]) }
   expose :article
 
