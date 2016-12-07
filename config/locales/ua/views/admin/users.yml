@@ -1,0 +1,5 @@
+ua:
+  admin:
+    users:
+      index:
+        title: Список користувачів

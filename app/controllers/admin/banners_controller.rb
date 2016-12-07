@@ -1,4 +1,4 @@
-class Admin::BannersController < ApplicationController
+class Admin::BannersController < AdminsController
   expose :banners, -> { Banner.all }
   expose :banner
 

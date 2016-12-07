@@ -1,0 +1,5 @@
+ru:
+  admin:
+    users:
+      index:
+        title: Список пользователей
