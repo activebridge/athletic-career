@@ -1,5 +1,7 @@
 h1= t('.page_title')
-
+br
+= link_to :new_length, new_admin_length_path, class: 'btn btn-default'
+br
 table.table
   thead
     tr
@@ -9,15 +11,4 @@ table.table
       th= t('.visible')
 
   tbody
-    - lengths.each do |length|
-      tr
-        td= length.name
-        td= length.title
-        td= length.mark
-        td= length.visible
-        td= link_to :edit, edit_admin_length_path(length)
-        td= link_to :delete, admin_length_path(length), data: { confirm: t('.are_you_sure') }, method: :delete
-
-br
-
-= link_to :new_length, new_admin_length_path
+    = render partial: 'length', collection: lengths, as: :length

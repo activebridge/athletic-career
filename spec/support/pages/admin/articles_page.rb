@@ -8,6 +8,7 @@ class Admin::ArticlesPage < BasePage
 
   def fill_form(params)
     within 'form' do
+      page.execute_script('$("#article_body").tinymce().setContent("Content")')
       find("label[for='article_image']").trigger :click
       attach_file('article[image]', "#{Rails.root}/spec/fixtures/test.jpg", visible: false)
       fill_in 'article[title]', with: params[:title]
@@ -19,6 +20,7 @@ class Admin::ArticlesPage < BasePage
 
   def fill_form_edit(params)
     within 'form' do
+      page.execute_script('$("#article_body").tinymce().setContent("Content")')
       find("label[for='article_image']").trigger :click
       attach_file('article[image]', "#{Rails.root}/spec/fixtures/test.jpg", visible: false)
       fill_in 'article[title]', with: params[:title]
