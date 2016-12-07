@@ -6,11 +6,11 @@ feature 'AdminSession' do
 
   scenario 'Log In/Log Out Admin Panel', js: true do
     login_page.open
-    fill_in 'session[email]', with: admin[:email]
-    fill_in 'session[password]', with: admin[:password]
+    fill_in 'session[email]', with: admin[:email], visible: false
+    fill_in 'session[password]', with: admin[:password], visible: false
     click_button 'login'
     login_page.wait_js_execution
     expect(page).to have_no_css('.error')
-    # expect(page).to have_content(I18n.t('.admin.dashboards.show.users_count')) WTF????
+    expect(page).to have_content(I18n.t('.admin.dashboards.show.users_count'))
   end
 end
