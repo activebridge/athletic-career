@@ -1,0 +1,7 @@
+ua:
+  views:
+    pagination:
+      first: Перша
+      previous: Попередня
+      next: Наступна
+      last: Остання
