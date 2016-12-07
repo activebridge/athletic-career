@@ -1,2 +1,262 @@
 en:
-  hello: 'Hello world'
+  ua: укр
+  ru: рус
+  all: всі
+  are_you_sure: Ви впевнені?
+  admin:
+    events:
+      form:
+        distances: Дистанції
+      index:
+        unauthenticated: Ви повинні увійти або зареєструватися перш ніж виконувати цю дію
+      create:
+        event_created: Забіг успішно створений.
+      show:
+        name: Назва
+        description: Опис
+        city: Місто
+        country: Країна
+        date: Дата
+  date:
+    month_names: ['~', 'Січня', 'Лютого', 'Березня', 'Квітня', 'Травня', 'Червня', 'Липня', 'Серпня', 'Вересня', 'Жовтня', 'Листопада', 'Грудня']
+    formats:
+      default: "%d %B %Y"
+  sessions:
+    create:
+      succesfull: Ви успішно увійшли в свій акаунт
+    destroy:
+      succesfull: Ви успішно вийшли зі свого акаунта
+    new:
+      no_account: Немає аккаунта
+  lengths:
+    create:
+      length_created: Довжина успішно створена. Після огляду адміністрaтором вона з'явиться на сайті.
+    destroy:
+      length_destroyed: Довжина була успішно видалена
+    show:
+      past: Минулі
+      future: Майбутні
+    index:
+      not_found_distance: не знайшли дистанцію в якій приймали участь, ви можете
+      variant: свій варіант
+  events:
+    new:
+      unauthenticated: Ви повинні увійти або зареєструватися перш ніж виконувати цю дію
+    past_events:
+      not_found_events: Нічого не знайдено
+    future_events:
+      not_found_events: Нічого не знайдено
+    create:
+      event_created: Забіг успішно створений. Після огляду адміністрaтором він з'явиться на сайті.
+    show:
+      distance: Дистанції
+      name: Назва
+      description: Опис
+      city: Місто
+      country: Країна
+      date: Дата
+    search_form:
+      year: Рік
+      city: Місто
+      organizer: Організатор
+    form:
+      running_event: Бігова подія
+      distances: Дистанції
+  competitions:
+    form:
+      event: Забіг
+      organizer: Організатор
+      distance: Дистанция
+      new_competition: Нове змагання
+      events: Забіги
+    destroy:
+      competition_destroyed: Забіг видалено з вашої кар'єри.
+    create:
+      competition_created: Забіг додано до вашої кар'єри.
+    new:
+      new_competition: Нове змагання
+      unauthenticated: Ви повинні увійти або зареєструватися перш ніж виконувати цю дію
+    index:
+      unauthenticated: Ви повинні увійти або зареєструватися перш ніж виконувати цю дію
+      competitions: Моя кар'єра
+  users:
+    index:
+      unauthenticated: Ви повинні увійти або зареєструватися перш ніж виконувати цю дію
+    show:
+      share: 'Поділитися:'
+      history: 'Список та результати змагань:'
+      distance: 'Дистанція:'
+      count: 'Кількість забігів:'
+      age: 'Вікова група:'
+      city: 'Місто:'
+    useful_links:
+      useful_links: 'Корисні посилання'
+      sport_event: 'Ukraine Sport Events - Спортивні заходи України'
+      at_events: 'Athletic Events - Спортивні заходи України'
+      run_ukraine: Організація спортивних масових заходів
+      all_events: Всеукраїнський календар пробігів і тренувань
+      legs_gots: 'Все про біг: тренування для початківців, мотивація, підготовка до марафону, екіпірування.'
+      run_and_travel: "Блог про біг на довгі дистанції, марафони, напівмарафони, тренування і про все, що з цим пов'язано."
+    users:
+      distance: 'Дистанція:'
+      count: 'Кількість забігів:'
+      age: 'Вікова група:'
+      city: 'Місто:'
+  prompts:
+    organizer_id: Виберіть організатора
+    category_id: Виберіть категорію
+    length_id: Виберіть дистанцію
+    select_year: Виберіть рік
+    select_city: Виберіть місто
+    select_name: Виберіть назву
+    select_organizer: Виберіть організатора
+    select_distance: Виберіть дистанцію
+  links:
+    edit_profile: Редагувати профайл
+    run: Я брав участь!
+    new_organizer: Новий огранізатор
+    new_length: Нова довжина
+    new_events: Новий забіг
+    more: Показати більше
+    sentence: запропонувати
+    add_distance: Додати дистанцію
+    remove_distance: Прибрати
+    add_competition: Додати кар'єру
+    news: Новини
+    read_more: Дізнатись більше
+    back: Назад
+    edit: Змінити
+    show: Показати
+    delete: Видалити
+    add: Додати
+    login: Увійти
+    sign_up: Зареєструватися
+    sign_out: Вийти
+    my_profile: Мій профіль
+    vk_signin: Увійти за допомогою VK
+    fb_signin: Увійти за дпомогою Facebook
+    add_event: Додати забіг
+    events: Забіги
+    past_event: Минулі забіги
+    future_event: Найближчі забіги
+    add_past_event: Додати минулий забіг
+    add_future_event: Додати найближчий забіг
+    title: MyAthleticCareer
+    admin_title: Admin Dashboard
+    users: Користувачі
+    sport_event: Sport Event
+    at_events: At. Events
+    run_ukraine: Run Ukraine
+    all_events: ВсеПробеги
+    legs_gots: Ногибоги
+    run_and_travel: Run and Travel
+    organizers: Організатори
+    lengths: Дистанції
+    categories: Категорії
+    future_events: Майбутні івенти
+    past_events: Минулі івенти
+    users: Користувачі
+    banner: Банери
+    news: Новини
+    new_article: Створити статтю
+  helpers:
+    submit:
+      event:
+        create: Створити забіг
+      competition:
+        create: Додати цей забіг до вашої кар'єри
+        update: Внести зміни до цього забігу
+      length:
+        create: Додати дистанцію
+      user:
+        update: Оновити профайл
+    placeholder:
+      length:
+        title: Назва
+      competition:
+        race_number: Номер
+      distance:
+        title: Назва
+        price: Початкова ціна
+        end_price: Кінцева ціна
+      event:
+        name: Назва
+        city: Місто
+        site: Сайт
+        description: Опиc
+        organizer: Організатор
+  activerecord:
+    attributes:
+      competition:
+        year: Рік
+        city: Місто
+        event_id: Назва забігу
+        distance_id: Дистанція
+        rank: Загальна позиція
+        category_rank: Позиція в своїй категорії
+        race_number: Номер
+        result: Загальний результат
+        net_result: Персональний результат
+      event:
+        name: Назва
+        site: Сайт
+        description: Опис
+        city: Місто
+        country: Країна
+        date: Дата
+        category_id: Категорія
+        organizer_id: Організатор
+      distance:
+        title: Назва
+        price: Початкова ціна
+        end_price: Кінцева ціна
+        length_id: Довжина
+      user:
+        city: Ваше місто
+        category: Ваша вікова група
+    errors:
+      models:
+        competition:
+          attributes:
+            year:
+              blank: Повинно бути заповнене
+            city:
+              blank: Повинно бути заповнене
+            event_id:
+              blank: Повинно бути заповнене
+            distance_id:
+              blank: Повинно бути заповнене
+            race_number:
+              blank: Повинно бути заповнене
+            result:
+              blank: Повинно бути заповнене
+            net_result:
+              blank: Повинно бути заповнене
+            rank:
+              blank: Повинно бути заповнене
+            category_rank:
+              less_than_or_equal_to: Позиція в своїй категорії не може бути більша, ніж загальна позиція
+              blank: Повинно бути заповнене
+        event:
+          attributes:
+            date:
+              blank: Повинно бути заповнене
+            name:
+              blank: Повинно бути заповнене
+            organizer_id:
+              blank: Повинно бути заповнене
+            category_id:
+              blank: Повинно бути заповнене
+            city:
+              blank: Повинно бути заповнене
+        distance:
+          attributes:
+            title:
+              blank: Повинно бути заповнене
+            price:
+              blank: Повинно бути заповнене
+              less_than_or_equal_to: Початкова ціна повинна бути менша за кінцеву
+            end_price:
+              blank: Повинно бути заповнене
+            length_id:
+              blank: Повинно бути заповнене

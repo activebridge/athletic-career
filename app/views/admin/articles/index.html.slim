@@ -10,15 +10,7 @@ table.table
       th
       th
   tbody
-    - articles.each do |article|
-      tr
-        td= article.title
-        td= article.body
-        td= article.image
-        td= link_to :show, admin_article_path(article)
-        td= link_to :edit, edit_admin_article_path(article)
-        td= link_to :delete, admin_article_path(article), data: { confirm: t('are_you_sure') }, method: :delete
-
+    = render partial: 'article', collection: articles, as: :article
 br
 
-= link_to :new_article, new_admin_article_path
+= link_to :new_article, new_admin_article_path, class: 'btn btn-default'

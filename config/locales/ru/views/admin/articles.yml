@@ -1,0 +1,22 @@
+ru:
+  admin:
+    articles:
+      index:
+        title: Список публикаций
+        name: Заголовок
+        body: Текст
+        image: Изображение
+      new:
+        title: Создать новую статью
+      edit:
+        title: Редактировать статью
+      edit_form:
+        logo:  Добавить изображение
+        submit: Обновить статью
+      form:
+        logo: Добавить изображение
+        submit: Создать статью
+      show:
+        title: Заголовок
+        body: Текст
+        image: Изображение

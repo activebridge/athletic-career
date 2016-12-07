@@ -13,6 +13,10 @@
 //= require_tree .
 
 $(document).on('page:load ready', function() {
+  initTiniMCE();
+});
+
+function initTiniMCE() {
   tinyMCE.editors=[]
   tinyMCE.init({
     plugins : ['media advlist autolink lists link image',
@@ -24,4 +28,4 @@ $(document).on('page:load ready', function() {
       selector: 'textarea.tinymce',
       menubar: false
   });
-});
+}

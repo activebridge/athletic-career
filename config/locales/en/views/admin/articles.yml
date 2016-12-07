@@ -1,0 +1,23 @@
+en:
+  admin:
+    articles:
+      index:
+        title: Список публікацій
+        name: Заголовок
+        body: Текст
+        image: Зображення
+      new:
+        title: Створити нову статтю
+      edit:
+        title: Редагувати статтю
+      edit_form:
+        logo: Додати зображення
+        submit: Оновити статтю
+      form:
+        logo: Додати зображення
+        submit: Створити статтю
+      show:
+        title: Заголовок
+        body: Текст
+        image: Зображення
+

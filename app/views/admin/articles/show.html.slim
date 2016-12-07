@@ -1,15 +1,15 @@
 p#notice= notice
 
 p
-  strong= ('.title')
-  = article.title
+  strong= t('.title')
+p= show_article.title
 p
-  strong= ('.body')
-  = article.body
+  strong= t('.body')
+p== show_article.body
 p
-  strong= ('.image')
-  = article.image
+  strong= t('.image')
+p= cl_image_tag(show_article.image.url(:small))
 
-= link_to :edit, edit_admin_article_path(article)
+= link_to :edit, edit_admin_article_path(show_article), class: 'btn btn-default'
 '|
-= link_to :back, admin_articles_path
+= link_to :back, admin_articles_path, class: 'btn btn-default'

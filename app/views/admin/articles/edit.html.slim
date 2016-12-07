@@ -1,6 +1,6 @@
 h1= t('.title')
-==render 'form', url: admin_article_path(article)
-=link_to :show, admin_article_path(article)
+==render 'edit_form', url: admin_article_path(show_article)
+=link_to :show, admin_article_path(show_article), class: 'btn btn-default'
 '|
-=link_to :back, admin_articles_path
+=link_to :back, admin_articles_path, class: 'btn btn-default'
 

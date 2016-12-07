@@ -1,0 +1,7 @@
+tr
+  td= article.title
+  td== article.body
+  td= cl_image_tag(article.image.url(:small))
+  td= link_to :show, admin_article_path(article)
+  td= link_to :edit, edit_admin_article_path(article)
+  td= link_to :delete, admin_article_path(article), data: { confirm: t('are_you_sure') }, method: :delete
