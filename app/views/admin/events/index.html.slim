@@ -12,7 +12,7 @@ table.table
         td= link_to event.name, admin_event_path(event, type: "#{params[:type]}")
         td= event.visible
         td= link_to :edit, edit_admin_event_path(event, type: "#{params[:type]}")
-        td= link_to :delete, admin_event_path(event, type: "#{params[:type]}"), data: { confirm: t('.are_you_sure') }, method: :delete
+        td= link_to :delete, admin_event_path(event, type: "#{params[:type]}"), data: { confirm: t('are_you_sure') }, method: :delete
 
 br
 
