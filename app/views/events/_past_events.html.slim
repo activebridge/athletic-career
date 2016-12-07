@@ -1,5 +1,5 @@
-- past_events.each do |event|
+- search_event.each do |event|
   .col-lg-3.col-md-4.col-sm-6.col-xs-6
     = render partial: 'event', locals: { event: event }
 .row.pagination
-  = link_to_next_page(past_events, '', remote: true)
+  = link_to_next_page(search_event, '', remote: true)
