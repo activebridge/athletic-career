@@ -1,26 +1,16 @@
 h1= t('.title')
-
+br
+= link_to t('.new_banner'), new_admin_banner_path, class: 'btn btn-default'
+br
 table
   thead
     tr
+      th= t('.image')
       th= t('.name')
       th= t('.visible')
-      th= t('.image')
       th= t('.priority')
       th
       th
       th
   tbody
-    - banners.each do |banner|
-      tr
-        td= banner.name
-        td= banner.visible
-        td= cl_image_tag(banner.image.url(:small))
-        td= banner.priority
-        td= link_to :show, admin_banner_path(banner)
-        td= link_to :edit, edit_admin_banner_path(banner)
-        td= link_to :delete, admin_banner_path(banner), data: { confirm: t('are_you_sure') }, method: :delete
-
-br
-
-= link_to t('.new_banner'), new_admin_banner_path
+    = render partial: 'banner', collection: banners, as: :banner

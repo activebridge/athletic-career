@@ -1,19 +1,12 @@
 h1= t('.title')
-
+br
+= link_to :new_organizer, new_admin_organizer_path, class: 'btn btn-default'
+br
 table.table
   thead
     tr
       th= t('.name')
       th= t('.edit')
       th= t('.destroy')
-
   tbody
-    - organizers.each do |organizer|
-      tr
-        td = organizer.title
-        td = link_to :edit, edit_admin_organizer_path(organizer)
-        td = link_to :delete, admin_organizer_path(organizer), data: { confirm: t('are_you_sure') }, method: :delete
-
-br
-
-= link_to :new_organizer, new_admin_organizer_path
+    = render partial: 'organizer', collection: organizers, as: :organizer

@@ -1,5 +1,7 @@
 h1= t('.title')
-
+br
+= link_to :new_category, new_admin_category_path, class: 'btn btn-default'
+br
 table.table
   thead
     tr
@@ -8,12 +10,4 @@ table.table
       th= t('.destroy')
 
   tbody
-    - categories.each do |category|
-      tr
-        td = category.title
-        td = link_to :edit, edit_admin_category_path(category)
-        td = link_to :delete, admin_category_path(category), data: { confirm: t('are_you_sure') }, method: :delete
-
-br
-
-= link_to :new_category, new_admin_category_path
+    = render partial: 'category', collection: categories, as: :category

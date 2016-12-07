@@ -1,0 +1,4 @@
+tr
+  td= organizer.title
+  td= link_to :edit, edit_admin_organizer_path(organizer)
+  td= link_to :delete, admin_organizer_path(organizer), data: { confirm: t('are_you_sure') }, method: :delete
