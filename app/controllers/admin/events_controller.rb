@@ -1,14 +1,11 @@
 class Admin::EventsController < AdminsController
-  expose :events, -> { Event.all }
+  expose :events, -> { Event.all.order(created_at: :desc).page(params[:page]) }
   expose :event
   expose :show_event, -> { Event.friendly.find(params[:id]) }
 
   def create
-    if event.save
-      redirect_to admin_events_path, notice: t('.event_created')
-    else
-      render :new
-    end
+    return redirect_to admin_events_path if event.save
+    render :new
   end
 
   def update

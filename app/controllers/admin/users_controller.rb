@@ -1,5 +1,5 @@
 class Admin::UsersController < AdminsController
-  expose :users, -> { User.all }
+  expose :users, -> { User.all.order(created_at: :desc).page(params[:page]) }
   expose :user, -> { User.friendly.find(params[:id]) }
 
   def update

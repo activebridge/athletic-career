@@ -1,5 +1,5 @@
 class Admin::OrganizersController < AdminsController
-  expose :organizers, -> { Organizer.all }
+  expose :organizers, -> { Organizer.all.order(created_at: :desc).page(params[:page]) }
   expose :organizer
 
   def create
@@ -13,7 +13,7 @@ class Admin::OrganizersController < AdminsController
 
   def destroy
     organizer.destroy
-    redirect_to admin_organizers_url, notice: 'Organizer was successfully destroyed.'
+    redirect_to admin_organizers_url
   end
 
   private

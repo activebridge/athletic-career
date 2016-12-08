@@ -1,5 +1,5 @@
 class Admin::CategoriesController < AdminsController
-  expose :categories, -> { Category.all }
+  expose :categories, -> { Category.all.order(created_at: :desc).page(params[:page]) }
   expose :category
 
   def create
@@ -13,7 +13,7 @@ class Admin::CategoriesController < AdminsController
 
   def destroy
     category.destroy
-    redirect_to admin_categories_url, notice: 'Category was successfully destroyed.'
+    redirect_to admin_categories_url
   end
 
   private
