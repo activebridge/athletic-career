@@ -1,5 +1,5 @@
 h1= t('.title')
 == render 'form', url: admin_banner_path(banner)
-= link_to :show, admin_banner_path(banner)
+= link_to :show, admin_banner_path(banner), class: 'btn btn-default'
 '|
-= link_to :back, admin_banners_path
+= link_to :back, admin_banners_path, class: 'btn btn-default'
