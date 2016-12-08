@@ -22,7 +22,7 @@ feature 'AdminSession' do
     articles_page.open
     click_link I18n.t('.links.edit')
     expect(page).to have_content(I18n.t('.admin.articles.edit.title'))
-    articles_page.fill_form_edit(attrs1)
+    articles_page.fill_form(attrs1, true)
     articles_page.wait_js_execution
     expect(page).to have_content(attrs1[:title])
     click_link I18n.t('.links.delete')
