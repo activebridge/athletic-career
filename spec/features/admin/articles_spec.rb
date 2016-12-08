@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-feature 'AdminSession' do
+feature 'AdminArticles' do
   let(:articles_page) { Admin::ArticlesPage.new }
   let(:attrs) { attributes_for(:article) }
   let(:attrs1) { attributes_for(:article, title: 'Another title') }
