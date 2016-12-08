@@ -10,4 +10,4 @@
     = f.input :organizer_id, as: :select, collection: Organizer.all, selected: user.organizer_id
     = f.input :city
     = f.select :role, options_for_select(User.roles.keys, selected: user.role)
-    = f.button :submit, class: 'button success'
+    = f.button :submit, t('.submit')

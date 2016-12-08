@@ -2,13 +2,16 @@ p#notice= notice
 
 p
   strong= t('.title')
-  = banner.name
+p= banner.name
 p
-  strong= t('.body')
-  = banner.visible
+  strong= t('.priority')
+p= banner.priority
+p
+  strong= t('.visible')
+p= banner.visible
 p
   strong= t('.image')
-  = banner.image
+p= cl_image_tag(banner.image.url(:small))
 
 = link_to :edit, edit_admin_banner_path(banner), class: 'btn btn-default'
 '|

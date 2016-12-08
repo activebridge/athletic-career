@@ -159,6 +159,7 @@ ua:
     banner: Банери
     news: Новини
     new_article: Створити статтю
+    new_banner: Створити банер
   helpers:
     submit:
       event:

@@ -3,3 +3,19 @@ ru:
     banners:
       index:
         title: Баннер лист
+        image: Баннер
+        name: Название
+        visible: Видимый
+        priority: Приоритет
+      new:
+        title: Создать баннер
+      edit:
+        title: Обновить баннер
+      form:
+        image: Выберите изображение
+        submit: Завершить
+      show:
+        image: Баннер
+        title: Название
+        visible: Видимый
+        priority: Приоритет

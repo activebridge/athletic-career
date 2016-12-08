@@ -3,3 +3,20 @@ ua:
     banners:
       index:
         title: Банер лист
+        image: Банер
+        name: Назва
+        visible: Видимий
+        priority: Приорітет
+      new:
+        title: Створити банер
+      edit:
+        title: Оновити банер
+      form:
+        image: Виберіть зображення
+        submit: Завершити
+      show:
+        image: Банер
+        title: Назва
+        visible: Видимий
+        priority: Приорітет
+

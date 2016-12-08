@@ -1,8 +1,8 @@
 en:
-  ua: укр
-  ru: рус
-  all: всі
-  are_you_sure: Ви впевнені?
+  ua: ua
+  ru: ru
+  all: all
+  are_you_sure: Are you sure?
   admin:
     events:
       form:
@@ -12,11 +12,11 @@ en:
       create:
         event_created: Забіг успішно створений.
       show:
-        name: Назва
-        description: Опис
-        city: Місто
-        country: Країна
-        date: Дата
+        name: Name
+        description: Description
+        city: City
+        country: Country
+        date: Date
   date:
     month_names: ['~', 'Січня', 'Лютого', 'Березня', 'Квітня', 'Травня', 'Червня', 'Липня', 'Серпня', 'Вересня', 'Жовтня', 'Листопада', 'Грудня']
     formats:
@@ -50,25 +50,25 @@ en:
       event_created: Забіг успішно створений. Після огляду адміністрaтором він з'явиться на сайті.
     show:
       distance: Дистанції
-      name: Назва
-      description: Опис
-      city: Місто
-      country: Країна
-      date: Дата
+      name: Name
+      description: Description
+      city: City
+      country: Country
+      date: Date
     search_form:
-      year: Рік
-      city: Місто
-      organizer: Організатор
+      year: Year
+      city: City
+      organizer: Organizer
     form:
       running_event: Бігова подія
       distances: Дистанції
   competitions:
     form:
-      event: Забіг
+      event: Event
       organizer: Організатор
       distance: Дистанция
       new_competition: Нове змагання
-      events: Забіги
+      events: Events
     destroy:
       competition_destroyed: Забіг видалено з вашої кар'єри.
     create:
@@ -88,7 +88,7 @@ en:
       distance: 'Дистанція:'
       count: 'Кількість забігів:'
       age: 'Вікова група:'
-      city: 'Місто:'
+      city: 'City:'
     useful_links:
       useful_links: 'Корисні посилання'
       sport_event: 'Ukraine Sport Events - Спортивні заходи України'
@@ -101,7 +101,7 @@ en:
       distance: 'Дистанція:'
       count: 'Кількість забігів:'
       age: 'Вікова група:'
-      city: 'Місто:'
+      city: 'City:'
   prompts:
     organizer_id: Виберіть організатора
     category_id: Виберіть категорію
@@ -122,28 +122,28 @@ en:
     add_distance: Додати дистанцію
     remove_distance: Прибрати
     add_competition: Додати кар'єру
-    news: Новини
+    news: News
     read_more: Дізнатись більше
-    back: Назад
-    edit: Змінити
-    show: Показати
-    delete: Видалити
-    add: Додати
-    login: Увійти
-    sign_up: Зареєструватися
-    sign_out: Вийти
-    my_profile: Мій профіль
+    back: Back
+    edit: Edit
+    show: Show
+    delete: Delete
+    add: Add
+    login: Login
+    sign_up: Sign Up
+    sign_out: Sign Out
+    my_profile: My profile
     vk_signin: Увійти за допомогою VK
     fb_signin: Увійти за дпомогою Facebook
-    add_event: Додати забіг
-    events: Забіги
+    add_event: Add event
+    events: Events
     past_event: Минулі забіги
     future_event: Найближчі забіги
     add_past_event: Додати минулий забіг
     add_future_event: Додати найближчий забіг
     title: MyAthleticCareer
     admin_title: Admin Dashboard
-    users: Користувачі
+    users: Users
     sport_event: Sport Event
     at_events: At. Events
     run_ukraine: Run Ukraine
@@ -152,13 +152,14 @@ en:
     run_and_travel: Run and Travel
     organizers: Організатори
     lengths: Дистанції
-    categories: Категорії
+    categories: Categories
     future_events: Майбутні івенти
     past_events: Минулі івенти
-    users: Користувачі
-    banner: Банери
-    news: Новини
-    new_article: Створити статтю
+    users: Users
+    banner: Banners
+    news: News
+    new_article: New Article
+    new_banner: New Banner
   helpers:
     submit:
       event:

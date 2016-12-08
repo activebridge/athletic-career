@@ -3,3 +3,19 @@ en:
     banners:
       index:
         title: Banners list
+        image: Banner
+        name: Name
+        visible: Visible
+        priority: Priority
+      new:
+        title: Create banner
+      edit:
+        title: Edit banner
+      form:
+        image: Choose banner
+        submit: Submit
+      show:
+        image: Banner
+        title: Name
+        visible: Visible
+        priority: Priority

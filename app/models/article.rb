@@ -6,6 +6,7 @@ class Article < ApplicationRecord
 
   validates :title, :body, :image, presence: true
   validates :title, uniqueness: true
+
   def normalize_friendly_id(input)
     input.to_s.to_slug.normalize(transliterations: :russian).to_s
   end

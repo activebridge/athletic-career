@@ -1,13 +1,10 @@
 class Admin::BannersController < AdminsController
-  expose :banners, -> { Banner.all }
+  expose :banners, -> { Banner.all.order(created_at: :desc).page(params[:page]) }
   expose :banner
 
   def create
-    if banner.save
-      redirect_to admin_banners_path, notice: t('.banner_created')
-    else
-      render :new
-    end
+    return redirect_to admin_banners_path if banner.save
+    render :new
   end
 
   def update

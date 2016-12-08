@@ -159,6 +159,7 @@ ru:
     news: Новости
     banner: Банеры
     new_article: Создать статью
+    new_banner: Создать баннер
   helpers:
     submit:
       event:

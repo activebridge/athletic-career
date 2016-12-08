@@ -15,7 +15,7 @@ class Admin::ArticlesController < AdminsController
 
   def destroy
     show_article.destroy
-    redirect_to admin_articles_url, notice: 'Article was successfully destroyed.'
+    redirect_to admin_articles_url
   end
 
   private
