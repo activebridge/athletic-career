@@ -1,5 +1,5 @@
 class Admin::CategoriesController < AdminsController
-  expose :categories, -> { Category.all.order(created_at: :desc).page(params[:page]) }
+  expose :categories, -> { Category.all }
   expose :category
 
   def create

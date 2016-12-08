@@ -1,5 +1,5 @@
 class Admin::OrganizersController < AdminsController
-  expose :organizers, -> { Organizer.all.order(created_at: :desc).page(params[:page]) }
+  expose :organizers, -> { Organizer.all.page(params[:page]) }
   expose :organizer
 
   def create
