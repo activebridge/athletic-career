@@ -1,0 +1,9 @@
+nav.navbar.navbar-fixed-top
+  .container-fluid
+    .collapse.navbar-collapse
+      .nav.navbar-nav
+        = link_to '', organizer_dashboard_path, class: 'pull-left'
+        .pull-right
+          => link_to_unless current_locale?(:ua), t('ua'), language_path(:ua), method: :patch
+          ' |
+          = link_to_unless current_locale?(:ru), t('ru'), language_path(:ru), method: :patch

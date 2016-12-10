@@ -29,6 +29,10 @@ Rails.application.routes.draw do
     get '/', to: 'dashboards#show', as: :dashboard
   end
 
+  namespace :organizer do
+    get '/', to: 'dashboards#show', as: :dashboard
+  end
+
   get '/auth/:provider/callback', to: 'sessions#create'
   get '/signup', to: 'users#new'
   get '/signin', to: 'sessions#new'

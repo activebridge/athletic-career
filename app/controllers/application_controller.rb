@@ -26,6 +26,10 @@ class ApplicationController < ActionController::Base
     redirect(root_path)
   end
 
+  def require_organizer
+    return true if current_user&.organizer? || current_admin
+  end
+
   def set_locale
     I18n.locale = session[:locale] || I18n.default_locale
   end

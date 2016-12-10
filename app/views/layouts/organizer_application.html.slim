@@ -1,0 +1,11 @@
+doctype 5
+html lang='en' class='no-js'
+  head
+    title MyAthleticCareer
+    = csrf_meta_tags
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+    = render_lazybox
+  body
+    = render 'shared/organizer_header'
+    = yield
