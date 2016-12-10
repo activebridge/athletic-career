@@ -2,4 +2,4 @@
 = link_to :add_event, new_event_path(type: "#{params[:type]}"), class: 'btn btn-default new_event'
 .row
   .events-side
-    = render partial: "#{params[:type]}_events"
+    = render partial: 'events', collection: index_events, as: :event

@@ -4,8 +4,9 @@ class EventsController < ApplicationController
   expose :events, -> { Event.ready }
   expose :event
   expose :show_event, -> { Event.friendly.find(params[:id]) }
-  expose :search_event, -> { events.past.search(params[:search]).order('date desc') }
-  expose :future_search_event, -> { events.future.search(params[:search]).order('date asc') }
+  expose :past_events, -> { events.past.search(params[:search]).order('date desc') }
+  expose :future_events, -> { events.future.search(params[:search]).order('date asc') }
+  expose :index_events, -> { params[:type] == 'past' ? past_events : future_events }
 
   def new
     event.distances.build
