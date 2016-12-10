@@ -1,5 +1,5 @@
 h1= t('.title')
-= link_to :add_event, new_event_path(type: "#{params[:type]}"), class: 'btn btn-default new_event'
+= link_to :add_event, new_admin_event_path(type: "#{params[:type]}"), class: 'btn btn-default'
 table.table
   thead
     tr
@@ -9,4 +9,4 @@ table.table
       th
       th
   tbody
-    = render partial: "#{params[:type]}_events"
+    = render partial: 'events', collection: index_events, as: :event
