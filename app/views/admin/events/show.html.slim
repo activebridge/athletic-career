@@ -13,3 +13,15 @@
   p
     strong=>t('.description') if show_event.description.present?
     = show_event.description
+
+= link_to :add_distance, new_admin_event_path(type: "#{params[:type]}"), class: 'btn btn-default'
+table.table
+  thead
+    tr
+      th= t('.name')
+      th= t('.visible')
+      th
+      th
+      th
+  tbody
+    = render partial: 'distances', collection: distances, as: :distance

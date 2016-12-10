@@ -20,7 +20,9 @@ Rails.application.routes.draw do
     resources :lengths
     resources :categories
     scope ':type', constraints: { type: /past|future/ } do
-      resources :events
+      resources :events do
+        resource :distance
+      end
     end
     resources :users
     resources :articles

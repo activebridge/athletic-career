@@ -5,6 +5,7 @@ class Admin::EventsController < AdminsController
   expose :past_events, -> { events.past }
   expose :future_events, -> { events.future }
   expose :index_events, -> { params[:type] == 'past' ? past_events : future_events }
+  expose :distances, -> { show_event.distances }
 
   def create
     return redirect_to admin_events_path if event.save
