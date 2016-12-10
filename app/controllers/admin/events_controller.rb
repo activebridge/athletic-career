@@ -6,7 +6,6 @@ class Admin::EventsController < AdminsController
   expose :future_events, -> { events.future }
 
   def index
-
   end
 
   def create
