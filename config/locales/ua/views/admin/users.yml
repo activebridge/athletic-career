@@ -3,3 +3,7 @@ ua:
     users:
       index:
         title: Список користувачів
+        name: Учасник
+      form:
+        submit: Оновити дані
+        avatar: Аватар

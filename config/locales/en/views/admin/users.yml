@@ -3,3 +3,7 @@ en:
     users:
       index:
         title: Users List
+        name: Name
+      form:
+        submit: Submit
+        avatar: Avatar

@@ -3,3 +3,7 @@ ru:
     users:
       index:
         title: Список пользователей
+        name: Учасник
+      form:
+        submit: Обновить данные
+        avatar: Аватар
