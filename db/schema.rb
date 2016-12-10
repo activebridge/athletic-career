@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161206141130) do
+ActiveRecord::Schema.define(version: 20161210155220) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -133,7 +133,10 @@ ActiveRecord::Schema.define(version: 20161206141130) do
 
   create_table "organizers", force: :cascade do |t|
     t.string  "title"
-    t.boolean "visible", default: false
+    t.boolean "visible",     default: false
+    t.string  "logo"
+    t.string  "site"
+    t.string  "description"
   end
 
   create_table "users", force: :cascade do |t|
