@@ -1,19 +1,12 @@
-h1= ('.title')
-
+h1= t('.title')
+= link_to :add_event, new_event_path(type: "#{params[:type]}"), class: 'btn btn-default new_event'
 table.table
   thead
     tr
       th= t('.name')
       th= t('.visible')
-
+      th
+      th
+      th
   tbody
-    - events.each do |event|
-      tr
-        td= link_to event.name, admin_event_path(event, type: "#{params[:type]}")
-        td= event.visible
-        td= link_to :edit, edit_admin_event_path(event, type: "#{params[:type]}")
-        td= link_to :delete, admin_event_path(event, type: "#{params[:type]}"), data: { confirm: t('are_you_sure') }, method: :delete
-
-br
-
-= link_to :new_events, new_admin_event_path(type: "#{params[:type]}")
+    = render partial: "#{params[:type]}_events"

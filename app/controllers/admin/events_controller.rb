@@ -2,6 +2,12 @@ class Admin::EventsController < AdminsController
   expose :events, -> { Event.all.order(created_at: :desc).page(params[:page]) }
   expose :event
   expose :show_event, -> { Event.friendly.find(params[:id]) }
+  expose :past_events, -> { events.past }
+  expose :future_events, -> { events.future }
+
+  def index
+
+  end
 
   def create
     return redirect_to admin_events_path if event.save

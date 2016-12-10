@@ -1,6 +1,10 @@
-- if search_event.future.present?
-  - search_event.future.each do |event|
-    .col-lg-3.col-md-4.col-sm-6.col-xs-6
-      = render partial: 'event', locals: { event: event }
-- else
-  h1 = t('.not_found_events')
+- future_events.each do |event|
+  tr
+    td= link_to event.name, admin_event_path(event, type: "#{params[:type]}")
+    td= event.visible
+    td= link_to :edit, edit_admin_event_path(event, type: "#{params[:type]}")
+    td= link_to :delete, admin_event_path(event, type: "#{params[:type]}"), data: { confirm: t('are_you_sure') }, method: :delete
+
+br
+
+= link_to :new_events, new_admin_event_path(type: "#{params[:type]}")
