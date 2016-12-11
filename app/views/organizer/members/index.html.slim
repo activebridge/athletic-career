@@ -1,0 +1,13 @@
+h1= t('.title')
+br
+= link_to :new_command, new_organizer_member_path, class: 'btn btn-default'
+br
+table.table
+  thead
+    tr
+      th= t('.avatar')
+      th= t('.name')
+      th
+
+  tbody
+    = render partial: 'member', collection: members, as: :member

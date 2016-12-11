@@ -1,0 +1,11 @@
+= simple_form_for member, as: :member, url: url do |f|
+  = f.error_notification
+  .form-inputs
+    .file-upload
+      .btn-default
+        = f.input :avatar, label: t('.avatar')
+        = f.hidden_field(:avatar_cache)
+  = f.input :name
+  = f.input :position
+  = f.input :bio
+  = f.button :submit, t('.submit')

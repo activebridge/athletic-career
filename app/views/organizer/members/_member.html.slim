@@ -1,0 +1,5 @@
+tr
+  td= cl_image_tag(member.avatar.url(:small))
+  td= member.name
+  td= link_to :edit, edit_organizer_member_path(member)
+  td= link_to :delete, organizer_member_path(member), data: { confirm: t('are_you_sure') }, method: :delete

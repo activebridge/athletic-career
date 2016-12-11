@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161210155220) do
+ActiveRecord::Schema.define(version: 20161211185940) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -129,6 +129,17 @@ ActiveRecord::Schema.define(version: 20161210155220) do
     t.integer "mark",    default: 1000
     t.string  "logo"
     t.string  "name"
+  end
+
+  create_table "members", force: :cascade do |t|
+    t.integer  "organizer_id"
+    t.string   "avatar"
+    t.string   "name"
+    t.string   "position"
+    t.string   "bio"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+    t.index ["organizer_id"], name: "index_members_on_organizer_id", using: :btree
   end
 
   create_table "organizers", force: :cascade do |t|
