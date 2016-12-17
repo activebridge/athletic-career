@@ -1,0 +1,15 @@
+h1= t('.title')
+br
+= link_to :new_sm_link, new_organizer_sm_link_path, class: 'btn btn-default'
+br
+table.table
+  thead
+    tr
+      th= t('.avatar')
+      th= t('.name')
+      th
+
+  tbody
+    - if sm_links
+      tr
+        td= sm_links.facebook

@@ -4,7 +4,7 @@ class User < ApplicationRecord
   AGE = { '16-39' => 1, '40-49' => 2, '50-59' => 3, '60+' => 4 }
 
   has_many :accounts, dependent: :delete_all
-  has_many :competitions
+  has_many :competitions, dependent: :delete_all
   has_many :distances, through: :competitions
 
   enum role: [:user, :organizer]

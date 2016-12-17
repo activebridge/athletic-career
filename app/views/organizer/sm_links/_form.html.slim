@@ -1,0 +1,4 @@
+= simple_form_for [organizer, sm_link], as: :sm_link, url: url do |f|
+  = f.error_notification
+  = f.input :facebook
+  = f.button :submit, t('.submit')

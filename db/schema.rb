@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161211185940) do
+ActiveRecord::Schema.define(version: 20161215191012) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -148,6 +148,21 @@ ActiveRecord::Schema.define(version: 20161211185940) do
     t.string  "logo"
     t.string  "site"
     t.string  "description"
+  end
+
+  create_table "sm_links", force: :cascade do |t|
+    t.string   "sm_linkable_type"
+    t.integer  "sm_linkable_id"
+    t.string   "type"
+    t.string   "facebook"
+    t.string   "vkontakte"
+    t.string   "google"
+    t.string   "twitter"
+    t.string   "instagram"
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
+    t.index ["sm_linkable_id", "sm_linkable_type"], name: "index_sm_links_on_sm_linkable_id_and_sm_linkable_type", using: :btree
+    t.index ["sm_linkable_type", "sm_linkable_id"], name: "index_sm_links_on_sm_linkable_type_and_sm_linkable_id", using: :btree
   end
 
   create_table "users", force: :cascade do |t|

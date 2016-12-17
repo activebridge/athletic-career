@@ -32,6 +32,7 @@ Rails.application.routes.draw do
   namespace :organizer do
     get '/', to: 'dashboards#show', as: :dashboard
     resources :members
+    resources :sm_links, except: :show
   end
 
   get '/auth/:provider/callback', to: 'sessions#create'

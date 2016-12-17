@@ -4,6 +4,7 @@ nav.navbar.navbar-fixed-top
       .nav.navbar-nav
         = link_to '', organizer_dashboard_path, class: 'pull-left'
         = nav_link t('links.team'), organizer_members_path
+        = nav_link t('links.team'), organizer_sm_links_path
         .pull-right
           => link_to_unless current_locale?(:ua), t('ua'), language_path(:ua), method: :patch
           ' |
