@@ -1,0 +1,15 @@
+en:
+  admin:
+    events:
+      form:
+        distances: Distances
+      index:
+        unauthenticated: You must sign up before performing this action
+      create:
+        event_created: The race was successfully created
+      show:
+        name: Name
+        description: Description
+        city: City
+        country: Country
+        date: Date

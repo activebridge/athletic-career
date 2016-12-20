@@ -3,20 +3,6 @@ en:
   ru: ru
   all: all
   are_you_sure: Are you sure?
-  admin:
-    events:
-      form:
-        distances: Дистанції
-      index:
-        unauthenticated: Ви повинні увійти або зареєструватися перш ніж виконувати цю дію
-      create:
-        event_created: Забіг успішно створений.
-      show:
-        name: Name
-        description: Description
-        city: City
-        country: Country
-        date: Date
   date:
     month_names: ['~', 'Січня', 'Лютого', 'Березня', 'Квітня', 'Травня', 'Червня', 'Липня', 'Серпня', 'Вересня', 'Жовтня', 'Листопада', 'Грудня']
     formats:
@@ -160,6 +146,8 @@ en:
     news: News
     new_article: New Article
     new_banner: New Banner
+    team: Team
+    sm_links: Social Media
   helpers:
     submit:
       event:

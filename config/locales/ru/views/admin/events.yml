@@ -1,0 +1,15 @@
+ru:
+  admin:
+    events:
+      form:
+        distances: Дистанции
+      index:
+        unauthenticated: Вы должны войти или зарегистрироваться прежде чем выполнять это действие.
+      create:
+        event_created: Забег успешно создан
+      show:
+        name: Название
+        description: Описание
+        city: Город
+        country: Страна
+        date: Дата

@@ -3,20 +3,6 @@ ru:
   ru: рус
   all: все
   are_you_sure: Вы уверены?
-  admin:
-    events:
-      form:
-        distances: Дистанции
-      index:
-        unauthenticated: Вы должны войти или зарегистрироваться прежде чем выполнять это действие.
-      create:
-        event_created: Забег успешно создан
-      show:
-        name: Название
-        description: Описание
-        city: Город
-        country: Страна
-        date: Дата
   date:
     month_names: ['~', 'Января', 'Февраля', 'Марта', 'Апреля', 'Мая', 'Июня', 'Июля', 'Августа', 'Сентября', 'Октября', 'Ноября', 'Декабря']
     formats:
@@ -160,6 +146,8 @@ ru:
     banner: Банеры
     new_article: Создать статью
     new_banner: Создать баннер
+    team: Команда
+    sm_links: Соц. сети
   helpers:
     submit:
       event:
