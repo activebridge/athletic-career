@@ -1,0 +1,17 @@
+en:
+  organizer:
+    members:
+      index:
+        avatar: Avatar
+        name: name
+        title: My Team
+      form:
+        submit: Add Member
+        avatar: Avatar
+        name: Name
+        bio: Biography
+        position: Position
+      new:
+        title: Add member
+      edit:
+        title: Edit member

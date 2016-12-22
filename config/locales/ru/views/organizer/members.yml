@@ -1,0 +1,17 @@
+ru:
+  organizer:
+    members:
+      index:
+        avatar: Изображение
+        name: Ф.И.О
+        title: Моя команда
+      form:
+        submit: Добавить
+        avatar: Изображение
+        name: Имя
+        bio: Об участнике
+        position: Должность
+      new:
+        title: Добавить участника
+      edit:
+        title: Обновить данные участника

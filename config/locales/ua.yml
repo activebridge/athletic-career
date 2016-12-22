@@ -148,6 +148,8 @@ ua:
     new_banner: Створити банер
     team: Команда
     sm_links: Соц. мережі
+    new_command: Додати учасника команди
+    new_sm_link: Додати Соціальні мережі
   helpers:
     submit:
       event:

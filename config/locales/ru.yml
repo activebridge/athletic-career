@@ -148,6 +148,8 @@ ru:
     new_banner: Создать баннер
     team: Команда
     sm_links: Соц. сети
+    new_command: Добавить участника команды
+    new_sm_link: Добавить Социальные сети
   helpers:
     submit:
       event:

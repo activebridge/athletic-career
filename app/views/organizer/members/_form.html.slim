@@ -5,7 +5,7 @@
       .btn-default
         = f.input :avatar, label: t('.avatar')
         = f.hidden_field(:avatar_cache)
-  = f.input :name
-  = f.input :position
-  = f.input :bio
+  = f.input :name, label: t('.name')
+  = f.input :position, label: t('.position')
+  = f.input :bio, label: t('.bio')
   = f.button :submit, t('.submit')

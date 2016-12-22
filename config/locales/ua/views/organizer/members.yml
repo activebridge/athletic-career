@@ -1,0 +1,17 @@
+ua:
+  organizer:
+    members:
+      index:
+        avatar: Зображення
+        name: П.І.Б
+        title: Моя команда
+      form:
+        submit: Додати
+        avatar: Зображення
+        name: Ім'я
+        bio: Про учасника
+        position: Посада
+      new:
+        title: Додати учасника
+      edit:
+        title: Оновити дані учасника

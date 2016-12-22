@@ -148,6 +148,8 @@ en:
     new_banner: New Banner
     team: Team
     sm_links: Social Media
+    new_command: Add member to team
+    new_sm_link: Add SM Link
   helpers:
     submit:
       event:
