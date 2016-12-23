@@ -1,0 +1,12 @@
+en:
+  lengths:
+    create:
+      length_created: Length successfully created. After review by the administrator it will appear on the site.
+    destroy:
+      length_destroyed: Length was been successfully removed
+    show:
+      past: Past
+      future: Future
+    index:
+      not_found_distance: 'did not find the distance in which participated ? you can'
+      variant: add your variant.

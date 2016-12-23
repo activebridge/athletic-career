@@ -14,17 +14,6 @@ ru:
       succesfull: Вы успешно вышли со своего аккаунта
     new:
       no_account: Нету аккаунта
-  lengths:
-    create:
-      length_created: Длина успешно создана. После осмотра администратором она появится на сайте.
-    destroy:
-      length_destroyed: Длина была успешно удалена
-    show:
-      past: Прошлые
-      future: Будущие
-    index:
-      not_found_distance: не найшли дистанцию в которой принимали участие, вы можете
-      variant:  свой вариант
   events:
     new:
       unauthenticated: Вы должны войти или зарегистрироваться прежде чем выполнять это действие.

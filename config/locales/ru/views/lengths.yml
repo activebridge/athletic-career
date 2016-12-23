@@ -1,0 +1,12 @@
+ru:
+  lengths:
+    create:
+      length_created: Длина успешно создана. После осмотра администратором она появится на сайте.
+    destroy:
+      length_destroyed: Длина была успешно удалена
+    show:
+      past: Прошлые
+      future: Будущие
+    index:
+      not_found_distance: не найшли дистанцию в которой принимали участие? вы можете
+      variant:  свой вариант

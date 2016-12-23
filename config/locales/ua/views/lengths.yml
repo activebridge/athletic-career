@@ -1,0 +1,12 @@
+ua:
+  lengths:
+    create:
+      length_created: Довжина успішно створена. Після огляду адміністрaтором вона з'явиться на сайті.
+    destroy:
+      length_destroyed: Довжина була успішно видалена
+    show:
+      past: Минулі
+      future: Майбутні
+    index:
+      not_found_distance: не знайшли дистанцію в якій приймали участь? ви можете
+      variant: свій варіант

@@ -14,17 +14,6 @@ en:
       succesfull: Ви успішно вийшли зі свого акаунта
     new:
       no_account: Немає аккаунта
-  lengths:
-    create:
-      length_created: Довжина успішно створена. Після огляду адміністрaтором вона з'явиться на сайті.
-    destroy:
-      length_destroyed: Довжина була успішно видалена
-    show:
-      past: Минулі
-      future: Майбутні
-    index:
-      not_found_distance: не знайшли дистанцію в якій приймали участь, ви можете
-      variant: свій варіант
   events:
     new:
       unauthenticated: Ви повинні увійти або зареєструватися перш ніж виконувати цю дію
