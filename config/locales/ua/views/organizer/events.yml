@@ -1,15 +1,12 @@
 ua:
-  admin:
+  organizer:
     events:
       form:
         distances: Дистанції
       index:
-        unauthenticated: Ви повинні увійти або зареєструватися перш ніж виконувати цю дію
         title: Додати минулий забіг
         name: Назва
         visible: Активний
-      create:
-        event_created: Забіг успішно створений.
       show:
         name: Назва
         description: Опис

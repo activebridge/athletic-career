@@ -1,15 +1,12 @@
 en:
-  admin:
+  organizer:
     events:
       form:
         distances: Distances
       index:
-        unauthenticated: You must sign up before performing this action
         title: Add past event
         name: Name
         visible: Visible
-      create:
-        event_created: The race was successfully created
       show:
         name: Name
         description: Description

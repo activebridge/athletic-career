@@ -1,15 +1,12 @@
 ru:
-  admin:
+  organizer:
     events:
       form:
         distances: Дистанции
       index:
-        unauthenticated: Вы должны войти или зарегистрироваться прежде чем выполнять это действие.
         title: Добавить прошлий забег
         name: Название
         visible: Активен
-      create:
-        event_created: Забег успешно создан
       show:
         name: Название
         description: Описание
