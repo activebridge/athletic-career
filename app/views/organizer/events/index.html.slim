@@ -1,0 +1,12 @@
+h1= t('.title')
+= link_to :add_event, new_organizer_event_path(type: "#{params[:type]}"), class: 'btn btn-default'
+table.table
+  thead
+    tr
+      th= t('.name')
+      th= t('.visible')
+      th
+      th
+      th
+  tbody
+    = render partial: 'events', collection: index_events, as: :event

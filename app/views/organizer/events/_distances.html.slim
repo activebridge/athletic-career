@@ -1,0 +1,5 @@
+tr
+  td= distance.title
+  td= distance.length.name
+  td= link_to :edit, edit_organizer_event_distance_path(show_event, type: "#{params[:type]}")
+  td= link_to :delete, admin_organizer_distance_path(show_event, type: "#{params[:type]}"), data: { confirm: t('are_you_sure') }, method: :delete

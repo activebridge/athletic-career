@@ -1,0 +1,6 @@
+tr
+  td= event.name
+  td= event.visible
+  td= link_to :show, organizer_event_path(event, type: "#{params[:type]}")
+  td= link_to :edit, edit_organizer_event_path(event, type: "#{params[:type]}")
+  td= link_to :delete, organizer_event_path(event, type: "#{params[:type]}"), data: { confirm: t('are_you_sure') }, method: :delete

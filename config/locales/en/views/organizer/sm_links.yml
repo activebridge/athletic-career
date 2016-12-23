@@ -1,0 +1,11 @@
+en:
+  organizer:
+    sm_links:
+      index:
+        title: My SM links
+        avatar: Icon
+        name: Name
+      new:
+        title: Add SM Links
+      form:
+        submit: Submit

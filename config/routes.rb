@@ -33,6 +33,11 @@ Rails.application.routes.draw do
     get '/', to: 'dashboards#show', as: :dashboard
     resources :members
     resources :sm_links, except: :show
+    scope ':type', constraints: { type: /past|future/ } do
+      resources :events do
+        resource :distance
+      end
+    end
   end
 
   get '/auth/:provider/callback', to: 'sessions#create'

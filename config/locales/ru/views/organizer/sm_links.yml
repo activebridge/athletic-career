@@ -1,0 +1,11 @@
+ru:
+  organizer:
+    sm_links:
+      index:
+        title: Мои социальные сети
+        avatar: Изображение
+        name: Название
+      new:
+        title: Добавить социальные сети
+      form:
+        submit: Добавить

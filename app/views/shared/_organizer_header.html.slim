@@ -3,6 +3,8 @@ nav.navbar.navbar-fixed-top
     .collapse.navbar-collapse
       .nav.navbar-nav
         = link_to '', organizer_dashboard_path, class: 'pull-left'
+        = nav_link t('links.future_events'), organizer_events_path(type: 'future')
+        = nav_link t('links.past_events'), organizer_events_path(type: 'past')
         = nav_link t('links.team'), organizer_members_path
         = nav_link t('links.sm_links'), organizer_sm_links_path
         .pull-right

@@ -1,0 +1,11 @@
+ua:
+  organizer:
+    sm_links:
+      index:
+        title: Мої соціальні мережі
+        avatar: Зображення
+        name: Назва
+      new:
+        title: Додати соціальні мережі
+      form:
+        submit: Додати

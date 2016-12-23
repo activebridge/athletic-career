@@ -1,0 +1,5 @@
+= f.simple_fields_for :distance do |d|
+  = link_to_remove_association '', f, class: 'fa fa-times'
+  = f.input :length_id, as: :select, collection: Length.ready.map { |a| [a.title, a.id] }, label: false, prompt: t('prompts.length_id'), value_method: :second
+  = f.input :price, label: false, input_html: { placeholder: true }
+  = f.input :end_price, label: false, input_html: { placeholder: true }

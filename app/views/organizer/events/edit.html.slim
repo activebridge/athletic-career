@@ -1,0 +1,4 @@
+h1
+  strong Edit #{show_event.name}
+== render 'form', url: organizer_event_path(show_event, type: "#{params[:type]}"), new_event: false
+= link_to :back, organizer_events_path

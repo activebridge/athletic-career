@@ -1,0 +1,3 @@
+.nested-fields.row.input_fields_form
+  = link_to_remove_association '', f, class: 'fa fa-times'
+  = f.input :length_id, as: :select, collection: Length.ready.map { |a| [a.title, a.id] }, label: false, prompt: t('prompts.length_id'), value_method: :second

@@ -1,0 +1,21 @@
+- ur = new_event ? event : show_event
+= simple_form_for ur, as: :event, url: url do |f|
+  = f.hidden_field :organizer_id, value: current_user.organizer_id
+  = f.input :visible, as: :select
+  .file-upload
+    .btn-default
+      = f.input :logo, label: t('.logo')
+      = f.hidden_field(:logo_cache)
+  .input_fields_form
+    = f.input :name
+    = f.input :date, as: :date, html5: true
+    = f.input :country, as: :country, selected: 'UA', label: false
+    = f.input :city
+    = f.input :category_id, as: :select, collection: Category.ready
+    = f.input :site
+    = f.input :description
+    h1 =t('.distances')
+    .row
+      = f.simple_fields_for :distance do |d|
+        = link_to_add_association :add_distance, f, :distances, partial: "#{params[:type]}_distance", class: 'btn btn-default'
+  = f.button :submit
