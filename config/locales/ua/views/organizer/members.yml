@@ -11,6 +11,8 @@ ua:
         name: Ім'я
         bio: Про учасника
         position: Посада
+        email: Поштова адреса
+        phone: Телефон
       new:
         title: Додати учасника
       edit:

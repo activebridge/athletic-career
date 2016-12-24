@@ -11,6 +11,8 @@ en:
         name: Name
         bio: Biography
         position: Position
+        email: E-mail
+        phone: Phone
       new:
         title: Add member
       edit:

@@ -11,6 +11,8 @@ ru:
         name: Имя
         bio: Об участнике
         position: Должность
+        email: E-mail
+        phone: Телефон
       new:
         title: Добавить участника
       edit:
