@@ -3,3 +3,8 @@ ua:
     organizers:
       index:
         title: Список організаторів
+        name: Назва
+      new:
+        title: Додати організатора
+      edit:
+        title: Оновити організатора

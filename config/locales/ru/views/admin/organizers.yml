@@ -3,3 +3,8 @@ ru:
     organizers:
       index:
         title: Список организаторов
+        name: Название
+      new:
+        title: Добавить организатора
+      edit:
+        title: Обновить организатора

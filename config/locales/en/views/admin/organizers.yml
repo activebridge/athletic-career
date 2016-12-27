@@ -3,3 +3,8 @@ en:
     organizers:
       index:
         title: Organizers List
+        name: Name
+      new:
+        title: Add Organizer
+      edit:
+        title: Edit Organizer
