@@ -10,3 +10,4 @@ table.table
       th
   tbody
     = render partial: 'events', collection: index_events, as: :event
+p= paginate index_events

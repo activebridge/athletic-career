@@ -2,8 +2,8 @@ class Admin::EventsController < AdminsController
   expose :events, -> { Event.all.order(created_at: :desc).page(params[:page]) }
   expose :event
   expose :show_event, -> { Event.friendly.find(params[:id]) }
-  expose :past_events, -> { events.past }
-  expose :future_events, -> { events.future }
+  expose :past_events, -> { events.past.page(params[:page]) }
+  expose :future_events, -> { events.future.page(params[:page]) }
   expose :index_events, -> { params[:type] == 'past' ? past_events : future_events }
   expose :distances, -> { show_event.distances }
 
