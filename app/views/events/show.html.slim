@@ -1,9 +1,9 @@
+.col-lg-12.col-md-12.col-sm-14.col-xs-12
+  h3= show_event.name
+  hr
 .col-lg-4.col-sm-4.col-xs-12.show
   = event_logo(show_event)
 .col-lg-8.col-sm-8.col-xs-12.show
-  p
-    strong =>t('.name')
-    = show_event.name
   p
     strong =>t('.city')
     = show_event.city
@@ -21,8 +21,10 @@
 .col-lg-12.col-md-12.col-sm-14.col-xs-12
   .row
     h1=t('.distance')
+    hr
   = render partial: 'distance', collection: distances_list, as: :distance
 .col-lg-12.col-md-12.col-sm-14.col-xs-12
   .row
     h1=t('.other_events')
+    hr
   = render partial: 'organizer_events', collection: organizer_events, as: :event
