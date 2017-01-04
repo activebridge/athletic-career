@@ -9,7 +9,7 @@ class Admin::UsersController < AdminsController
 
   def destroy
     user.destroy
-    redirect admin_dashboard_path
+    redirect admin_users_path
   end
 
   private
