@@ -19,13 +19,15 @@
 .profile-link {
   padding: 23px 0;
 }
-.user-list {
-  border-bottom: 1px solid $gray;
+.user-list, .competition-list {
   img {
     display: block;
     margin: 30px auto 0;
     border-radius: 5px;
   }
+}
+.user-list {
+  border-bottom: 1px solid $gray;
 }
 .user-share {
   width: 140px;
