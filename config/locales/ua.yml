@@ -65,7 +65,8 @@ ua:
     select_distance: Виберіть дистанцію
   links:
     edit_profile: Редагувати профайл
-    run: Я приймав участь!
+    run: Я брав участь!
+    future_run: Я візьму участь!
     new_organizer: Новий огранізатор
     new_length: Нова довжина
     new_events: Новий забіг

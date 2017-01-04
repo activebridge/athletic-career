@@ -2,8 +2,11 @@
   .length-block class=("length-block-#{distance.length.name}").parameterize
     = image_tag ('man.png')
     = link_to distance.length.title, 'javascript:void(false);'
-  - if current_user && !run_link?(distance.id, distance.event)
+  - if current_user && !run_link?(distance.id)
     .right
-      = link_to :run, new_competition_path(event: distance.event.name, distance: distance)
+      - if distance.event.date > Time.now
+        = link_to :future_run, new_competition_path(event: distance.event.name, distance: distance)
+      - else
+        = link_to :run, new_competition_path(event: distance.event.name, distance: distance)
       br
       br

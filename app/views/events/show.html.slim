@@ -9,7 +9,7 @@
     = show_event.city
   p
     strong =>t('.date')
-    = show_event.date
+    = l(show_event.date, format: :default)
   p
     strong =>t('.description') if show_event.description.present?
     = show_event.description
@@ -22,3 +22,7 @@
   .row
     h1=t('.distance')
   = render partial: 'distance', collection: distances_list, as: :distance
+.col-lg-12.col-md-12.col-sm-14.col-xs-12
+  .row
+    h1=t('.other_events')
+  = render partial: 'organizer_events', collection: organizer_events, as: :event

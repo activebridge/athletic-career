@@ -10,6 +10,8 @@
         .card-date
           .fa.fa-calendar
           =< l(event.date, format: :default)
+    br
     - if params['type'] == 'past'
-      br
       = link_to :run, event_path(event)
+    - else
+      = link_to :future_run, event_path(event)

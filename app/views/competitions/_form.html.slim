@@ -15,7 +15,8 @@
     = f.hidden_field :distance_id, value: params[:distance]
     .col-lg-4.col-md-4.col-sm-4.col-xs-4
       = f.input :race_number, input_html: { placeholder: true, required: true }
-    .col-lg-4.col-md-4.col-sm-4.col-xs-4
-      = f.input :net_result, include_seconds: true, prompt: { hour: 'hour', minute: 'min', second: 'sec' }, input_html: { required: true }
+    - if event.date < Time.now
+      .col-lg-4.col-md-4.col-sm-4.col-xs-4
+        = f.input :net_result, include_seconds: true, prompt: { hour: 'hour', minute: 'min', second: 'sec' }, input_html: { required: true }
     .col-lg-4.col-md-4.col-sm-4.col-xs-4
       = f.button :submit, class: 'button success add-competition'
