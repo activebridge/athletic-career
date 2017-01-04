@@ -1,0 +1,25 @@
+en:
+  events:
+    new:
+      unauthenticated: Ви повинні увійти або зареєструватися перш ніж виконувати цю дію
+    past_events:
+      not_found_events: Events not found
+    future_events:
+      not_found_events: Events not found
+    create:
+      event_created: Забіг успішно створений. Після огляду адміністрaтором він з'явиться на сайті.
+    show:
+      distance: Distances
+      name: Name
+      description: Description
+      city: City
+      country: Country
+      date: Date
+      participated: 'Participated:'
+    search_form:
+      year: Year
+      city: City
+      organizer: Organizer
+    form:
+      running_event: Running event
+      distances: Distances

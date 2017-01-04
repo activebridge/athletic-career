@@ -1,0 +1,25 @@
+ru:
+  events:
+    new:
+      unauthenticated: Вы должны войти или зарегистрироваться прежде чем выполнять это действие.
+    past_events:
+      not_found_events: Ничего не найдено
+    future_events:
+      not_found_events: Ничего не найдено
+    create:
+      event_created: Забег успешно создан. После осмотра администратором он появится на сайте.
+    show:
+      distance: Дистанции
+      name: Название
+      description: Описание
+      city: Город
+      country: Страна
+      date: Дата
+      participated: 'Принимали участие:'
+    search_form:
+      year: Год
+      city: Город
+      organizer: Организатор
+    form:
+      running_event: Беговое событие
+      distances: Дистанции

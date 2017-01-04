@@ -7,6 +7,8 @@ class EventsController < ApplicationController
   expose :past_events, -> { events.past.search(params[:search]).order('date desc') }
   expose :future_events, -> { events.future.search(params[:search]).order('date asc') }
   expose :index_events, -> { params[:type] == 'past' ? past_events : future_events }
+  expose :competitions_list, -> { show_event.competitions.includes(:user) }
+  expose :distances_list, -> { show_event.distances.includes(:length) }
 
   def new
     event.distances.build

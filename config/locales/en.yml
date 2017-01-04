@@ -15,29 +15,6 @@ en:
       succesfull: Ви успішно вийшли зі свого акаунта
     new:
       no_account: No account
-  events:
-    new:
-      unauthenticated: Ви повинні увійти або зареєструватися перш ніж виконувати цю дію
-    past_events:
-      not_found_events: Нічого не знайдено
-    future_events:
-      not_found_events: Нічого не знайдено
-    create:
-      event_created: Забіг успішно створений. Після огляду адміністрaтором він з'явиться на сайті.
-    show:
-      distance: Distances
-      name: Name
-      description: Description
-      city: City
-      country: Country
-      date: Date
-    search_form:
-      year: Year
-      city: City
-      organizer: Organizer
-    form:
-      running_event: Бігова подія
-      distances: Distances
   competitions:
     form:
       event: Event

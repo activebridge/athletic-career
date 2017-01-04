@@ -13,8 +13,12 @@
   p
     strong =>t('.description') if show_event.description.present?
     = show_event.description
-
+  - if competitions_list.count > 0
+    p
+      strong =>t('.participated')
+      = competitions_list.count
+      = render partial: 'users', collection: competitions_list, as: :competition
 .col-lg-12.col-md-12.col-sm-14.col-xs-12
   .row
     h1=t('.distance')
-  = render partial: 'distance', collection: show_event.distances.includes(:length), as: :distance
+  = render partial: 'distance', collection: distances_list, as: :distance
