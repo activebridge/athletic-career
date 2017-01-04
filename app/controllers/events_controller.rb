@@ -9,7 +9,7 @@ class EventsController < ApplicationController
   expose :index_events, -> { params[:type] == 'past' ? past_events : future_events }
   expose :competitions_list, -> { show_event.competitions.includes(:user) }
   expose :distances_list, -> { show_event.distances.includes(:length) }
-  expose :organizer_events, -> { show_event.organizer.events.where('events.id != ?', show_event.id) }
+  expose :organizer_events, -> { show_event.organizer.events.where('events.id != ?', show_event.id).last(4) }
 
   def new
     event.distances.build
