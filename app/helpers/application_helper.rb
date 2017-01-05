@@ -17,6 +17,11 @@ module ApplicationHelper
     end
   end
 
+  def distance_title(distance)
+    return distance.title if distance.title
+    distance.length.name
+  end
+
   def distance_list(event)
     event.distances.includes(:length).map { |d| [d.length.title, d.id] }
   end
