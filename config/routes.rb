@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   resource :session, only: [:new, :destroy]
   resources :languages, only: :update, constraints: { id: /(ua|ru)/ }
   resources :competitions
+  resource :personal_best, except: :show
   resources :lengths
   resources :articles, only: [:show, :index]
 

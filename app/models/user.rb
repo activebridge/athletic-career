@@ -6,6 +6,7 @@ class User < ApplicationRecord
   has_many :accounts, dependent: :delete_all
   has_many :competitions, dependent: :delete_all
   has_many :distances, through: :competitions
+  has_one :personal_best, dependent: :destroy
 
   enum role: [:user, :organizer]
 

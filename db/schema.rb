@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161224175451) do
+ActiveRecord::Schema.define(version: 20170105131652) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -150,6 +150,19 @@ ActiveRecord::Schema.define(version: 20161224175451) do
     t.string  "logo"
     t.string  "site"
     t.string  "description"
+  end
+
+  create_table "personal_bests", force: :cascade do |t|
+    t.integer  "user_id"
+    t.time     "km5"
+    t.time     "km10"
+    t.time     "km15"
+    t.time     "half"
+    t.time     "marathon"
+    t.time     "ultra"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_personal_bests_on_user_id", using: :btree
   end
 
   create_table "sm_links", force: :cascade do |t|

@@ -41,6 +41,11 @@ ru:
       count: 'Количество забегов:'
       age: 'Возрастная группа:'
       city: 'Город:'
+    personal_best:
+      distance: Расстояние
+      time: Время
+      tempo: Темп (мин/км)
+      speed: Скорость (км/час)
     useful_links:
       useful_links: 'Полезные ссылки'
       sport_event: Ukraine Sport Events - Спортивные мероприятия Украины
@@ -117,6 +122,8 @@ ru:
     sm_links: Соц. сети
     new_command: Добавить участника команды
     new_sm_link: Добавить Социальные сети
+    new_personal_best: Добавить ваш Personal Best
+    edit_personal_best: Редактировать ваш Personal Best
   helpers:
     submit:
       event:
@@ -143,6 +150,13 @@ ru:
         organizer: Организатор
   activerecord:
     attributes:
+      personal_best:
+        km5: '5 км'
+        km10: '10 км'
+        km15: '15 км'
+        half: Half Marathon
+        marathon: Marathon
+        ultra: Ultra (100 км)
       competition:
         year: Год
         city: Город

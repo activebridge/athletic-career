@@ -1,0 +1,118 @@
+.col-sm-7.col-xs-3
+  .user-title
+    h3
+      i
+        = 'Personal Best '
+    table.table
+      tr
+        th
+          i= t('.distance')
+        th
+          i= t('.time')
+        th
+          i= t('.tempo')
+        th
+          i= t('.speed')
+      - if user.personal_best
+        tr
+          td
+            i 5 km
+          td= personal_time(user.personal_best.km5, 5.0)[:time]
+          td= personal_time(user.personal_best.km5, 5.0)[:temp]
+          td= personal_time(user.personal_best.km5, 5.0)[:speed]
+        tr
+          td
+            i 10 km
+          td= personal_time(user.personal_best.km10, 10.0)[:time]
+          td= personal_time(user.personal_best.km10, 10.0)[:temp]
+          td= personal_time(user.personal_best.km10, 10.0)[:speed]
+        tr
+          td
+            i 15 km
+          td= personal_time(user.personal_best.km15, 15.0)[:time]
+          td= personal_time(user.personal_best.km15, 15.0)[:temp]
+          td= personal_time(user.personal_best.km15, 15.0)[:speed]
+        tr
+          td
+            i Half Marathon
+          td= personal_time(user.personal_best.half, 21.098)[:time]
+          td= personal_time(user.personal_best.half, 21.098)[:temp]
+          td= personal_time(user.personal_best.half, 21.098)[:speed]
+        tr
+          td
+            i Marathon
+          td= personal_time(user.personal_best.marathon, 42.196)[:time]
+          td= personal_time(user.personal_best.marathon, 42.196)[:temp]
+          td= personal_time(user.personal_best.marathon, 42.196)[:speed]
+        tr
+          td
+            i Ultra (100 km)
+          td= personal_time(user.personal_best.ultra, 100.0)[:time]
+          td= personal_time(user.personal_best.ultra, 100.0)[:temp]
+          td= personal_time(user.personal_best.ultra, 100.0)[:speed]
+      - else
+        tr
+          td
+            i 5 km
+          td= '-'
+          td= '-'
+          td= '-'
+        tr
+          td
+            i 10 km
+          td= '-'
+          td= '-'
+          td= '-'
+        tr
+          td
+            i 15 km
+          td= '-'
+          td= '-'
+          td= '-'
+        tr
+          td
+            i Half Marathon
+          td= '-'
+          td= '-'
+          td= '-'
+        tr
+          td
+            i Marathon
+          td= '-'
+          td= '-'
+          td= '-'
+        tr
+          td
+            i Ultra (100 km)
+          td= '-'
+          td= '-'
+          td= '-'
+/* .col-sm-7.col-xs-3 */
+/*   .user-title */
+/*     h3 */
+/*       i= t('.useful_links') */
+/*     table.table */
+/*       tr */
+/*         td */
+/*           i= link_to :sport_event, 'http://sportevent.com.ua/', target: '_black' */
+/*         td= t('.sport_event') */
+/*       tr */
+/*         td */
+/*           i= link_to :at_events, 'https://athletic-events.com/', target: '_blank' */
+/*         td= t('.at_events') */
+/*       tr */
+/*         td */
+/*           i= link_to :run_ukraine, 'http://runukraine.org/', target: '_blank' */
+/*         td= t('.run_ukraine') */
+/*       tr */
+/*         td */
+/*           i= link_to :all_events, 'https://vseprobegi.org/', target: '_blank' */
+/*         td= t('.all_events') */
+/*       tr */
+/*         td */
+/*           i= link_to :legs_gots, 'http://nogibogi.com/', target: '_blank' */
+/*         td= t('.legs_gots') */
+/*       tr */
+/*         td */
+/*           i= link_to :run_and_travel, 'http://run-and-travel.com/', target: '_blank' */
+/*         td= t('.run_and_travel') */
