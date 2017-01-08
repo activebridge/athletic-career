@@ -4,6 +4,7 @@
     - if current_user == user
       p= link_to :edit_profile, edit_user_path
       p= personal_best_link
+      p= link_to :useful_links, page_path(:useful_links)
   .col-sm-3.col-xs-3
     .user-title
       h3= user.name

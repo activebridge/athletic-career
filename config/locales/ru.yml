@@ -46,14 +46,6 @@ ru:
       time: Время
       tempo: Темп (мин/км)
       speed: Скорость (км/час)
-    useful_links:
-      useful_links: 'Полезные ссылки'
-      sport_event: Ukraine Sport Events - Спортивные мероприятия Украины
-      at_events: Athletic Events - Спортивные мероприятия Украины
-      run_ukraine: Организация спортивных массовых мероприятий
-      all_events: Всеукраинский календарь пробегов и тренировок
-      legs_gots: "Всё о беге: тренировки для начинающих, мотивация, подготовка к марафону, экипировка."
-      run_and_travel: Блог о беге на длинные дистанции, марафонах, полумарафонах, тренировках и обо всем, что с этим связано.
     users:
       distance: 'Дистанция:'
       count: 'Количество забегов:'
@@ -124,6 +116,7 @@ ru:
     new_sm_link: Добавить Социальные сети
     new_personal_best: Добавить ваш Personal Best
     edit_personal_best: Редактировать ваш Personal Best
+    useful_links: Полезные беговые ссылки
   helpers:
     submit:
       event:
