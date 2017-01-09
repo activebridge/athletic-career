@@ -35,6 +35,9 @@ gem 'therubyracer'
 gem 'tinymce-rails'
 gem 'kaminari'
 gem 'jquery-infinite-pages'
+gem 'geocoder'
+gem 'gmaps4rails'
+gem 'google-api-client'
 
 group :development, :test do
   gem 'pry'
