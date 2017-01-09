@@ -3,6 +3,7 @@
 //= require jquery-ui
 //= require tinymce-jquery
 //= require turbolinks
+//= require gmaps/google
 //= require lazybox
 //= require cloudinary
 //= require jquery.datetimepicker.min
