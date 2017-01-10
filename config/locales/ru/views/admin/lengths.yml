@@ -2,4 +2,7 @@ ru:
   admin:
     lengths:
       index:
-        title: Список дистанций
+        page_title: Список дистанций
+        name: Название
+        mark: Позиция
+        visible: Видимость

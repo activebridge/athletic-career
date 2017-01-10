@@ -2,4 +2,7 @@ ua:
   admin:
     lengths:
       index:
-        title: Список дистанцій
+        page_title: Список дистанцій
+        name: Назва
+        mark: Позиція
+        visible: Видимість

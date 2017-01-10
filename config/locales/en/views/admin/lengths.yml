@@ -2,4 +2,7 @@ en:
   admin:
     lengths:
       index:
-        title: Lengths List
+        page_title: Lengths List
+        name: Name
+        mark: Mark
+        visible: Visible
