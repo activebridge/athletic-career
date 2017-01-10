@@ -18,7 +18,7 @@ class Admin::EventsController < AdminsController
   end
 
   def destroy
-    event.destroy
+    show_event.destroy
     redirect_to admin_events_url
   end
 

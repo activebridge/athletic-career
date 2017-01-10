@@ -8,3 +8,5 @@ en:
         title: Add Organizer
       edit:
         title: Edit Organizer
+      form:
+        submit: Submit
