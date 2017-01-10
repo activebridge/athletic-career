@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170105131652) do
+ActiveRecord::Schema.define(version: 20170109160911) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -163,6 +163,23 @@ ActiveRecord::Schema.define(version: 20170105131652) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_personal_bests_on_user_id", using: :btree
+  end
+
+  create_table "results", force: :cascade do |t|
+    t.integer  "distance_id"
+    t.string   "name"
+    t.integer  "bib_number"
+    t.integer  "age"
+    t.string   "category"
+    t.time     "gun_time"
+    t.time     "chip_time"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.index ["age"], name: "index_results_on_age", using: :btree
+    t.index ["bib_number"], name: "index_results_on_bib_number", using: :btree
+    t.index ["category"], name: "index_results_on_category", using: :btree
+    t.index ["distance_id"], name: "index_results_on_distance_id", using: :btree
+    t.index ["name"], name: "index_results_on_name", using: :btree
   end
 
   create_table "sm_links", force: :cascade do |t|
