@@ -15,6 +15,7 @@ ua:
       city: Місто
       country: Країна
       date: Дата
+      site: Сайт
       participated: 'Приймали участь:'
       other_events: Інші бігові заходи від організатора
     search_form:

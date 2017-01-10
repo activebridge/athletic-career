@@ -15,6 +15,7 @@ en:
       city: City
       country: Country
       date: Date
+      site: Site
       participated: 'Participated:'
       other_events: Other Events
     search_form:

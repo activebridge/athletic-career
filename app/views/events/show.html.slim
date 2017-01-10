@@ -5,11 +5,15 @@
   = event_logo(show_event)
 .col-lg-8.col-sm-8.col-xs-12.show
   p
-    strong =>t('.city')
+    strong=> t('.city')
     = show_event.city
   p
-    strong =>t('.date')
+    strong=> t('.date')
     = l(show_event.date, format: :default)
+  - if show_event.site
+    p
+      strong=> t('.site')
+      = link_to show_event.name, show_event.site, target: '_blank'
   p
     strong =>t('.description') if show_event.description.present?
     = show_event.description

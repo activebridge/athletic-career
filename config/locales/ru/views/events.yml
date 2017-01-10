@@ -15,6 +15,7 @@ ru:
       city: Город
       country: Страна
       date: Дата
+      site: Сайт
       participated: 'Принимали участие:'
       other_events: Другие беговые мероприятия от организатора
     search_form:
