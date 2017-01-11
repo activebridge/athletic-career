@@ -13,6 +13,7 @@ module ActiveJack
     config.i18n.default_locale = :ua
     config.active_record.time_zone_aware_types = [:datetime]
     config.assets.paths << Rails.root.join('app', 'assets', 'fonts')
+    config.active_job.queue_adapter = :sidekiq
   end
 end
 

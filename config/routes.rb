@@ -1,3 +1,6 @@
+require 'sidekiq/web'
+require 'admin_constraint'
+
 Rails.application.routes.draw do
   root to: 'welcome#index'
 
@@ -28,6 +31,8 @@ Rails.application.routes.draw do
     resources :users
     resources :articles
     get '/', to: 'dashboards#show', as: :dashboard
+
+    mount Sidekiq::Web => '/sidekiq', constraints: AdminConstraint.new
   end
 
   namespace :organizer do

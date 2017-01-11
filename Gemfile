@@ -38,6 +38,8 @@ gem 'jquery-infinite-pages'
 gem 'geocoder'
 gem 'gmaps4rails'
 gem 'google-api-client'
+gem 'sidekiq'
+gem 'sinatra', require: false
 
 group :development, :test do
   gem 'pry'
