@@ -36,7 +36,7 @@ class ApplicationController < ActionController::Base
 
   def redirect(path)
     if request.xhr?
-      redirect_via_turbolinks_to path
+      redirect_to path, turbolinks: true
     else
       redirect_to path
     end
