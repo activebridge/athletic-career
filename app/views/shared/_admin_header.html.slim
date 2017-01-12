@@ -4,6 +4,7 @@ nav.navbar.navbar-fixed-top
       .nav.navbar-nav
         = link_to '', admin_dashboard_path, class: 'pull-left'
         = nav_link t('links.organizers'), admin_organizers_path
+        = nav_link t('links.results'), admin_results_path
         = nav_link t('links.lengths'), admin_lengths_path
         = nav_link t('links.categories'), admin_categories_path
         = nav_link t('links.future_events'), admin_events_path(type: 'future')

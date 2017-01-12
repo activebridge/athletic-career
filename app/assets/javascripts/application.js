@@ -17,6 +17,10 @@ $(document).on('page:load ready', function() {
   initTiniMCE();
 });
 
+$(document).on('change', '[data-behavior~=live-update]', function() {
+  $(this.form).trigger('submit.rails');
+});
+
 function initTiniMCE() {
   tinyMCE.editors=[]
   tinyMCE.init({

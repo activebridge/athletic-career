@@ -23,6 +23,9 @@ Rails.application.routes.draw do
     resources :organizers
     resources :lengths
     resources :categories
+    resources :results do
+      patch :import_csv, on: :collection
+    end
     scope ':type', constraints: { type: /past|future/ } do
       resources :events do
         resource :distance

@@ -1,0 +1,3 @@
+.large-2.columns
+  = simple_form_for :csv, url: import_csv_admin_results_path, html: { multipart: true, method: :patch } do |f|
+    = f.input :file, label: 'Import CSV', required: false, as: :file, label_html: { class: 'btn btn-default' }, input_html: { data: { behavior: 'live-update' }}, accept: 'text/csv'
