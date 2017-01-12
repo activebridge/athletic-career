@@ -11,6 +11,6 @@ class SmLink < ApplicationRecord
 
   def google_link
     return true if google.blank?
-      google.include?('https://plus.google.com/') || google.include?('https://www.plus.google.com/') ? true : errors.add(:google, I18n.t('errors.google.message'))
+    google.include?('https://plus.google.com/') || google.include?('https://www.plus.google.com/') ? true : errors.add(:google, I18n.t('errors.google.message'))
   end
 end
