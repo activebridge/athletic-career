@@ -20,11 +20,12 @@ class Event < ApplicationRecord
   scope :by_length, -> (length) { joins(:distances).where(distances: { length_id: length.id }) }
 
   query = lambda do |params|
-    return if params.blank?
-    all
-      .by_date(params[:date])
-      .by_city(params[:city])
-      .by_organizer(params[:organizer_id])
+    if params.present?
+      all
+        .by_date(params[:date])
+        .by_city(params[:city])
+        .by_organizer(params[:organizer_id])
+    end
   end
 
   scope :search, query
