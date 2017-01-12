@@ -1,8 +1,15 @@
-= simple_form_for [organizer, sm_link], as: :sm_link, url: url do |f|
-  = f.error_notification
-  = f.input :facebook
-  = f.input :vkontakte
-  = f.input :twitter
-  = f.input :instagram
-  = f.input :google
-  = f.button :submit, t('.submit')
+.container
+  = simple_form_for [organizer, sm_link], as: :sm_link, url: url do |f|
+    = f.error_notification
+    .col-lg-4.col-md-4.col-sm-4.col-xs-4
+      = f.input :facebook, input_html: { placeholder: true }
+    .col-lg-4.col-md-4.col-sm-4.col-xs-4
+      = f.input :vk, input_html: { placeholder: true }
+    .col-lg-4.col-md-4.col-sm-4.col-xs-4
+      = f.input :twitter, input_html: { placeholder: true }
+    .col-lg-4.col-md-4.col-sm-4.col-xs-4
+      = f.input :instagram, input_html: { placeholder: true }
+    .col-lg-4.col-md-4.col-sm-4.col-xs-4
+      = f.input :google, input_html: { placeholder: true }
+    .col-lg-12.col-md-12.col-sm-4.col-xs-12
+      = f.button :submit, t('.submit')

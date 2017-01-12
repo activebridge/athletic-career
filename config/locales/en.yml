@@ -32,6 +32,17 @@ en:
     index:
       unauthenticated: Ви повинні увійти або зареєструватися перш ніж виконувати цю дію
       competitions: My Competitions
+  errors:
+    facebook:
+      message: 'Your link should include https://facebook.com/ or https://www.facebook.com/'
+    instagram:
+      message: 'Your link should include https://instagram.com/ or https://www.instagram.com/'
+    vk:
+      message: 'Your link should include https://vk.com/ or https://www.vk.com/'
+    twitter:
+      message: 'Your link should include https://twitter.com/ or https://www.twitter.com/'
+    google:
+      message: 'Your link should include https://plus.google.com/ or https://www.plus.google.com/'
   users:
     index:
       unauthenticated: Ви повинні увійти або зареєструватися перш ніж виконувати цю дію
@@ -117,6 +128,7 @@ en:
     new_personal_best: Add your Personal Best
     edit_personal_best: Update your Personal Best
     useful_links: Useful links
+    results: Results
   helpers:
     submit:
       event:
@@ -129,6 +141,12 @@ en:
       user:
         update: Оновити профайл
     placeholder:
+      sm_link:
+        facebook: 'https://www.facebook.com/'
+        vk: 'https://vk.com/'
+        twitter: 'https://twitter.com/'
+        instagram: 'https://www.instagram.com/'
+        google: 'https://plus.google.com/'
       length:
         title: Title
       competition:

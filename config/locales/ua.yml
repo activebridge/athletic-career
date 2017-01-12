@@ -31,6 +31,17 @@ ua:
     index:
       unauthenticated: Ви повинні увійти або зареєструватися перш ніж виконувати цю дію
       competitions: Моя кар'єра
+  errors:
+    facebook:
+      message: 'Ваш лінк має містити https://facebook.com/ або https://www.facebook.com/'
+    instagram:
+      message: 'Ваш лінк має містити https://instagram.com/ або https://www.instagram.com/'
+    vk:
+      message: 'Ваш лінк має містити https://vk.com/ або https://www.vk.com/'
+    twitter:
+      message: 'Ваш лінк має містити https://twitter.com/ або https://www.twitter.com/'
+    google:
+      message: 'Ваш лінк має містити https://plus.google.com/ або https://www.plus.google.com/'
   users:
     index:
       unauthenticated: Ви повинні увійти або зареєструватися перш ніж виконувати цю дію
@@ -117,6 +128,7 @@ ua:
     new_personal_best: Додати ваш Personal Best
     edit_personal_best: Оновити ваш Personal Best
     useful_links: Корисні бігові лінки
+    results: Результати
   helpers:
     submit:
       event:
@@ -129,6 +141,12 @@ ua:
       user:
         update: Оновити профайл
     placeholder:
+      sm_link:
+        facebook: 'https://www.facebook.com/'
+        vk: 'https://vk.com/'
+        twitter: 'https://twitter.com/'
+        instagram: 'https://www.instagram.com/'
+        google: 'https://plus.google.com/'
       length:
         title: Назва
       competition:

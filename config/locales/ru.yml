@@ -31,6 +31,17 @@ ru:
     index:
       unauthenticated: Вы должны войти или зарегистрироваться прежде чем выполнять это действие.
       competitions: Моя карера
+  errors:
+    facebook:
+      message: 'Ваша ссылка должна содержать https://facebook.com/ или https://www.facebook.com/'
+    instagram:
+      message: 'Ваша ссылка должна содержать https://instagram.com/ или https://www.instagram.com/'
+    vk:
+      message: 'Ваша ссылка должна содержать https://vk.com/ или https://www.vk.com/'
+    twitter:
+      message: 'Ваша ссылка должна содержать https://twitter.com/ или https://www.twitter.com/'
+    google:
+      message: 'Ваша ссылка должна содержать https://plus.google.com/ или https://www.plus.google.com/'
   users:
     index:
       unauthenticated: Вы должны войти или зарегистрироваться прежде чем выполнять это действие.
@@ -117,6 +128,7 @@ ru:
     new_personal_best: Добавить ваш Personal Best
     edit_personal_best: Редактировать ваш Personal Best
     useful_links: Полезные беговые ссылки
+    results: Результаты
   helpers:
     submit:
       event:
@@ -129,6 +141,14 @@ ru:
       user:
         update: Обновить профайл
     placeholder:
+      sm_link:
+        facebook: 'https://www.facebook.com/'
+        vk: 'https://vk.com/'
+        twitter: 'https://twitter.com/'
+        instagram: 'https://www.instagram.com/'
+        google: 'https://plus.google.com/'
+      length:
+        title: Название
       competition:
         race_number: Номер
       distance:

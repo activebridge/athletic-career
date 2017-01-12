@@ -3,13 +3,25 @@ br
 = link_to :new_sm_link, new_organizer_sm_link_path, class: 'btn btn-default'
 br
 table.table
-  thead
-    tr
-      th= t('.avatar')
-      th= t('.name')
-      th
-
   tbody
     - if sm_links
       tr
+        td
+          a.fa.fa-facebook href='#'
         td= sm_links.facebook
+      tr
+        td
+          a.fa.fa-vk href='#'
+        td= sm_links.vk
+      tr
+        td
+          a.fa.fa-twitter href='#'
+        td= sm_links.twitter
+      tr
+        td
+          a.fa.fa-instagram href='#'
+        td= sm_links.instagram
+      tr
+        td
+          a.fa.fa-google href='#'
+        td= sm_links.google
