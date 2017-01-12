@@ -1,13 +1,20 @@
-= simple_form_for member, as: :member, url: url do |f|
-  = f.error_notification
-  .form-inputs
-    .file-upload
-      .btn-default
-        = f.input :avatar, label: t('.avatar')
-        = f.hidden_field(:avatar_cache)
-  = f.input :name, label: t('.name')
-  = f.input :position, label: t('.position')
-  = f.input :bio, label: t('.bio')
-  = f.input :email, label: t('.email')
-  = f.input :phone, label: t('.phone')
-  = f.button :submit, t('.submit')
+.container
+  = simple_form_for member, as: :member, url: url do |f|
+    = f.error_notification
+    .col-lg-12.col-md-12.col-sm-12.col-xs-12
+      .form-inputs
+        .file-upload
+          .btn-default
+            = f.input :avatar, label: t('.avatar')
+            = f.hidden_field(:avatar_cache)
+    .col-lg-6.col-md-6.col-sm-6.col-xs-6
+      = f.input :name, label: t('.name')
+    .col-lg-6.col-md-6.col-sm-6.col-xs-6
+      = f.input :position, label: t('.position')
+    .col-lg-12.col-md-12.col-sm-12.col-xs-12
+      = f.input :bio, label: t('.bio'), input_html: { id: 'simplemde' }
+    .col-lg-6.col-md-6.col-sm-6.col-xs-6
+      = f.input :email
+    .col-lg-6.col-md-6.col-sm-6.col-xs-6
+      = f.input :phone, label: t('.phone')
+    = f.button :submit, t('.submit')
