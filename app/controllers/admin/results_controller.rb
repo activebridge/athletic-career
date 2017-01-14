@@ -7,7 +7,6 @@ class Admin::ResultsController < AdminsController
   private
 
   def parse_csv(file, distance)
-    binding.pry
     results = CSV.foreach(file, headers: false)
     results.each do |result|
       r = Result.find_or_initialize_by(distance_id: distance, position: result[0], bib_number: result[1], name: result[2], category: result[3], category_position: result[4], gun_time: result[5], chip_time: result[6], gender: result[7], age: result[8])
