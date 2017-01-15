@@ -15,7 +15,7 @@
         = f.input :organizer_id, as: :select, collection: Organizer.ready, label: false, prompt: t('prompts.organizer_id')
         = f.input :category_id, as: :select, collection: Category.ready, label: false, prompt: t('prompts.category_id')
         = f.input :site, label: false, input_html: { placeholder: true }
-        = f.input :description, label: false, input_html: { placeholder: true }
+        = f.input :description, label: false, input_html: { placeholder: true, id: 'simplemde' }
     h1 =t('.distances')
     .row
       = f.simple_fields_for :distances do |d|
