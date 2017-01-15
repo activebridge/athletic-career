@@ -17,5 +17,5 @@ $(document).on 'change', '[data-behavior~=live-update]', ->
   $(@form).trigger 'submit.rails'
   return
 
-$(document).on 'page:load ready', ->
+$(document).on 'turbolinks:load', ->
   simplemde = new SimpleMDE({ element: document.getElementById('simplemde') })
