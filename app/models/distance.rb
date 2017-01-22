@@ -4,6 +4,7 @@ class Distance < ApplicationRecord
   belongs_to :length
 
   has_many :competitions
+  has_many :results
 
   validates :length_id, presence: true
   validates :price, numericality: { less_than_or_equal_to: :end_price }, allow_blank: true
