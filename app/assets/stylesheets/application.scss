@@ -33,6 +33,12 @@ body {
   position: absolute;
   width: 100%;
 }
+#lazybox {
+  border-radius: 8px;
+}
+.login-btn {
+  width: 260px;
+}
 .translation_missing {
   color: red;
   background: black;
@@ -110,7 +116,7 @@ input[type=submit].btn-default{
 }
 .session-form {
   width: 380px;
-  padding: 25px;
+  padding: 30px 57px;
 }
 
 .right {
