@@ -21,18 +21,16 @@ class SessionsController < ApplicationController
 
   def user_params
     {
-      name: auth_hash[:info][:name],
       remote_avatar_url: client_avatar(auth_hash[:provider]),
       email: auth_hash[:info][:email],
       gender: user_gender(auth_hash[:provider]),
       profile: user_url(auth_hash[:provider])
-    }
+    }.merge(account_params)
   end
 
   def account_params
     {
       provider: auth_hash[:provider],
-      user_id: current_user&.id,
       uid: auth_hash[:uid],
       token: auth_hash[:credentials][:token],
       name: auth_hash[:info][:name]

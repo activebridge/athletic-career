@@ -3,14 +3,13 @@ class User < ApplicationRecord
   friendly_id :name, use: [:slugged, :finders]
   AGE = { '16-39' => 1, '40-49' => 2, '50-59' => 3, '60+' => 4 }
 
-  has_many :accounts, dependent: :delete_all
   has_many :competitions, dependent: :delete_all
   has_many :distances, through: :competitions
   has_one :personal_best, dependent: :destroy
 
   enum role: [:user, :organizer]
 
-  scope :find_by_provider_uid, -> (provider, uid) { joins(:accounts).where(accounts: { provider: provider, uid: uid }) }
+  scope :find_by_provider_uid, -> (provider, uid) { where(provider: provider, uid: uid) }
 
   paginates_per 15
   mount_base64_uploader :avatar, AvatarUploader
@@ -20,7 +19,6 @@ class User < ApplicationRecord
     return user.first if user.present?
     return if find_by('lower(name) = ?', account_params[:name].downcase)
     user = create(user_params)
-    user.accounts.create(account_params)
     user
   end
 
