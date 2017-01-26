@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170112134130) do
+ActiveRecord::Schema.define(version: 20170126183433) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -213,6 +213,9 @@ ActiveRecord::Schema.define(version: 20170112134130) do
     t.string   "city"
     t.integer  "category"
     t.integer  "organizer_id"
+    t.string   "provider"
+    t.string   "uid"
+    t.string   "token"
     t.index ["organizer_id"], name: "index_users_on_organizer_id", using: :btree
     t.index ["slug"], name: "index_users_on_slug", unique: true, using: :btree
   end
