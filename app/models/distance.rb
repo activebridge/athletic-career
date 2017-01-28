@@ -3,8 +3,8 @@ class Distance < ApplicationRecord
   belongs_to :event, required: false
   belongs_to :length
 
-  has_many :competitions
-  has_many :results
+  has_many :competitions, dependent: :destroy
+  has_many :results, dependent: :destroy
 
   validates :length_id, presence: true
   validates :price, numericality: { less_than_or_equal_to: :end_price }, allow_blank: true
