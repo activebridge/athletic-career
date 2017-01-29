@@ -40,6 +40,7 @@ gem 'google-api-client'
 gem 'sidekiq'
 gem 'sinatra', require: false
 gem 'whenever', require: false
+gem 'koala', '~> 2.2'
 
 group :development, :test do
   gem 'capistrano-sidekiq'
