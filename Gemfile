@@ -39,8 +39,10 @@ gem 'gmaps4rails'
 gem 'google-api-client'
 gem 'sidekiq'
 gem 'sinatra', require: false
+gem 'whenever', require: false
 
 group :development, :test do
+  gem 'capistrano-sidekiq'
   gem 'pry'
   gem 'rubocop', '~> 0.42.0', require: false
   gem 'byebug', platform: :mri

@@ -8,6 +8,7 @@ set :linked_dirs, fetch(:linked_dirs, []).push('log', 'tmp/pids', 'tmp/cache', '
 
 set :rvm_type, :user
 set :bundle_binstubs, nil
+set :whenever_identifier, 'bundle exec whenever'
 
 namespace :deploy do
   desc 'Restart application'
