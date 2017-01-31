@@ -34,7 +34,7 @@ body {
   width: 100%;
 }
 #lazybox {
-  border-radius: 8px;
+  border-radius: 6px;
 }
 .login-btn {
   width: 260px;
@@ -115,8 +115,10 @@ input[type=submit].btn-default{
   background: $lavender;
 }
 .session-form {
-  width: 380px;
-  padding: 30px 57px;
+  width: 364px;
+  height: 222px;
+  padding: 30px 0;
+  background: asset-url('trace.png') bottom right no-repeat;
 }
 
 .right {
