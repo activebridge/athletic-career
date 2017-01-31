@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   end
   resources :welcome, only: :index, path: 'dashboard'
   resources :users, except: :destroy
+  resource :protocol
   resource :session, only: [:new, :destroy]
   resources :languages, only: :update, constraints: { id: /(ua|ru)/ }
   resources :competitions
