@@ -1,6 +1,6 @@
 class LoginJob < ActiveJob::Base
   def perform(protocol)
-    # year = protocol.year.year
+    # year = protocol.birthday.year
     list = list(protocol)
     return if list.blank?
     competitions = competitions(list)
