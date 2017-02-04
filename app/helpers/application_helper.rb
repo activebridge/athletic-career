@@ -14,6 +14,11 @@ module ApplicationHelper
     link_to :new_personal_best, new_personal_best_path
   end
 
+  def protocol_link
+    return link_to :edit_protocol, edit_protocol_path if user.protocol
+    link_to :new_protocol, new_protocol_path
+  end
+
   def personal_time(time, distance)
     res_time = "#{time.hour.to_s.rjust(2, '0')}:#{time.min.to_s.rjust(2, '0')}:#{time.sec.to_s.rjust(2, '0')}"
     return { time: '-', temp: '-', speed: '-' } if res_time == '00:00:00'

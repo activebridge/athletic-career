@@ -131,6 +131,8 @@ ua:
     new_sm_link: Додати Соціальні мережі
     new_personal_best: Додати ваш Personal Best
     edit_personal_best: Оновити ваш Personal Best
+    new_protocol: Додати ваші протокольні дані
+    edit_protocol: Оновити ваші протокольні дані
     useful_links: Корисні бігові лінки
     results: Результати
   helpers:
