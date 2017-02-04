@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170204163947) do
+ActiveRecord::Schema.define(version: 20170204180331) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -52,8 +52,6 @@ ActiveRecord::Schema.define(version: 20170204163947) do
 
   create_table "competitions", force: :cascade do |t|
     t.integer  "user_id"
-    t.string   "race"
-    t.string   "distance"
     t.integer  "race_number"
     t.time     "result"
     t.time     "net_result"
@@ -61,10 +59,8 @@ ActiveRecord::Schema.define(version: 20170204163947) do
     t.integer  "category_rank"
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
-    t.integer  "year"
     t.integer  "event_id"
     t.integer  "distance_id"
-    t.string   "city"
     t.index ["distance_id"], name: "index_competitions_on_distance_id", using: :btree
     t.index ["event_id"], name: "index_competitions_on_event_id", using: :btree
     t.index ["user_id"], name: "index_competitions_on_user_id", using: :btree
