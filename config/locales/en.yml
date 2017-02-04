@@ -131,6 +131,8 @@ en:
     new_sm_link: Add SM Link
     new_personal_best: Add your Personal Best
     edit_personal_best: Update your Personal Best
+    new_protocol: Add your protocol data
+    edit_protocol: Update your protocol data
     useful_links: Useful links
     results: Results
   helpers:

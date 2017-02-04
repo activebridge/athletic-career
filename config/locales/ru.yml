@@ -131,6 +131,8 @@ ru:
     new_sm_link: Добавить Социальные сети
     new_personal_best: Добавить ваш Personal Best
     edit_personal_best: Редактировать ваш Personal Best
+    new_protocol: Добавить ваши протокольные данные
+    edit_protocol: Редактировать ваши протокольные данные
     useful_links: Полезные беговые ссылки
     results: Результаты
   helpers:
