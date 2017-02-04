@@ -8,6 +8,7 @@ AllCops:
     - 'log/**/*'
     - 'Gemfile'
     - 'spec/support/**/*'
+    - 'app/jobs/login_job.rb'
 Metrics/LineLength:
   Enabled: false
 Style/Documentation:

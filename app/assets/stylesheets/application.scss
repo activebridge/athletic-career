@@ -121,10 +121,30 @@ input[type=submit].btn-default{
   background: asset-url('trace.png') bottom right no-repeat;
 }
 
+.active-jack {
+  margin-top: 30px;
+  width: 285px;
+  height: 522px;
+  background: asset-url('jack.png') bottom right no-repeat;
+  background-size: cover;
+}
+
 .right {
   float: right;
 }
 
 .add-competition {
   margin-top: 50px;
+}
+
+input[type=submit].btn-default, .btn-default {
+  background-color: $btncolor;
+}
+
+select.year-select {
+  width: 200px !important;
+}
+
+.protocol-text {
+  margin-top: 15px;
 }
