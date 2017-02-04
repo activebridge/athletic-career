@@ -4,7 +4,7 @@
       = f.error_notification
       .row
         .col-lg-3.col-md-6.col-sm-6.col-xs-6
-          = f.input :year
+          = f.input :year, label: t('.year')
           /* = f.input :year, as: :date, start_year: Date.today.year - 14, end_year: Date.today.year - 110, order: [:year], label: t('.year'), prompt: true, input_html: { class: 'year-select' } */
         .col-lg-9.col-md-6.col-sm-6.col-xs-6
           .protocol-text= t('.protocol_text')
