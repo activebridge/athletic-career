@@ -18,8 +18,8 @@ class WelcomePage < BasePage
     click_link 'Увійти'
     if options[:success]
       OmniAuth.config.mock_auth[:vkontakte] = OmniAuth::AuthHash.new(provider: 'vkontakte', uid: '12345', nname: 'test_username',
-                                                                    info: { name: 'test_username', image: 'http://link_to_image.com/image' },
-                                                                    credentials: { token: 'sf23hdsjk', secret: :secret }, extra: { raw_info: { photo_200_orig: 'http://link_to_image.com/image' }})
+                                                                    info: { name: 'test_username', image: 'https://pp.vk.me/c5608/v5608812/d9/eV1kHgCYITE.jpg', urls: { "Vkontakte"=>"http://vk.com/id31737812" } },
+                                                                    credentials: { token: 'sf23hdsjk', secret: :secret }, extra: { raw_info: { photo_200_orig: 'https://pp.vk.me/c5608/v5608812/d9/eV1kHgCYITE.jpg' }})
     else
       OmniAuth.config.mock_auth[:vkontakte] = :invalid_credentials
     end

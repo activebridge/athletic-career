@@ -1,0 +1,37 @@
+.col-lg-12.col-md-12.col-sm-12.col-xs-12
+  .col-lg-9.col-md-9.col-sm-9.col-xs-9
+    = simple_form_for protocol, url: protocol_path do |f|
+      = f.error_notification
+      .row
+        .col-lg-3.col-md-6.col-sm-6.col-xs-6
+          = f.input :year, as: :date, start_year: Date.today.year - 14, end_year: Date.today.year - 110, order: [:year], label: t('.year'), prompt: true, input_html: { class: 'year-select' }
+        .col-lg-9.col-md-6.col-sm-6.col-xs-6
+          .protocol-text= t('.protocol_text')
+          => link_to :run_ukraine, 'http://runukraine.org/', target: '_blank'
+          ' |
+          => link_to :sport_event, 'http://sportevent.com.ua/', target: '_black'
+          ' |
+          => link_to :at_events, 'https://athletic-events.com/', target: '_blank'
+          ' |
+          => link_to :runstyle, 'http://ua.runstyle.com.ua/', target: '_blank'
+      .row
+        .col-lg-6.col-md-6.col-sm-6.col-xs-6
+          = f.input :first_name_ua, label: t('.first_name_ua'), placeholder: t('.first_ua_example')
+        .col-lg-6.col-md-6.col-sm-6.col-xs-6
+          = f.input :last_name_ua, label: t('.last_name_ua'), placeholder: t('.last_ua_example')
+      .row
+        .col-lg-6.col-md-6.col-sm-6.col-xs-6
+          = f.input :first_name_ru, label: t('.first_name_ru'), placeholder: t('.first_ru_example')
+        .col-lg-6.col-md-6.col-sm-6.col-xs-6
+          = f.input :last_name_ru, label: t('.last_name_ru'), placeholder: t('.last_ru_example')
+      .row
+        .col-lg-6.col-md-6.col-sm-6.col-xs-6
+          = f.input :first_name_en, label: t('.first_name_en'), placeholder: t('.first_en_example')
+        .col-lg-6.col-md-6.col-sm-6.col-xs-6
+          = f.input :last_name_en, label: t('.last_name_en'), placeholder: t('.last_en_example')
+
+      .row
+        .col-lg-12.col-md-12.col-sm-12.col-xs-12
+          = f.button :submit, t('.submit')
+  .col-lg-3.col-md-3.col-sm-3.col-xs-3
+    .active-jack

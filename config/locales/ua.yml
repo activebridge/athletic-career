@@ -3,6 +3,9 @@ ua:
   ru: рус
   all: всі
   are_you_sure: Ви впевнені?
+  datetime:
+    prompts:
+      year: Оберіть рік
   date:
     month_names: ['~', 'Січня', 'Лютого', 'Березня', 'Квітня', 'Травня', 'Червня', 'Липня', 'Серпня', 'Вересня', 'Жовтня', 'Листопада', 'Грудня']
     formats:
@@ -107,6 +110,7 @@ ua:
     users: Користувачі
     sport_event: Sport Event
     at_events: At. Events
+    runstyle: Run Style
     run_ukraine: Run Ukraine
     all_events: ВсеПробеги
     legs_gots: Ногибоги
@@ -199,6 +203,22 @@ ua:
         category: Ваша вікова група
     errors:
       models:
+        protocol:
+          attributes:
+            year:
+              blank: Вкажіть рік народження
+            first_name_ua:
+              blank: UA Ім'я теж повинне бути заповнене
+            last_name_ua:
+              blank: UA Прізвище теж повинне бути заповнене
+            first_name_ru:
+              blank: RU Ім'я теж повинне бути заповнене
+            last_name_ru:
+              blank: RU Прізвище теж повинне бути заповнене
+            first_name_en:
+              blank: EN Ім'я теж повинне бути заповнене
+            last_name_en:
+              blank: EN Прізвище теж повинне бути заповнене
         competition:
           attributes:
             year:

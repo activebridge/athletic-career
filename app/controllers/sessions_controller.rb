@@ -8,7 +8,7 @@ class SessionsController < ApplicationController
   def create
     user = User.fetch_account(account_params, user_params)
     session[:user_id] = user.id
-    redirect_to user_path(user), notice: t('.succesfull')
+    redirect_to new_protocol_path, notice: t('.succesfull')
   end
 
   def destroy

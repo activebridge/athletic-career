@@ -1,0 +1,18 @@
+ua:
+  protocols:
+    form:
+      submit: Зберегти
+      year: Рік народження
+      first_name_ua: Ім'я
+      last_name_ua: Прізвище
+      first_name_ru: Имя
+      last_name_ru: Фамилия
+      first_name_en: First Name
+      last_name_en: Last Name
+      first_ua_example: Іван
+      last_ua_example: Іванов
+      first_ru_example: Иван
+      last_ru_example: Иванов
+      first_en_example: Jack
+      last_en_example: Sparrow
+      protocol_text: "Бажаєте щоб система додала результати ваших змагань за вас? Просто вкажіть ваш рік народження, ім'я та прізвище українською, російською чи англійською мовою відповідно до того як ви зареєстровані на ресурсах організаторів змагань:"
