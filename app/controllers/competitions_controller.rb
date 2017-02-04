@@ -27,6 +27,6 @@ class CompetitionsController < ApplicationController
   end
 
   def runner_params
-    { user_id: current_user.id, year: @event.date.year, city: @event.city, event_id: @event.id, distance_id: @distance.id }
+    { user_id: current_user.id, event_id: @event.id, distance_id: @distance.id }
   end
 end
