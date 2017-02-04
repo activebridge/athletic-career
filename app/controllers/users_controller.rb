@@ -4,7 +4,7 @@ class UsersController < ApplicationController
 
   expose :users, -> { User.all.order('created_at desc').page(params[:page]) }
   expose :user, -> { User.friendly.find(params[:id]) }
-  expose :competitions, -> { user.competitions.includes(:event) }
+  expose :competitions, -> { user.competitions.includes(:event).order('events.date desc') }
 
   def update
     return redirect_to user_path(current_user) if current_user.update(user_params)
