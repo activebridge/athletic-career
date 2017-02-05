@@ -41,6 +41,7 @@ gem 'sidekiq'
 gem 'sinatra', require: false
 gem 'whenever', require: false
 gem 'koala', '~> 2.2'
+gem 'highcharts-rails'
 
 group :development, :test do
   gem 'capistrano-sidekiq'
