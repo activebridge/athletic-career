@@ -55,4 +55,6 @@ Rails.application.routes.draw do
   get '/signin', to: 'sessions#new'
   delete '/signout', to: 'sessions#destroy'
   get ':page', to: 'page#show', as: :page, constraints: { page: /(useful_links)/ }
+  match '/404', to: 'errors#not_found', via: :all
+  match '/500', to: 'errors#internal_server_error', via: :all
 end

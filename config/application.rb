@@ -15,6 +15,7 @@ module ActiveJack
     config.active_record.time_zone_aware_types = [:datetime]
     config.assets.paths << Rails.root.join('app', 'assets', 'fonts')
     config.active_job.queue_adapter = :sidekiq
+    config.exceptions_app = routes
   end
 end
 
