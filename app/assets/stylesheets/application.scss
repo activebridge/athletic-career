@@ -125,8 +125,16 @@ input[type=submit].btn-default{
   margin-top: 30px;
   width: 285px;
   height: 522px;
-  background: asset-url('jack.png') bottom right no-repeat;
   background-size: cover;
+  background: asset-url('jack.png') bottom right no-repeat;
+}
+
+.active-jack-best {
+  margin: 30px 0;
+  width: 324px;
+  height: 522px;
+  background-size: cover;
+  background: asset-url('jack-best.png') bottom right no-repeat;
 }
 
 .right {
@@ -152,4 +160,8 @@ select.year-select {
 .link-more {
   margin: 0 52px 40px;
   font-size: 16px;
+}
+
+.personal-link {
+  margin-right: 93px;
 }

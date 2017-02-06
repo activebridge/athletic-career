@@ -35,6 +35,7 @@ ua:
       unauthenticated: Ви повинні увійти або зареєструватися перш ніж виконувати цю дію
       competitions: Моя кар'єра
   errors:
+    record: Вказаний Вами час є кращим за світовий рекорд на данній дистанції
     facebook:
       message: 'Ваш лінк має містити https://facebook.com/ або https://www.facebook.com/'
     instagram:
