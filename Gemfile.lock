@@ -170,6 +170,8 @@ GEM
       os (~> 0.9)
       signet (~> 0.7)
     hashie (3.4.6)
+    highcharts-rails (5.0.7)
+      railties (>= 3.1)
     http-cookie (1.0.3)
       domain_name (~> 0.5)
     httpclient (2.8.3)
@@ -465,6 +467,7 @@ DEPENDENCIES
   geocoder
   gmaps4rails
   google-api-client
+  highcharts-rails
   jbuilder (~> 2.5)
   jquery-infinite-pages
   jquery-rails

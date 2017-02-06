@@ -11,6 +11,8 @@
 #= require cocoon
 #= require bootstrap-notify
 #= require bootstrap-sprockets
+#= require highcharts
+#= require highcharts/highcharts-more
 #= require_tree .
 
 $(document).on 'change', '[data-behavior~=live-update]', ->
