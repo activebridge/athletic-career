@@ -35,6 +35,7 @@ ru:
       unauthenticated: Вы должны войти или зарегистрироваться прежде чем выполнять это действие.
       competitions: Моя карера
   errors:
+    record: Указанное Вами время является лучшим чем мировой рекорд на этой дистанции
     facebook:
       message: 'Ваша ссылка должна содержать https://facebook.com/ или https://www.facebook.com/'
     instagram:

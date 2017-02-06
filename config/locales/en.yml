@@ -36,6 +36,7 @@ en:
       unauthenticated: Ви повинні увійти або зареєструватися перш ніж виконувати цю дію
       competitions: My Competitions
   errors:
+    record: Указанное Вами время является лучшим чем мировой рекорд на этой дистанции
     facebook:
       message: 'Your link should include https://facebook.com/ or https://www.facebook.com/'
     instagram:
