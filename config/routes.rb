@@ -17,6 +17,7 @@ Rails.application.routes.draw do
   resource :personal_best, except: :show
   resources :lengths
   resources :articles, only: [:show, :index]
+  resources :results, only: [:show, :index]
 
   namespace :admin do
     resource :session, only: [:new, :create, :destroy]
