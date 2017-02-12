@@ -5,6 +5,8 @@
   - if current_admin
     - if distance.results.present?
       p
+        = link_to :show_results, event_distance_path(show_event)
+      p
         = 'Have '
         = distance.results.count
     = simple_form_for :csv, url: import_csv_admin_results_path(distance: distance.id), html: { multipart: true, method: :patch } do |f|

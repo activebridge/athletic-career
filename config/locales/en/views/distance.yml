@@ -1,0 +1,6 @@
+en:
+  distances:
+    show:
+      position: Position
+      bib_number: BIB Number
+      name: Name

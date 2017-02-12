@@ -4,7 +4,10 @@ require 'admin_constraint'
 Rails.application.routes.draw do
   root to: 'welcome#index'
 
-  resources :events, except: [:new, :index, :edit]
+  resources :events, except: [:new, :index, :edit] do
+    resource :distance, only: :show
+  end
+
   scope ':type', constraints: { type: /past|future/ } do
     resources :events, only: [:new, :index], controller: 'events'
   end
@@ -17,7 +20,7 @@ Rails.application.routes.draw do
   resource :personal_best, except: :show
   resources :lengths
   resources :articles, only: [:show, :index]
-  resources :results, only: [:show, :index]
+  resources :results, only: :index
 
   namespace :admin do
     resource :session, only: [:new, :create, :destroy]
