@@ -1,0 +1,6 @@
+ru:
+  distances:
+    show:
+      position: Позиция
+      bib_number: Стартовый Номер
+      name: Участник

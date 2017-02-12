@@ -1,0 +1,6 @@
+ua:
+  distances:
+    show:
+      position: Позиція
+      bib_number: Стартовий Номер
+      name: Учасник
