@@ -1,8 +1,10 @@
 .col-lg-12.col-md-12.col-sm-12
   table.table
     thead
-      th= t('.position')
-      th= t('.bib_number')
-      th= t('.name')
+      tr
+        th= t('.position')
+        th= t('.bib_number')
+        th= t('.name')
+        th= t('.chip_time')
     tbody
       = render partial: 'result', collection: results

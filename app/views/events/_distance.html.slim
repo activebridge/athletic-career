@@ -5,7 +5,7 @@
   - if current_admin
     - if distance.results.present?
       p
-        = link_to :show_results, event_distance_path(show_event)
+        = link_to :show_results, event_distance_path(show_event, distance: distance)
       p
         = 'Have '
         = distance.results.count
