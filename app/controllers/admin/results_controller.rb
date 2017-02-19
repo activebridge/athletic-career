@@ -7,7 +7,7 @@ class Admin::ResultsController < AdminsController
     parse_csv(params['csv']['file'].tempfile, params[:distance].to_i)
 
     redirect_to admin_results_path
-    protocols.each { |protocol| ResultJob.perform_later(protocol, results) }
+    protocols.map { |protocol| LoginJob.perform_later(protocol) }
   end
 
   private
