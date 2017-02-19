@@ -2,6 +2,12 @@ class CompetitionsController < ApplicationController
   expose :competitions, -> { current_user.competitions.includes(:event) }
   expose :competition
   expose :event, -> { Event.find_by(name: params[:event]) }
+  expose :distance, -> { competition.distance }
+  expose :results, -> { Result.where(distance_id: distance) }
+  expose :results_count, -> { results.count }
+  expose :results_man, -> { Result.where(distance_id: distance, gender: true).count }
+  expose :results_woman, -> { Result.where(distance_id: distance, gender: false).count }
+  expose :length, -> { competition.distance.length }
 
   def create
     @distance = Distance.find(params[:competition][:distance_id])
