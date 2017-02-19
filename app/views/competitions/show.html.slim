@@ -1,2 +1,19 @@
 /* - if competition.distance.results.present? */
   /* = */
+= 'Total runners'
+= results_count
+br
+= 'Man runners'
+= results_man
+br
+= 'Woman runners'
+= results_woman
+br
+= 'Your time'
+="#{competition.net_result.hour.to_s.rjust(2, '0')}:#{competition.net_result.min.to_s.rjust(2, '0')}:#{competition.net_result.sec.to_s.rjust(2, '0')}"
+br
+= 'Your temp'
+= personal_time(competition.net_result, length.name.to_f)[:temp]
+br
+= 'Your speed'
+= personal_time(competition.net_result, length.name.to_f)[:speed]
