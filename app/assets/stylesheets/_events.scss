@@ -82,8 +82,13 @@
     object-fit: scale-down;
   }
   .card-info {
-    .card-date {
+    .card-time {
       font-size: 25px;
+    }
+    .card-date {
+      font-size: 20px;
+    }
+    .card-date, .card-time {
       margin: 10px;
       margin-left: auto;
       transition: .3s ease-out;
