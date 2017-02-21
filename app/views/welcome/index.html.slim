@@ -1,13 +1,13 @@
 = render 'shared/banner'
 .title
-  = t('.past')
-.row
-  .events-side
-    = render partial: 'shared/event', collection: events.past.order('date desc').first(4), as: :event, type: 'past'
-.row.more = link_to :more, '/past/events', class: 'right link-more'
-.title
   = t('.future')
 .row
   .events-side
-    = render partial: 'shared/event', collection: events.future.order('date asc').first(4), as: :event
-.more = link_to :more, '/future/events', class: 'right link-more'
+    = render partial: 'shared/event', collection: future_events, as: :event
+.row.more = link_to :more, '/future/events', class: 'right link-more'
+.title
+  = t('.past')
+.row
+  .events-side
+    = render partial: 'shared/event', collection: past_events, as: :event, type: 'past'
+.row.more = link_to :more, '/past/events', class: 'right link-more'
