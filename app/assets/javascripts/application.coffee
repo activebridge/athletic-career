@@ -13,6 +13,8 @@
 #= require bootstrap-sprockets
 #= require highcharts
 #= require highcharts/highcharts-more
+#= require rails.validations
+#= require rails.validations.simple_form
 #= require_tree .
 
 $(document).on 'change', '[data-behavior~=live-update]', ->
