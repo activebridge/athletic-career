@@ -5,9 +5,10 @@
     .card-block
       h4.card-title
         = link_to c.event.name, event_path(c.event.id)
-      .card-info
-        .card-time
-          ="#{c.net_result.hour.to_s.rjust(2, '0')}:#{c.net_result.min.to_s.rjust(2, '0')}:#{c.net_result.sec.to_s.rjust(2, '0')}"
+      - if c.net_result
+        .card-info
+          .card-time
+            ="#{c.net_result.hour.to_s.rjust(2, '0')}:#{c.net_result.min.to_s.rjust(2, '0')}:#{c.net_result.sec.to_s.rjust(2, '0')}"
     - if current_user == c.user
       => link_to :edit, edit_competition_path(c)
       =< link_to :delete, competition_path(c), data: { confirm: t('are_you_sure') }, method: :delete
