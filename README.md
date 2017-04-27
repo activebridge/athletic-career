@@ -1,4 +1,4 @@
-MyAthleticCareer [![Circle CI](https://circleci.com/gh/activebridge/athletic-career.svg?style=svg&circle-token=26614b014f5eeb27ae7accf9d6e2e03c2c675828)](https://circleci.com/gh/activebridge/athletic-career)
+Run in UA [![Circle CI](https://circleci.com/gh/activebridge/athletic-career.svg?style=svg&circle-token=26614b014f5eeb27ae7accf9d6e2e03c2c675828)](https://circleci.com/gh/activebridge/athletic-career)
 -
 
 Links
